@@ -1,0 +1,31 @@
+name: Build release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Verify tag matches package version
+        run: |
+          expected="v$(node -p "require('./package.json').version")"
+          test "$GITHUB_REF_NAME" = "$expected"
+      - run: npm run build
+      - name: Package web application
+        run: zip -r tsukikage-web-${GITHUB_REF_NAME}.zip dist LICENSE README.md THIRD_PARTY_NOTICES.md THIRD_PARTY_LICENSES.md
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: tsukikage-web-${{ github.ref_name }}.zip

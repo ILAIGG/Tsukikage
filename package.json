@@ -1,6 +1,6 @@
 {
   "name": "tsukikage",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -26,5 +26,6 @@
   "devDependencies": {
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0"
-  }
+  },
+  "license": "GPL-3.0-only"
 }

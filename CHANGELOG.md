@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.0] - 2026-11-04
+
+### Añadido
+- Menú Mundo con submenús de personajes, lugares y línea de tiempo; Notas queda como acceso directo de El Grimorio.
+- Preferencias centradas con fondo desenfocado, temas Pop y DarkPop, e importación de temas JSON con plantilla descargable.
+- Avisos legales y de dependencias dentro de la app, documentación de seguridad y workflows para compilar y empaquetar releases.
+
+### Cambiado
+- Licencia del proyecto identificada como GNU GPL-3.0-only y publicada también junto con la app instalable.
+- La caché de la PWA incorpora la licencia, los avisos de terceros y el ejemplo de tema.
+
 ## [0.5.0] - 2026-11-04
 
 ### Añadido

@@ -1,5 +1,12 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.6.0
+
+- [x] Agrupar personajes, lugares y línea de tiempo bajo Mundo; dejar Notas como entrada directa de El Grimorio.
+- [x] Convertir Preferencias en un diálogo centrado con fondo oscurecido y desenfocado.
+- [x] Añadir Pop y DarkPop e importar paletas JSON propias.
+- [x] Preparar licencia GPL-3.0-only, atribuciones, aviso de licencias dentro de la app, compilación CI y empaquetado de releases.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
@@ -18,13 +25,15 @@
 - [x] Recordar el proyecto, capítulo y sección que estaban abiertos; no mostrar la historia de ejemplo mientras IndexedDB aún carga.
 - [x] Controles con estilo propio para ajustar la meta diaria.
 
-## Pendiente para siguientes iteraciones
+## Plan priorizado para las siguientes iteraciones
 
-- [ ] Validar EPUB/DOCX/PDF en más lectores y ajustar portadas, metadatos, tipografía y formato de imprenta.
-- [ ] Añadir cronología con fechas y referencias entre eventos, personajes y lugares.
-- [ ] Historial automático y recuperación de versiones tras cierres inesperados.
-- [ ] Búsqueda global con resaltado y filtros por ficha, capítulo y etiqueta.
-- [ ] Resolución visual de conflictos y sincronización automática entre dispositivos; hoy la nube se actualiza con acciones manuales para evitar sobrescrituras inesperadas.
-- [ ] Pruebas de importación, exportación, migración y flujos de accesibilidad.
+- [ ] **P0 · Confianza del manuscrito:** autosave con indicador por capítulo, recuperación tras cierre inesperado, snapshots automáticos y exportación/importación probadas con proyectos grandes.
+- [ ] **P0 · Distribución pública:** probar instalación y actualización PWA en Chrome/Firefox/Safari, desplegar preview, añadir política de privacidad y revisar reglas/RLS de cualquier instancia Supabase pública.
+- [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
+- [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
+- [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
+- [ ] **P2 · Buscar en todo el proyecto:** búsqueda con resaltado y filtros por capítulo, ficha, nota y acontecimiento.
+- [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.
+- [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.
 
 La cuenta y la base remota son opcionales: hace falta crear un proyecto Supabase y configurarlo siguiendo `README.md`. No se transmiten manuscritos automáticamente.

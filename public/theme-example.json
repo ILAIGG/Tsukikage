@@ -1,0 +1,16 @@
+{
+  "name": "Mi paleta",
+  "mode": "dark",
+  "colors": {
+    "background": "#17141d",
+    "surface": "#24202b",
+    "sidebar": "#1d1925",
+    "text": "#f4edf8",
+    "muted": "#b0a5b6",
+    "line": "#675a70",
+    "accent": "#dd8bd6",
+    "accentStrong": "#f0b1e7",
+    "page": "#282330",
+    "shadow": "#0d0a12"
+  }
+}
