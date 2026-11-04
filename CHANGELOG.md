@@ -2,6 +2,15 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.2] - 2026-11-04
+
+### Añadido
+- Aviso por capítulo del estado de guardado, copias automáticas cada cinco minutos de escritura activa y recuperación de un borrador si IndexedDB no alcanzó a guardar su última versión.
+
+### Corregido
+- En Pop y DarkPop, los estados hover del Grimorio y las tarjetas de selección de tema usan la paleta activa.
+- Los iconos de Claro, Oscuro y Según el sistema quedan centrados verticalmente; al seleccionar una subopción de Mundo ya no se resalta también el grupo.
+
 ## [0.6.1] - 2026-11-04
 
 ### Corregido

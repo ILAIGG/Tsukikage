@@ -12,6 +12,7 @@ npm run dev
 ```
 
 Abre la URL que muestra Vite. Para generar la versión de producción: `npm run build`.
+Ejecuta `npm test` para comprobar copias JSON, guardado/recuperación local y EPUB con proyectos extensos.
 
 ## Arquitectura elegida
 

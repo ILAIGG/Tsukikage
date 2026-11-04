@@ -7,6 +7,12 @@
 - [x] Añadir Pop y DarkPop e importar paletas JSON propias.
 - [x] Preparar licencia GPL-3.0-only, atribuciones, aviso de licencias dentro de la app, compilación CI y empaquetado de releases.
 
+## Entregado en 0.6.2
+
+- [x] Mostrar el guardado del capítulo activo, conservar copias automáticas cada cinco minutos de escritura activa y ofrecer recuperar borradores pendientes.
+- [x] Verificar copias JSON, persistencia IndexedDB, recuperación de borrador y EPUB con una biblioteca de tres proyectos y 180 capítulos extensos.
+- [x] Corregir los estados hover y selección de Mundo en Pop/DarkPop y centrar los iconos del selector de temas.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
@@ -27,7 +33,7 @@
 
 ## Plan priorizado para las siguientes iteraciones
 
-- [ ] **P0 · Confianza del manuscrito:** autosave con indicador por capítulo, recuperación tras cierre inesperado, snapshots automáticos y exportación/importación probadas con proyectos grandes.
+- [ ] **P0 · Confianza del manuscrito:** probar recuperación tras cierre real del navegador y validar DOCX/PDF con manuscritos grandes; ampliar el historial automático en sesiones prolongadas.
 - [ ] **P0 · Distribución pública:** probar instalación y actualización PWA en Chrome/Firefox/Safari, desplegar preview, añadir política de privacidad y revisar reglas/RLS de cualquier instancia Supabase pública.
 - [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.

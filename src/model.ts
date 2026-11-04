@@ -1,6 +1,7 @@
 export type Chapter = { id: string; title: string; text: string; synopsis?: string; scenes?: string[] };
 export type Entry = { id: string; name: string; description: string; kind: 'character' | 'place' | 'note' | 'event'; chapterId?: string; date?: string };
-export type Revision = { id: string; at: string; html: string; words: number };
+export type Revision = { id: string; at: string; html: string; words: number; automatic?:boolean };
+export type RecoverySnapshot = { id:string; novelId:string; chapterId:string; chapter:Chapter; createdAt:number };
 export type Novel = { id: string; title: string; genre: string; chapters: Chapter[]; updated: string; synopsis?: string; entries?: Entry[]; revisions?: Record<string, Revision[]>; template?: string };
 export type ThemeColors = { background:string; surface:string; sidebar:string; text:string; muted:string; line:string; accent:string; accentStrong:string; page:string; shadow:string };
 export type CustomTheme = { id:string; name:string; mode:'light'|'dark'; colors:ThemeColors };

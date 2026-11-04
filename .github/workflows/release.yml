@@ -17,6 +17,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm test
       - name: Verify tag matches package version
         run: |
           expected="v$(node -p "require('./package.json').version")"
