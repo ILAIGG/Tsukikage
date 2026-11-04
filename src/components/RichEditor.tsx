@@ -1,0 +1,14 @@
+import { useEffect } from 'react';
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Placeholder from '@tiptap/extension-placeholder';
+import { Bold, Heading2, Italic, Redo2, Undo2 } from 'lucide-react';
+import type { Chapter } from '../model';
+import { htmlToText, sanitizeHtml, wordCount } from '../export';
+
+export default function RichEditor({ chapter, onChange, focus, fontSize, language }: { chapter: Chapter; onChange: (html: string) => void; focus: boolean; fontSize:number; language: 'es'|'en' }) {
+ const placeholder = language === 'es' ? 'Deja que la historia empiece…' : 'Let the story begin…';
+ const editor = useEditor({ extensions: [StarterKit, Placeholder.configure({ placeholder })], content: sanitizeHtml(chapter.text || ''), onUpdate: ({ editor }) => onChange(editor.getHTML()), editorProps: { attributes: { class: 'tiptap-writing', spellcheck: 'true' } } }, [chapter.id]);
+ useEffect(() => { if (editor && editor.getHTML() !== (chapter.text || '<p></p>')) editor.commands.setContent(sanitizeHtml(chapter.text || ''), { emitUpdate: false }); }, [chapter.id]);
+ return <><div className="format-toolbar"><button title={language==='es'?'Negrita':'Bold'} className={editor?.isActive('bold')?'selected':''} onClick={()=>editor?.chain().focus().toggleBold().run()}><Bold size={15}/></button><button title={language==='es'?'Cursiva':'Italic'} className={editor?.isActive('italic')?'selected':''} onClick={()=>editor?.chain().focus().toggleItalic().run()}><Italic size={15}/></button><button title={language==='es'?'Encabezado':'Heading'} className={editor?.isActive('heading')?'selected':''} onClick={()=>editor?.chain().focus().toggleHeading({level:2}).run()}><Heading2 size={16}/></button><span/><button title={language==='es'?'Deshacer':'Undo'} onClick={()=>editor?.chain().focus().undo().run()}><Undo2 size={15}/></button><button title={language==='es'?'Rehacer':'Redo'} onClick={()=>editor?.chain().focus().redo().run()}><Redo2 size={15}/></button></div><div className={`paper ${focus?'focus-paper':''}`} style={{'--writing-size':`${fontSize}px`} as React.CSSProperties}><input aria-label={language==='es'?'Título del capítulo':'Chapter title'} className="chapter-title" value={chapter.title} onChange={e=>onChange(JSON.stringify({title:e.target.value,html:editor?.getHTML()||''}))} placeholder={language==='es'?'Título del capítulo':'Chapter title'}/><EditorContent editor={editor}/><div className="paper-footer"><span>✦ &nbsp; {language==='es'?'Un párrafo a la vez.':'One paragraph at a time.'}</span><span>{wordCount(htmlToText(editor?.getHTML()||'')).toLocaleString(language==='es'?'es-AR':'en-US')} {language==='es'?'palabras':'words'}</span></div></div></>;
+}

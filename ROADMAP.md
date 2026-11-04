@@ -1,33 +1,27 @@
 # Hoja de ruta de Tsukikage
 
-Propuesta ordenada por valor para convertir el prototipo en un espacio fiable de escritura. Las etapas pueden ajustarse según lo que más uses.
+## Entregado en 0.3.0
 
-## Ahora: proteger y organizar manuscritos
+- [x] Copia completa e importación JSON de historias y preferencias.
+- [x] Guardado automático en IndexedDB, migración de texto de la primera versión y confirmaciones al borrar.
+- [x] Editar títulos/géneros; crear, borrar y reordenar historias y capítulos.
+- [x] Preferencias de español/inglés, meta diaria, tema claro/oscuro/sistema, tamaño de texto y ancho del editor.
+- [x] Editor enriquecido con negrita, cursiva, encabezados, búsqueda en capítulo y modo enfoque.
+- [x] Cuaderno de personajes, lugares y notas enlazadas a capítulos; sinopsis y planificación de escenas.
+- [x] Historial manual por capítulo con restauración, contador y meta diaria.
+- [x] Exportación EPUB 3, DOCX, PDF mediante imprimir y Markdown.
+- [x] Plantillas de novela, relato, guion y cuaderno de mundo.
+- [x] Revisión heurística de nombres sin ficha y títulos de capítulo duplicados.
+- [x] Instalación como PWA y caché de recursos para uso sin conexión.
+- [x] Sincronización opcional por cuenta Supabase con controles explícitos de subida/restauración y políticas RLS.
 
-- [ ] Exportar e importar una copia completa del proyecto en JSON.
-- [ ] Recuperación ante errores de guardado, confirmación al borrar y estado de guardado real.
-- [ ] Editar título y género de la novela; borrar y reordenar capítulos.
-- [ ] Preferencias de meta diaria, tipografía, ancho de lectura y tema.
+## Pendiente para siguientes iteraciones
 
-## Próximo: herramientas de escritura
+- [ ] Validar EPUB/DOCX/PDF en más lectores y ajustar portadas, metadatos, tipografía y formato de imprenta.
+- [ ] Añadir cronología con fechas y referencias entre eventos, personajes y lugares.
+- [ ] Historial automático y recuperación de versiones tras cierres inesperados.
+- [ ] Búsqueda global con resaltado y filtros por ficha, capítulo y etiqueta.
+- [ ] Resolución visual de conflictos y sincronización automática entre dispositivos; hoy la nube se actualiza con acciones manuales para evitar sobrescrituras inesperadas.
+- [ ] Pruebas de importación, exportación, migración y flujos de accesibilidad.
 
-- [ ] Editor enriquecido con atajos, encabezados, cursiva y búsqueda dentro del manuscrito.
-- [ ] Fichas de personajes, lugares, objetos y notas enlazadas a capítulos.
-- [ ] Esquema reordenable y planificación por escenas.
-- [ ] Historial de versiones y objetivos por sesión.
-
-## Después: preparar libros
-
-- [ ] Exportación EPUB y DOCX; PDF con portada y formato de impresión.
-- [ ] Plantillas de novela, relato, guion y cuaderno de mundo.
-- [ ] Revisión de consistencia, cronología y términos propios del mundo.
-
-## Cuando haga falta: acceso en varios dispositivos
-
-- [ ] Cuenta, sincronización cifrada y copias de seguridad.
-- [ ] Backend y base de datos remota (por ejemplo, PostgreSQL) con migración desde IndexedDB.
-- [ ] Aplicación instalable y modo sin conexión con sincronización al volver a conectarse.
-
-## Criterios para priorizar
-
-Primero proteger el texto y facilitar exportarlo; luego mejorar el flujo diario; después añadir publicación y colaboración. La app actual es local y de una sola persona, así que no necesita backend mientras esos límites sigan siendo adecuados.
+La cuenta y la base remota son opcionales: hace falta crear un proyecto Supabase y configurarlo siguiendo `README.md`. No se transmiten manuscritos automáticamente.
