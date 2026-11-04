@@ -14,7 +14,7 @@ const { defaultSettings } = await import('../src/model');
 type Novel = import('../src/model').Novel;
 type Workspace = import('../src/model').Workspace;
 const { clearPendingRecovery, loadPendingRecovery, loadWorkspace, savePendingRecovery, saveWorkspace } = await import('../src/storage');
-const { exportEpub } = await import('../src/export');
+const { exportDocx, exportEpub, exportPdf } = await import('../src/export');
 
 function makeLargeWorkspace(): Workspace {
   const text = `<p>${'Lía cruzó la ciudad bajo la luna y anotó cada detalle. '.repeat(170)}</p>`;
@@ -50,7 +50,8 @@ test('IndexedDB saves large workspaces and offers a newer unsaved chapter for re
   const chapter = { ...loaded.novels[0].chapters[0], text: '<p>Recovered draft</p>' };
   const recovery = { id: 'project-0:chapter-0-0', novelId: 'project-0', chapterId: 'chapter-0-0', chapter, createdAt: Date.now() };
   await savePendingRecovery(recovery);
-  assert.equal((await loadPendingRecovery(loaded.novels))?.chapter.text, chapter.text);
+  const reloaded = await loadWorkspace();
+  assert.equal((await loadPendingRecovery(reloaded.novels))?.chapter.text, chapter.text);
   loaded.novels[0].chapters[0] = chapter;
   await saveWorkspace(loaded);
   assert.equal(await loadPendingRecovery(loaded.novels), undefined);
@@ -73,4 +74,21 @@ test('EPUB export contains all chapters from a large project', async () => {
   const zip = await JSZip.loadAsync(exported!);
   assert.equal(Object.keys(zip.files).filter(name => /chapter-\d+\.xhtml$/.test(name)).length, novel.chapters.length);
   assert.match(await zip.file('OEBPS/chapter-60.xhtml')!.async('text'), /Capítulo 60/);
+});
+
+
+test('DOCX and print-ready PDF handle a long manuscript', async () => {
+  let exported: Blob | undefined;
+  URL.createObjectURL = ((blob: Blob) => { exported = blob; return 'blob:tsukikage-test'; }) as typeof URL.createObjectURL;
+  const novel = makeLargeWorkspace().novels[0];
+  await exportDocx(novel);
+  assert.ok(exported);
+  const docx = await JSZip.loadAsync(exported!);
+  const documentXml = await docx.file('word/document.xml')!.async('text');
+  assert.match(documentXml, /Capítulo 60/);
+  let printHtml = '';
+  browser.open = (() => ({ document: { write: (html: string) => { printHtml = html; }, close() {} } })) as typeof browser.open;
+  exportPdf(novel);
+  assert.equal((printHtml.match(/<h2>/g)||[]).length, novel.chapters.length);
+  assert.match(printHtml, /Capítulo 60/);
 });

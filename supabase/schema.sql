@@ -6,10 +6,11 @@ create table if not exists public.workspaces (
 );
 
 alter table public.workspaces enable row level security;
-revoke all on public.workspaces from anon;
+revoke all on table public.workspaces from public, anon;
 grant select, insert, update, delete on public.workspaces to authenticated;
 
+drop policy if exists "Users access only their own writing workspace" on public.workspaces;
 create policy "Users access only their own writing workspace"
   on public.workspaces for all to authenticated
-  using (auth.uid() = user_id)
-  with check (auth.uid() = user_id);
+  using ((select auth.uid()) is not null and (select auth.uid()) = user_id)
+  with check ((select auth.uid()) is not null and (select auth.uid()) = user_id);

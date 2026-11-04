@@ -13,6 +13,13 @@
 - [x] Verificar copias JSON, persistencia IndexedDB, recuperación de borrador y EPUB con una biblioteca de tres proyectos y 180 capítulos extensos.
 - [x] Corregir los estados hover y selección de Mundo en Pop/DarkPop y centrar los iconos del selector de temas.
 
+## Entregado en 0.6.3
+
+- [x] Dar un color de hipervínculo legible a cada tema; Pop y DarkPop usan tonos de su propia paleta y los temas importados pueden definir `colors.link`.
+- [x] Ampliar la prueba de manuscritos grandes a JSON, recuperación IndexedDB, EPUB, DOCX y HTML listo para imprimir como PDF (60 capítulos).
+- [x] Añadir política de privacidad y enlazarla desde Licencias; revisar las políticas Supabase con RLS y acceso limitado al propietario.
+- [x] Preparar el workflow manual de vista previa GitHub Pages, rutas para subdirectorios y manifiesto PWA con iconos PNG de 192 y 512 px.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
@@ -33,8 +40,8 @@
 
 ## Plan priorizado para las siguientes iteraciones
 
-- [ ] **P0 · Confianza del manuscrito:** probar recuperación tras cierre real del navegador y validar DOCX/PDF con manuscritos grandes; ampliar el historial automático en sesiones prolongadas.
-- [ ] **P0 · Distribución pública:** probar instalación y actualización PWA en Chrome/Firefox/Safari, desplegar preview, añadir política de privacidad y revisar reglas/RLS de cualquier instancia Supabase pública.
+- [ ] **P0 · Confianza del manuscrito:** comprobar recuperación tras un cierre real del navegador y validar visualmente los archivos DOCX/PDF extensos en aplicaciones lectoras; la prueba PDF actual comprueba el documento de impresión generado, no el cuadro de impresión del navegador.
+- [ ] **P0 · Distribución pública:** habilitar Pages y lanzar manualmente la vista previa; comprobar carga, actualización y funcionamiento offline en Chrome, Firefox y Safari. La revisión RLS realizada es estática: falta aplicarla y probarla en cada instancia Supabase antes de ofrecer sincronización.
 - [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
 - [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.

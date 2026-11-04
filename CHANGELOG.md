@@ -2,6 +2,18 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.3] - 2026-11-04
+
+### Añadido
+- Color de hipervínculos por tema: Pop y DarkPop mantienen el contraste de sus paletas; las paletas importadas aceptan `colors.link` y siguen usando `accentStrong` como valor de respaldo.
+- Política de privacidad accesible desde Licencias y publicada como recurso de la app.
+- Vista previa manual en GitHub Pages, compatible con rutas de repositorio, con iconos PWA de 192 y 512 px y caché sin conexión adaptada a subdirectorios.
+- Cobertura de exportación de manuscritos grandes para DOCX y documento de impresión PDF.
+
+### Seguridad y distribución
+- Endurecimiento de privilegios/política RLS para que las filas de sincronización pertenezcan a una cuenta autenticada.
+- El workflow de Pages corre pruebas antes de publicar; su ejecución requiere habilitar Pages y lanzarlo manualmente.
+
 ## [0.6.2] - 2026-11-04
 
 ### Añadido

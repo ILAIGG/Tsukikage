@@ -36,7 +36,9 @@ Tsukikage se distribuye bajo **GNU GPL v3 solamente** (`GPL-3.0-only`). La licen
 
 Para generar una versión web, ejecuta `npm ci && npm run build`; el sitio estático queda en `dist/`. El workflow de GitHub Actions compila en cada cambio y crea un ZIP de `dist/` al publicar un tag `v*`. Publica el código fuente junto al ZIP y mantén ambos disponibles desde el mismo lugar. No incluyas `.env.local` ni claves privadas; la clave anon de Supabase solo debe usarse con RLS y límites de acceso revisados. Antes de habilitar sincronización para usuarios, publica una política de privacidad y define retención, borrado y contacto de soporte.
 
-La app no se publica como paquete npm: `private: true` evita publicar por accidente una aplicación que no es una biblioteca. Para alojar el sitio, configura un hosting estático con fallback de rutas a `index.html`, HTTPS y las variables públicas de Supabase solo si ofreces sincronización.
+La app no se publica como paquete npm: `private: true` evita publicar por accidente una aplicación que no es una biblioteca. Para una vista previa en GitHub Pages, configura **Settings → Pages → Build and deployment → GitHub Actions** y ejecuta manualmente **Actions → Preview on GitHub Pages → Run workflow**. El workflow instala dependencias, corre las pruebas, compila con la ruta del repositorio y publica `dist/`; no se activa con cada push. Pages debe servir el sitio con HTTPS para habilitar el comportamiento instalable de la PWA. Para otro hosting estático, configura la base (`VITE_BASE_PATH`) según la URL, fallback de rutas a `index.html`, HTTPS y las variables públicas de Supabase solo si ofreces sincronización.
+
+La política de privacidad de referencia está en [`PRIVACY.md`](PRIVACY.md) y se publica junto a la app. Antes de operar una instancia propia, revisa y adapta el contacto, servicios externos y condiciones reales de esa instalación.
 
 ## Activar sincronización opcional
 

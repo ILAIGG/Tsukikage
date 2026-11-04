@@ -11,6 +11,7 @@
     "accent": "#dd8bd6",
     "accentStrong": "#f0b1e7",
     "page": "#282330",
-    "shadow": "#0d0a12"
+    "shadow": "#0d0a12",
+    "link": "#dda6ea"
   }
 }
