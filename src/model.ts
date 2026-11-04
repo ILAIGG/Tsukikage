@@ -5,7 +5,7 @@ export type Novel = { id: string; title: string; genre: string; chapters: Chapte
 export type ThemeColors = { background:string; surface:string; sidebar:string; text:string; muted:string; line:string; accent:string; accentStrong:string; page:string; shadow:string };
 export type CustomTheme = { id:string; name:string; mode:'light'|'dark'; colors:ThemeColors };
 export type Settings = { language: 'es' | 'en'; dailyGoal: number; theme: string; customThemes?:CustomTheme[]; dailyWords: number; dailyDate: string; fontSize: number; pageWidth: number };
-export type Workspace = { novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'chapters'|'library'; activeSection?: 'chapter'|'world'|'character'|'place'|'note'|'event' };
+export type Workspace = { novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'chapters'|'library'; activeSection?: 'project'|'chapter'|'world'|'character'|'place'|'note'|'event' };
 
 const localDate = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
 export const builtinThemes: CustomTheme[] = [

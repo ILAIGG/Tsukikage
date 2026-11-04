@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.1] - 2026-11-04
+
+### Corregido
+- Volver a El Grimorio limpia el resaltado de capítulos y fichas; el menú Mundo mantiene marcado solo el nivel seleccionado.
+- El diálogo de Preferencias queda centrado respecto de la ventana y adopta el tema claro cuando corresponde.
+- Los botones secundarios y controles de meta diaria usan los colores de Pop y DarkPop en lugar de conservar superficies oscuras.
+- Los nombres de los temas aparecen centrados y sus iconos alineados a la derecha.
+
 ## [0.6.0] - 2026-11-04
 
 ### Añadido
