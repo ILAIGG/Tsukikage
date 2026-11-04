@@ -2,6 +2,21 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.5.0] - 2026-11-04
+
+### Añadido
+- Navegación por proyecto con “El Grimorio”: capítulos, personajes, lugares, notas y línea de tiempo en un árbol lateral plegable.
+- La sección activa se despliega automáticamente; las secciones abiertas manualmente conservan su estado hasta que se contraen.
+- Vista de capítulos para organizar, reordenar, crear, eliminar y abrir partes del manuscrito.
+- Línea de tiempo con acontecimientos vinculables a capítulos y ordenados por fecha.
+
+### Cambiado
+- “Mis historias” vuelve a ser la pantalla inicial y el panel lateral muestra una indicación hasta abrir un proyecto.
+- La biblioteca reúne las acciones para crear, abrir, renombrar, organizar y eliminar proyectos.
+
+### Corregido
+- El editor verifica que la instancia Tiptap siga activa antes de sincronizar contenido, evitando operar sobre un esquema ya destruido.
+
 ## [0.4.0] - 2026-11-04
 
 ### Añadido
