@@ -3,7 +3,7 @@ export type Entry = { id: string; name: string; description: string; kind: 'char
 export type Revision = { id: string; at: string; html: string; words: number };
 export type Novel = { id: string; title: string; genre: string; chapters: Chapter[]; updated: string; synopsis?: string; entries?: Entry[]; revisions?: Record<string, Revision[]>; template?: string };
 export type Settings = { language: 'es' | 'en'; dailyGoal: number; theme: 'dark' | 'light' | 'system'; dailyWords: number; dailyDate: string; fontSize: number; pageWidth: number };
-export type Workspace = { novels: Novel[]; settings: Settings };
+export type Workspace = { novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'library' };
 
 const localDate = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
 export const defaultSettings: Settings = { language: 'es', dailyGoal: 1500, theme: 'system', dailyWords: 0, dailyDate: localDate(), fontSize: 18, pageWidth: 760 };

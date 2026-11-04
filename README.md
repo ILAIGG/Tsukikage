@@ -24,7 +24,9 @@ Abre la URL que muestra Vite. Para generar la versión de producción: `npm run 
 
 ## Alcance actual
 
-Crear y ordenar historias/capítulos, editor enriquecido, notas de mundo, escenas, historial manual, contador y meta diaria, temas claro/oscuro/sistema, español/inglés, plantillas, copias JSON y exportaciones Markdown/EPUB/DOCX/PDF. El ejemplo inicial es demostrativo y se puede editar o borrar.
+Crear varios proyectos de libro. Cada proyecto mantiene juntos su sinopsis, manuscrito, capítulos, escenas, personajes, lugares, notas, historial y exportaciones. La biblioteca es el selector de libros; al abrir uno, su inicio y menú lateral permiten entrar en cada parte del mismo proyecto.
+
+También incluye editor enriquecido, historial manual, contador y meta diaria, temas claro/oscuro/sistema, español/inglés, plantillas, copias JSON y exportaciones Markdown/EPUB/DOCX/PDF. El ejemplo inicial es demostrativo y se puede editar o borrar.
 
 ## Activar sincronización opcional
 

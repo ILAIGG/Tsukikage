@@ -14,6 +14,9 @@
 - [x] Revisión heurística de nombres sin ficha y títulos de capítulo duplicados.
 - [x] Instalación como PWA y caché de recursos para uso sin conexión.
 - [x] Sincronización opcional por cuenta Supabase con controles explícitos de subida/restauración y políticas RLS.
+- [x] Navegación centrada en un proyecto: biblioteca → inicio del libro → manuscrito/cuaderno, con capítulos del libro activos en la barra lateral.
+- [x] Recordar el proyecto, capítulo y sección que estaban abiertos; no mostrar la historia de ejemplo mientras IndexedDB aún carga.
+- [x] Controles con estilo propio para ajustar la meta diaria.
 
 ## Pendiente para siguientes iteraciones
 

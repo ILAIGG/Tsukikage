@@ -2,6 +2,19 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.4.0] - 2026-11-04
+
+### Añadido
+- Flujo por proyectos: biblioteca, inicio de proyecto, manuscrito y cuaderno de mundo pertenecen a un libro seleccionado.
+- Inicio de proyecto con sinopsis, métricas, capítulos, escenas y accesos a sus materiales de referencia.
+- Persistencia del proyecto, capítulo y sección abiertos; pantalla de carga durante la lectura inicial de IndexedDB.
+- Pantalla de recuperación con detalle visible cuando una vista de React falla.
+- Controles propios para subir y bajar la meta diaria en pasos de 100 palabras.
+
+### Cambiado
+- Abrir una historia ahora entra al espacio de ese proyecto; desde ahí se abre el manuscrito o sus recursos.
+- La biblioteca continúa siendo el selector de libros y el menú lateral muestra la estructura del proyecto activo.
+
 ## [0.3.0] - 2026-11-04
 
 ### Añadido
