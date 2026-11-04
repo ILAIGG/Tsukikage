@@ -33,7 +33,7 @@ export default function App() {
   const filtered = novels.filter(n => n.title.toLowerCase().includes(query.toLowerCase()));
   return <main className="app-shell">
     <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-      <div className="brand"><div className="brand-mark"><span>月</span></div>{!collapsed && <div><b>tsukikage</b><small>EL TALLER DE HISTORIAS</small></div>}<button className="icon-button collapse-btn" onClick={() => setCollapsed(!collapsed)} title="Contraer panel"><PanelLeftClose size={17}/></button></div>
+      <div className="brand"><img className="brand-mark" src="/tsukikage-mark.svg" alt="" />{!collapsed && <div><b>Tsukikage</b><small>EL TALLER DE HISTORIAS</small></div>}<button className="icon-button collapse-btn" onClick={() => setCollapsed(!collapsed)} title="Contraer panel"><PanelLeftClose size={17}/></button></div>
       <div className="workspace-label">ESPACIO PERSONAL <ChevronDown size={13}/></div>
       <button className="nav-item active"><BookOpen size={17}/>{!collapsed && 'Mis historias'}{!collapsed && <span className="nav-count">{novels.length}</span>}</button>
       <button className="nav-item"><FolderOpen size={17}/>{!collapsed && 'Archivo'}</button>
