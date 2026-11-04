@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.4] - 2026-11-04
+
+### Añadido
+- El idioma inicial sigue el idioma preferido del navegador (inglés o español); una preferencia guardada o seleccionada manualmente se conserva.
+- Política de privacidad que informa del registro de direcciones IP cuando la app se aloja en GitHub Pages.
+- README principal en inglés y guía equivalente en español.
+
 ## [0.6.3] - 2026-11-04
 
 ### Añadido

@@ -1,54 +1,51 @@
 # Tsukikage
 
-Un taller personal para planificar y escribir novelas. La app es local-first: guarda el trabajo en el navegador y permite activar una copia sincronizada de forma explícita con tu proyecto Supabase.
+A local-first writing studio for planning and writing novels. Your work stays in your browser unless you explicitly choose to upload a backup to your own Supabase project. [Leer en español](README.es.md).
 
-## Empezar
+## Get started
 
-Requiere Node.js 20.19+ o 22.12+.
+Requires Node.js 20.19+ or 22.12+.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Abre la URL que muestra Vite. Para generar la versión de producción: `npm run build`.
-Ejecuta `npm test` para comprobar copias JSON, guardado/recuperación local y EPUB con proyectos extensos.
+Open the URL printed by Vite. Create a production build with `npm run build`; the static site is written to `dist/`. Run `npm test` for the large-workspace backup, local recovery, and export checks.
 
-## Arquitectura elegida
+## Architecture
 
-- **React + TypeScript + Vite**: aplicación web de cliente con interfaz rica, tipado y arranque sencillo. Para una herramienta de escritura privada no hace falta un servidor SSR.
-- **IndexedDB**: almacenamiento local asíncrono, apropiado para manuscritos extensos. Los datos se quedan en el navegador hasta que el usuario activa y ordena una subida a la nube.
-- **Tiptap/ProseMirror**: texto estructurado en HTML con negrita, cursiva y encabezados; el contenido se sanitiza al importar y al exportar.
-- **Exportadores**: Markdown y DOCX; EPUB 3 empaquetado según W3C; PDF preparado con la impresión del navegador.
-- **PWA**: se puede instalar y mantiene una caché de la aplicación para abrirla sin conexión. Los cambios hechos sin conexión se guardan en IndexedDB.
-- **Supabase opcional**: autenticación por código de correo, una fila JSONB por cuenta y políticas RLS. La subida y restauración son manuales; descargar desde la nube crea primero una copia local.
-- **Temas**: claro, oscuro, sistema, Pop, DarkPop e importación local de paletas JSON.
+- **React, TypeScript, and Vite** power the client-side interface; server-side rendering is unnecessary for this private writing tool.
+- **IndexedDB** stores manuscripts asynchronously in the browser. Data stays local until you explicitly upload it.
+- **Tiptap/ProseMirror** provides rich-text editing; imported and exported content is sanitized.
+- **Markdown, EPUB 3, DOCX, and print-ready HTML** cover common writing and publishing workflows. Save the print view as PDF through your browser.
+- **PWA support** allows installation and offline access. Changes made offline remain in IndexedDB.
+- **Optional Supabase sync** uses email one-time codes, one JSON workspace per account, and row-level security. Upload and restore actions are manual.
+- **Themes** include Light, Dark, System, Pop, DarkPop, and local JSON theme import.
 
-## Alcance actual
+## What it includes
 
-Crear varios proyectos de libro. Cada proyecto mantiene juntos su sinopsis, manuscrito, capítulos, escenas, Mundo (personajes, lugares y línea del tiempo), notas, historial y exportaciones. La biblioteca es el selector de libros; al abrir uno, su inicio y menú lateral permiten entrar en cada parte del mismo proyecto. Las notas son un acceso directo del Grimorio; personajes, lugares y acontecimientos están agrupados en Mundo.
+Create multiple book projects. Each project keeps its synopsis, manuscript, chapters, scenes, Worldbook (characters, places, and timeline), notes, revision history, and exports together. The library selects projects; the project sidebar opens each section.
 
-También incluye editor enriquecido, historial manual, contador y meta diaria, temas claro/oscuro/sistema/Pop/DarkPop, importación de paletas JSON, español/inglés, plantillas, copias JSON y exportaciones Markdown/EPUB/DOCX/PDF. El ejemplo inicial es demostrativo y se puede editar o borrar. Descarga [un tema de ejemplo](public/theme-example.json) para ver el formato aceptado.
+The app also includes a rich-text editor, manual revision history, word counter and daily goal, Spanish and English interface, templates, JSON backups, and Markdown/EPUB/DOCX/PDF exports. A demo story is provided and can be edited or deleted. [Download a sample theme](public/theme-example.json).
 
-## Licencia y distribución
+## License and distribution
 
-Tsukikage se distribuye bajo **GNU GPL v3 solamente** (`GPL-3.0-only`). La licencia completa está en [`LICENSE`](LICENSE), los avisos de dependencias en [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) y la app muestra esos avisos en **Preferencias → Licencias**. Las dependencias conservan sus licencias; la etiqueta GPL del proyecto no las reemplaza.
+Tsukikage is distributed under **GNU GPL v3 only** (`GPL-3.0-only`). See [`LICENSE`](LICENSE), [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md), and [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md). Dependencies retain their own licenses.
 
-Para generar una versión web, ejecuta `npm ci && npm run build`; el sitio estático queda en `dist/`. El workflow de GitHub Actions compila en cada cambio y crea un ZIP de `dist/` al publicar un tag `v*`. Publica el código fuente junto al ZIP y mantén ambos disponibles desde el mismo lugar. No incluyas `.env.local` ni claves privadas; la clave anon de Supabase solo debe usarse con RLS y límites de acceso revisados. Antes de habilitar sincronización para usuarios, publica una política de privacidad y define retención, borrado y contacto de soporte.
+Build the static site with `npm ci && npm run build`. GitHub Actions runs CI on changes and packages a `dist/` ZIP when you publish a `v*` tag matching the package version. For a GitHub Pages preview, set **Settings → Pages → Build and deployment → GitHub Actions**, then manually run **Actions → Preview on GitHub Pages**. The workflow tests and builds before publishing and does not run on every push. HTTPS is required for installable PWA behavior.
 
-La app no se publica como paquete npm: `private: true` evita publicar por accidente una aplicación que no es una biblioteca. Para una vista previa en GitHub Pages, configura **Settings → Pages → Build and deployment → GitHub Actions** y ejecuta manualmente **Actions → Preview on GitHub Pages → Run workflow**. El workflow instala dependencias, corre las pruebas, compila con la ruta del repositorio y publica `dist/`; no se activa con cada push. Pages debe servir el sitio con HTTPS para habilitar el comportamiento instalable de la PWA. Para otro hosting estático, configura la base (`VITE_BASE_PATH`) según la URL, fallback de rutas a `index.html`, HTTPS y las variables públicas de Supabase solo si ofreces sincronización.
+The privacy policy is in [`PRIVACY.md`](PRIVACY.md). Adapt its contact and service details before operating your own hosted instance. Never commit `.env.local` or private keys. A Supabase anon/publishable key is designed to be public, but only use it with reviewed RLS policies; never expose a service-role key. The app is `private: true` to prevent accidental npm publishing; this does not prevent hosting the source on GitHub.
 
-La política de privacidad de referencia está en [`PRIVACY.md`](PRIVACY.md) y se publica junto a la app. Antes de operar una instancia propia, revisa y adapta el contacto, servicios externos y condiciones reales de esa instalación.
+## Optional Supabase sync
 
-## Activar sincronización opcional
+1. Create a Supabase project and run [`supabase/schema.sql`](supabase/schema.sql) in its SQL Editor.
+2. Copy `.env.example` to `.env.local` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` (the public anon/publishable key only).
+3. Restart `npm run dev` and open **Export → Sync**.
+4. Sign in with the code sent to your email. Choose when to upload or restore a backup.
 
-1. Crea un proyecto Supabase y ejecuta [`supabase/schema.sql`](supabase/schema.sql) en su SQL Editor.
-2. Copia `.env.example` a `.env.local` y completa `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY` (clave pública anon/publishable, nunca una service-role key).
-3. Reinicia `npm run dev` y abre **Exportar → Sincronización**.
-4. Inicia sesión con un código enviado a tu correo. Luego elige cuándo subir o restaurar una copia.
+Cloud content is associated with your Supabase account and protected by RLS; it is not end-to-end encrypted. Restoring downloads a local JSON backup first. Automatic sync and conflict resolution are not implemented.
 
-El contenido de la nube queda asociado a tu cuenta Supabase y protegido por RLS; no tiene cifrado de extremo a extremo. Al restaurar, Tsukikage descarga antes una copia JSON local. Para evitar que un dispositivo sobrescriba otro en silencio, todavía no hay sincronización automática ni resolución de conflictos.
+## Roadmap
 
-## Próximos pasos
-
-Consulta [`ROADMAP.md`](ROADMAP.md) para el plan priorizado de las siguientes versiones.
+See [`ROADMAP.md`](ROADMAP.md) for completed work and planned improvements.

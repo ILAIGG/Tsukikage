@@ -18,6 +18,8 @@ Al usar esta opción, el proyecto Supabase configurado recibe el correo de auten
 
 La hoja de estilos solicita DM Sans, Manrope y Newsreader a Google Fonts. El navegador puede contactar a Google Fonts para descargarlas. Si el operador elimina esa dependencia, la app usa fuentes locales alternativas.
 
+Si Tsukikage se aloja en GitHub Pages, GitHub registra y almacena las direcciones IP de quienes visitan el sitio por motivos de seguridad, según [la documentación de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). La persona u organización que publica el sitio debe considerar este tratamiento al informar sobre su instancia.
+
 No se incorporan analíticas ni anuncios en el código de Tsukikage.
 
 ## Archivos exportados

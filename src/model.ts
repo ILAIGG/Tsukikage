@@ -8,12 +8,17 @@ export type CustomTheme = { id:string; name:string; mode:'light'|'dark'; colors:
 export type Settings = { language: 'es' | 'en'; dailyGoal: number; theme: string; customThemes?:CustomTheme[]; dailyWords: number; dailyDate: string; fontSize: number; pageWidth: number };
 export type Workspace = { novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'chapters'|'library'; activeSection?: 'project'|'chapter'|'world'|'character'|'place'|'note'|'event' };
 
+export function preferredLanguage(languages: readonly string[] = typeof navigator === 'undefined' ? [] : navigator.languages?.length ? navigator.languages : [navigator.language]): Settings['language'] {
+  const supported = languages.find(language => /^(es|en)(-|$)/i.test(language));
+  return supported?.toLowerCase().startsWith('en') ? 'en' : 'es';
+}
+
 const localDate = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
 export const builtinThemes: CustomTheme[] = [
   {id:'pop',name:'Pop',mode:'light',colors:{background:'#fff7e8',surface:'#fffdf6',sidebar:'#ffe9f1',text:'#31243a',muted:'#786b7a',line:'#483a4c',accent:'#e85c9e',accentStrong:'#c83d7b',link:'#a82963',page:'#fffdf8',shadow:'#493044'}},
   {id:'darkpop',name:'DarkPop',mode:'dark',colors:{background:'#211a2c',surface:'#30253c',sidebar:'#281f34',text:'#fff3e8',muted:'#c0adc5',line:'#e9c9dc',accent:'#ff83bd',accentStrong:'#ffacd2',link:'#ffacd2',page:'#32283d',shadow:'#120d18'}}
 ];
-export const defaultSettings: Settings = { language: 'es', dailyGoal: 1500, theme: 'system', customThemes:builtinThemes, dailyWords: 0, dailyDate: localDate(), fontSize: 18, pageWidth: 760 };
+export const defaultSettings: Settings = { language: preferredLanguage(), dailyGoal: 1500, theme: 'system', customThemes:builtinThemes, dailyWords: 0, dailyDate: localDate(), fontSize: 18, pageWidth: 760 };
 export const starter: Novel[] = [{ id: 'moon', title: 'La ciudad bajo la luna', genre: 'Fantasía · 1ª versión', updated: 'Hace 2 min', chapters: [
   { id: 'c1', title: 'Prólogo — La última campana', text: '<p>La campana sonó trece veces aquella noche.</p><p>En Asteria, hasta los relojes sabían cuándo guardar silencio. Lía contó cada golpe desde el tejado, con la lluvia deslizándose por las tejas y una carta ardiendo lentamente entre sus dedos.</p><p>Cuando llegó el último eco, la luna se apagó.</p>' },
   { id: 'c2', title: 'Capítulo 1 — Una carta imposible', text: '' }, { id: 'c3', title: 'Capítulo 2 — El mapa de ceniza', text: '' }
