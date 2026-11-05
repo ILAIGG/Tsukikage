@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.9] - 2026-11-05
+
+### Cambiado
+- Se aumenta la altura del buscador del capítulo y se mantienen centrados el icono y el campo.
+- Se valida un manuscrito de 60 capítulos: el DOCX se abre y convierte en LibreOffice Writer, y el PDF de impresión se renderiza en Chromium.
+
 ## [0.9.8] - 2026-11-05
 
 ### Corregido
