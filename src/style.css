@@ -442,3 +442,82 @@ html[data-theme='pop'] .chapter-search input,html[data-theme='darkpop'] .chapter
 }
 @media(max-width:830px){.rich-wrapper{--editor-paper-width:100%}.rich-wrapper .paper{width:100%;max-width:100%}}
 .focus-mode .rich-wrapper .paper{width:100%;max-width:none}
+
+/* Consistent hover feedback and clean full-chapter controls across themes. */
+html[data-resolved-theme='light'] .nav-item:hover:not(.active),
+html[data-resolved-theme='light'] .tree-section-head:hover,
+html[data-resolved-theme='light'] .tree-entries button:hover:not(.selected),
+html[data-resolved-theme='light'] .tree-add:hover,
+html[data-resolved-theme='light'] .goal-stepper button:hover:not(:disabled),
+html[data-resolved-theme='light'] .goal-heading .icon-button:hover,
+html[data-resolved-theme='light'] .profile:hover,
+html[data-resolved-theme='light'] .settings-dialog .icon-button:hover,
+html[data-resolved-theme='light'] .format-toolbar button:hover,
+html[data-resolved-theme='light'] .tools-actions .icon-button:hover,
+html[data-resolved-theme='light'] .icon-button:hover{
+  background:#eee7f5;color:#60477c;border-color:#b9a2cf
+}
+html[data-resolved-theme='light'] .tree-section-head:hover,
+html[data-resolved-theme='light'] .nav-item:hover:not(.active),
+html[data-resolved-theme='light'] .tree-entries button:hover:not(.selected),
+html[data-resolved-theme='light'] .goal-stepper button:hover:not(:disabled),
+html[data-resolved-theme='light'] .profile:hover{box-shadow:inset 0 0 0 1px #b9a2cf}
+html[data-resolved-theme='light'] .profile-icon{color:#694d85}
+html[data-resolved-theme='light'] .profile:hover .profile-icon{background:#e4d9ef;border-color:#b9a2cf}
+html[data-resolved-theme='light'] .tree-section-head{border:1px solid transparent}
+html[data-resolved-theme='light'] .goal-stepper button{width:27px;height:27px;flex:0 0 27px;border:1px solid transparent;border-radius:5px;background:transparent}
+html[data-resolved-theme='light'] .goal-stepper button:hover:not(:disabled){border-color:#b9a2cf}
+html[data-theme='pop'] .goal-stepper button:hover:not(:disabled),
+html[data-theme='darkpop'] .goal-stepper button:hover:not(:disabled),
+html[data-theme='pop'] .goal-heading .icon-button:hover,
+html[data-theme='darkpop'] .goal-heading .icon-button:hover,
+html[data-theme='pop'] .profile:hover,
+html[data-theme='darkpop'] .profile:hover,
+html[data-theme='pop'] .tree-add:hover,
+html[data-theme='darkpop'] .tree-add:hover,
+html[data-theme='pop'] .tree-entries button:hover:not(.selected),
+html[data-theme='darkpop'] .tree-entries button:hover:not(.selected){
+  background:color-mix(in srgb,var(--theme-accent) 20%,var(--theme-surface));
+  color:var(--theme-text);border-color:var(--theme-accent)
+}
+html[data-theme='pop'] .goal-stepper button:hover:not(:disabled),html[data-theme='darkpop'] .goal-stepper button:hover:not(:disabled){box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .tree-submenu,html[data-theme='darkpop'] .tree-submenu{display:grid;gap:6px;margin:5px 0 8px 11px;padding-left:7px}
+html[data-theme='pop'] .tree-subsection .tree-entries,html[data-theme='darkpop'] .tree-subsection .tree-entries{gap:6px;margin-top:5px;margin-bottom:5px}
+html[data-theme='pop'] .complete-chapter-paper,html[data-theme='darkpop'] .complete-chapter-paper{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+html[data-theme='pop'] .complete-chapter-paper .format-toolbar,html[data-theme='darkpop'] .complete-chapter-paper .format-toolbar{background:transparent;box-shadow:none;border:0}
+html[data-theme='pop'] .complete-chapter-paper .format-toolbar button:hover,html[data-theme='darkpop'] .complete-chapter-paper .format-toolbar button:hover{background:color-mix(in srgb,var(--theme-accent) 22%,var(--theme-surface));border-color:var(--theme-accent)}
+html[data-theme='pop'] .format-toolbar button,html[data-theme='darkpop'] .format-toolbar button{flex:0 0 29px;width:29px;height:28px}
+html[data-theme='pop'] .format-toolbar,html[data-theme='darkpop'] .format-toolbar{gap:5px;flex-wrap:wrap}
+.tiptap-writing h1{font-size:1.6em;line-height:1.25;margin:1.35em 0 .7em}
+.tiptap-writing h3{font-size:1.15em;line-height:1.35;margin:1.25em 0 .6em}
+.tiptap-writing ul,.tiptap-writing ol{padding-left:1.5em;margin:0 0 1.05em}
+.tiptap-writing li{padding-left:.25em;margin:.25em 0}
+.tiptap-writing blockquote{border-left:3px solid var(--accent);margin:1em 0;padding-left:1em;color:var(--muted)}
+@media(max-width:600px){html[data-theme='pop'] .format-toolbar,html[data-theme='darkpop'] .format-toolbar{max-width:100%;overflow-x:auto;flex-wrap:nowrap;padding:2px 1px 4px}}
+html[data-resolved-theme='dark'] .nav-item:hover:not(.active),
+html[data-resolved-theme='dark'] .tree-section-head:hover,
+html[data-resolved-theme='dark'] .tree-entries button:hover:not(.selected),
+html[data-resolved-theme='dark'] .tree-add:hover,
+html[data-resolved-theme='dark'] .goal-stepper button:hover:not(:disabled),
+html[data-resolved-theme='dark'] .goal-heading .icon-button:hover,
+html[data-resolved-theme='dark'] .profile:hover,
+html[data-resolved-theme='dark'] .icon-button:hover,
+html[data-resolved-theme='dark'] .format-toolbar button:hover,
+html[data-resolved-theme='dark'] .tools-actions .icon-button:hover{
+  background:color-mix(in srgb,var(--accent) 20%,var(--panel));color:var(--text);border-color:var(--accent)
+}
+html[data-resolved-theme='dark'] .tree-section-head:hover,
+html[data-resolved-theme='dark'] .tree-entries button:hover:not(.selected),
+html[data-resolved-theme='dark'] .goal-stepper button:hover:not(:disabled),
+html[data-resolved-theme='dark'] .profile:hover{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 70%,transparent)}
+html[data-theme^='custom-'] .goal-stepper button:hover:not(:disabled),
+html[data-theme^='custom-'] .goal-heading .icon-button:hover,
+html[data-theme^='custom-'] .profile:hover,
+html[data-theme^='custom-'] .tree-add:hover,
+html[data-theme^='custom-'] .tree-entries button:hover:not(.selected),
+html[data-theme^='custom-'] .format-toolbar button:hover,
+html[data-theme^='custom-'] .icon-button:hover{
+  background:color-mix(in srgb,var(--theme-accent) 20%,var(--theme-surface));color:var(--theme-text);border-color:var(--theme-accent)
+}
+html[data-theme^='custom-'] .goal-stepper button:hover:not(:disabled),html[data-theme^='custom-'] .profile:hover{box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-resolved-theme='light'] .profile-icon{background:#f1ebf8;border-color:#cfc2df;color:#694d85}

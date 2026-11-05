@@ -2,6 +2,16 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.10.0] - 2026-11-05
+
+### Añadido
+- El editor ofrece títulos de tres niveles, subrayado, tachado y listas con viñetas o numeradas.
+
+### Corregido
+- Los botones de navegación, preferencias y meta diaria usan hover coherentes con cada tema; las secciones se pliegan también al pulsar su título.
+- Se separan las subsecciones de Mundo en Pop y DarkPop y se elimina el panel de fondo redundante en Capítulo completo.
+- Se quita el acceso duplicado a Preferencias de la barra superior y se alinea el control de meta diaria para evitar hover fuera de sus botones.
+
 ## [0.9.10] - 2026-11-05
 
 ### Cambiado
