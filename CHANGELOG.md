@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.13.1] - 2026-11-05
+
+### Corregido
+- El campo de edición de la sinopsis tiene más espacio interior y exterior, con esquinas más redondeadas.
+
 ## [0.13.0] - 2026-11-05
 
 ### Añadido
