@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.13.2] - 2026-11-05
+
+### Corregido
+- El hover de la sinopsis tiene espacio alrededor del texto y esquinas redondeadas con el acento del tema.
+- El campo de edición recupera su espaciado y redondeado anteriores.
+
 ## [0.13.1] - 2026-11-05
 
 ### Corregido
