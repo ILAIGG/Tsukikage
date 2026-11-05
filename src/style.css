@@ -634,3 +634,5 @@ html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .pr
 @media(max-width:600px){.top-actions .top-action-label{display:none}.top-actions .search-trigger,.top-actions .export-trigger{gap:0;grid-template-rows:1fr;grid-template-columns:1fr}}
 
 html[data-theme='pop'] .project-synopsis,html[data-theme='darkpop'] .project-synopsis{background:transparent;color:var(--theme-text)}
+
+.project-hero .synopsis-preview{width:100%;padding:0;text-align:left;background:transparent!important;border:0;box-shadow:none;color:inherit}.synopsis-preview>span{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--theme-muted,var(--muted))}.project-hero .synopsis-preview>p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 Manrope,sans-serif;color:inherit}.synopsis-preview:focus-visible{outline:2px solid var(--theme-accent,var(--accent));outline-offset:5px;border-radius:4px}

@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.13.0] - 2026-11-05
+
+### Añadido
+- La sinopsis del Grimorio se muestra como texto al salir del campo y vuelve a editarse al tocarla. Si está vacía, conserva el campo de escritura.
+
 ## [0.12.11] - 2026-11-05
 
 ### Corregido
