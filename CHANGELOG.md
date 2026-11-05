@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.1] - 2026-11-05
+
+### Cambiado
+- La descripción guiada de personajes se presenta como una entrevista: categorías plegables, preguntas abiertas y áreas amplias para redactar respuestas.
+
 ## [0.14.0] - 2026-11-05
 
 ### Añadido
