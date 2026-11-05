@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.19.0] - 2026-11-05
+
+### Añadido
+- La descripción del personaje utiliza el mismo editor enriquecido del manuscrito, con su barra de formato, tipografía y tamaño de texto configurado en Preferencias. Las descripciones existentes conservan su contenido.
+
 ## [0.18.2] - 2026-11-05
 
 ### Corregido
