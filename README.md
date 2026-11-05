@@ -1,6 +1,26 @@
-# Tsukikage
+<p align="center">
+  <img src="public/tsukikage-mark.svg" width="112" height="112" alt="Tsukikage" />
+</p>
+<h1 align="center">Tsukikage</h1>
+<p align="center">A writing studio for planning stories, shaping worlds, and bringing your manuscript to life. Your projects stay in your browser.</p>
+<p align="center"><strong>Offline ready · English & Spanish · GPL-3.0-only</strong></p>
 
-A local-first writing studio for planning and writing novels. Your work stays in your browser unless you explicitly choose to upload a backup to your own Supabase project. [Leer en español](README.es.md).
+[Open the app](https://ilaigg.github.io/Tsukikage/) · [Español](README.es.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md)
+
+---
+
+## Your writing space
+
+| Space | What you can do |
+| --- | --- |
+| Manuscript | Write rich text, organize chapters and scenes, and enter focus mode. |
+| Grimoire | Keep the story synopsis and browse the project outline. |
+| World | Create characters with their own page, first name, surname, role, and rich-text description. |
+| Notes | Collect ideas and project reference material. |
+| Backups & exports | Save JSON backups and export Markdown, EPUB, DOCX, or PDF through printing. |
+| Appearance | Choose Light, Dark, Pop, DarkPop, or import a JSON palette. |
+
+> Projects are stored in this browser. Export a JSON backup to keep another copy outside it. Supabase work is deferred in the roadmap; local writing needs no account.
 
 ## Get started
 
@@ -25,7 +45,7 @@ Open the URL printed by Vite. Create a production build with `npm run build`; th
 
 ## What it includes
 
-Create multiple book projects. Each project keeps its synopsis, manuscript, chapters, scenes, Worldbook (characters, places, and timeline), notes, revision history, and exports together. The library selects projects; the project sidebar opens each section.
+Create multiple book projects. Each project keeps its synopsis, manuscript, chapters, scenes, World (currently characters; other sections are being redesigned), notes, revision history, and exports together. The library selects projects; the project sidebar opens each section.
 
 The app also includes a rich-text editor, manual revision history, word counter and daily goal, Spanish and English interface, templates, JSON backups, and Markdown/EPUB/DOCX/PDF exports. A demo story is provided and can be edited or deleted. [Download a sample theme](public/theme-example.json).
 
@@ -38,6 +58,8 @@ Build the static site with `npm ci && npm run build`. GitHub Actions runs CI on 
 The privacy policy is in [`PRIVACY.md`](PRIVACY.md). Adapt its contact and service details before operating your own hosted instance. Never commit `.env.local` or private keys. A Supabase anon/publishable key is designed to be public, but only use it with reviewed RLS policies; never expose a service-role key. The app is `private: true` to prevent accidental npm publishing; this does not prevent hosting the source on GitHub.
 
 ## Optional Supabase sync
+
+Status: deferred. This section documents the existing setup; production validation remains pending.
 
 1. Create a Supabase project and run [`supabase/schema.sql`](supabase/schema.sql) in its SQL Editor.
 2. Copy `.env.example` to `.env.local` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (or the legacy anon key).
@@ -52,6 +74,6 @@ Cloud content is associated with your Supabase account and protected by RLS; it 
 
 See [`ROADMAP.md`](ROADMAP.md) for completed work and planned improvements.
 
-### Recuperación en un navegador real
+### Recovery in a real browser
 
-Ejecuta `npm run test:browser` con Chromium instalado (`CHROMIUM_BIN` permite indicar otro ejecutable). La prueba inicia Vite y Chromium en los puertos locales 5188 y 9228, usa un perfil temporal independiente y verifica la recuperación de un borrador tras cerrar y reabrir el navegador. Después comprueba la persistencia del texto recuperado en otra apertura y elimina el perfil temporal.
+Run `npm run test:browser` with Chromium installed (`CHROMIUM_BIN` can point to another executable). The check starts Vite and Chromium on local ports 5188 and 9228 with an isolated temporary profile. It verifies draft recovery after a browser restart, then checks that the restored text survives another restart. The temporary profile is removed afterward.

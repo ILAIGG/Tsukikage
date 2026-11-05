@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.19.2] - 2026-11-05
+
+### Documentación
+- Se renuevan los README en inglés y español con el icono del proyecto, enlaces rápidos y un resumen de funciones actuales. Se aclara el estado aplazado de Supabase y se documenta la prueba de recuperación en ambos idiomas.
+
 ## [0.19.1] - 2026-11-05
 
 ### Corregido

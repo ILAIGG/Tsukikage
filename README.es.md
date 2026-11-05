@@ -1,6 +1,26 @@
-# Tsukikage
+<p align="center">
+  <img src="public/tsukikage-mark.svg" width="112" height="112" alt="Tsukikage" />
+</p>
+<h1 align="center">Tsukikage</h1>
+<p align="center">Un taller de historias para planificar, escribir y dar forma a tus mundos. Tus proyectos se guardan en el navegador.</p>
+<p align="center"><strong>Sin conexión · Español e inglés · GPL-3.0-only</strong></p>
 
-Un taller local-first para planificar y escribir novelas. Tu trabajo permanece en el navegador salvo que elijas subir una copia a tu propio proyecto Supabase. [Read in English](README.md).
+[Abrir la aplicación](https://ilaigg.github.io/Tsukikage/) · [English](README.md) · [Hoja de ruta](ROADMAP.md) · [Cambios](CHANGELOG.md)
+
+---
+
+## Tu espacio de escritura
+
+| Espacio | Qué puedes hacer |
+| --- | --- |
+| Manuscrito | Escribe con formato, organiza capítulos y escenas y usa el modo concentración. |
+| Grimorio | Guarda la sinopsis y consulta la estructura del proyecto. |
+| Mundo | Crea personajes con página propia, nombre, apellido, tipo y descripción enriquecida. |
+| Notas | Conserva ideas y material de referencia del proyecto. |
+| Copias y exportación | Guarda copias JSON y exporta Markdown, EPUB, DOCX o PDF mediante impresión. |
+| Apariencia | Elige Claro, Oscuro, Pop, DarkPop o importa una paleta JSON. |
+
+> Los proyectos se guardan en este navegador. Exporta una copia JSON para conservarlos también fuera de él. Supabase está aplazado en el roadmap; la escritura local funciona sin cuenta.
 
 ## Empezar
 
@@ -25,7 +45,7 @@ Abre la URL que muestra Vite. Genera una compilación de producción con `npm ru
 
 ## Funciones
 
-Crea varios proyectos de libro. Cada uno reúne sinopsis, manuscrito, capítulos, escenas, Mundo (personajes, lugares y línea del tiempo), notas, historial y exportaciones. La biblioteca permite elegir un proyecto y el panel lateral abre cada una de sus secciones.
+Crea varios proyectos de libro. Cada uno reúne sinopsis, manuscrito, capítulos, escenas, Mundo (actualmente personajes; los demás apartados están en reestructuración), notas, historial y exportaciones. La biblioteca permite elegir un proyecto y el panel lateral abre cada una de sus secciones.
 
 También incluye editor enriquecido, historial manual, contador y meta diaria de palabras, interfaz en español e inglés, plantillas, copias JSON y exportaciones Markdown/EPUB/DOCX/PDF. Incluye una historia de ejemplo que puedes editar o borrar. [Descarga un tema de ejemplo](public/theme-example.json).
 
@@ -39,6 +59,8 @@ La política de privacidad está en [`PRIVACY.md`](PRIVACY.md). Adapta el contac
 
 ## Sincronización opcional con Supabase
 
+Estado: aplazada. Esta sección documenta la configuración existente; la validación de producción sigue pendiente.
+
 1. Crea un proyecto Supabase y ejecuta [`supabase/schema.sql`](supabase/schema.sql) en su SQL Editor.
 2. Copia `.env.example` a `.env.local` y configura `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` (o la clave anon legacy).
 3. Reinicia `npm run dev` y abre **Exportar → Sincronización**.
@@ -51,3 +73,7 @@ El contenido en la nube queda asociado a tu cuenta Supabase y protegido por RLS;
 ## Hoja de ruta
 
 Consulta [`ROADMAP.md`](ROADMAP.md) para ver el trabajo entregado y las mejoras previstas.
+
+### Recuperación en un navegador real
+
+Ejecuta `npm run test:browser` con Chromium instalado (`CHROMIUM_BIN` permite indicar otro ejecutable). La prueba usa los puertos locales 5188 y 9228 y un perfil temporal independiente. Comprueba la recuperación tras reiniciar el navegador y que el texto restaurado persista después de otra apertura. Al terminar elimina el perfil temporal.
