@@ -1,5 +1,11 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.7
+
+- [x] Reordenar escenas con arrastrar y soltar, conservar la escena activa y guardar el orden.
+- [x] Pedir nombre al crear una escena y permitir cambiarlo con doble clic.
+- [x] Separar visualmente el árbol lateral y quitar los paneles de fondo innecesarios en resumen y descripción.
+
 ## Entregado en 0.9.6
 
 - [x] Quitar bordes duplicados del planificador y espaciar las pestañas de escenas.

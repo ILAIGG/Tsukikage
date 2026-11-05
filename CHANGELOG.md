@@ -2,6 +2,16 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.7] - 2026-11-05
+
+### Añadido
+- Las escenas se pueden reordenar arrastrando sus pestañas y renombrar con doble clic.
+- Al crear una escena se solicita un nombre, con una sugerencia que se puede editar.
+
+### Corregido
+- Se separan las entradas del árbol lateral y los botones «+» dejan de tener un marco doble.
+- Se quitan los fondos sobrantes de la vista del resumen y la descripción de escena; el campo de edición conserva su superficie.
+
 ## [0.9.6] - 2026-11-05
 
 ### Corregido
