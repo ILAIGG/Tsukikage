@@ -132,7 +132,7 @@
 ## Plan priorizado para las siguientes iteraciones
 
 - [x] **P0 · Exportaciones en lectores:** validar un DOCX de 60 capítulos en LibreOffice Writer y la impresión PDF de 60 capítulos en Chromium; ambos conservan el título del último capítulo y se pueden abrir/renderizar.
-- [ ] **P0 · Recuperación del manuscrito:** comprobar la recuperación después de cerrar y volver a abrir un navegador real. La prueba automatizada actual cubre IndexedDB simulado, pero no este ciclo en un navegador persistente.
+- [x] **P0 · Recuperación del manuscrito:** verificada en Chromium real con un perfil persistente temporal: manuscrito guardado, borrador pendiente tras reiniciar, recuperación desde el diálogo y persistencia tras un segundo reinicio. Repetible con `npm run test:browser`.
 - [ ] **P0 · Sincronización segura antes de habilitarla:** aplicar el esquema y probar las políticas RLS en la instancia Supabase de producción; la revisión actual es estática.
 - [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.

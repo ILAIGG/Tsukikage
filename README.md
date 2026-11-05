@@ -51,3 +51,7 @@ Cloud content is associated with your Supabase account and protected by RLS; it 
 ## Roadmap
 
 See [`ROADMAP.md`](ROADMAP.md) for completed work and planned improvements.
+
+### Recuperación en un navegador real
+
+Ejecuta `npm run test:browser` con Chromium instalado (`CHROMIUM_BIN` permite indicar otro ejecutable). La prueba inicia Vite y Chromium en los puertos locales 5188 y 9228, usa un perfil temporal independiente y verifica la recuperación de un borrador tras cerrar y reabrir el navegador. Después comprueba la persistencia del texto recuperado en otra apertura y elimina el perfil temporal.

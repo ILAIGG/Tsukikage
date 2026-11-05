@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.13.3] - 2026-11-05
+
+### Verificado
+- La recuperación del manuscrito conserva el borrador pendiente tras cerrar Chromium, permite restaurarlo y mantiene el texto recuperado después de otra apertura. Se incorpora una comprobación reproducible con perfil temporal.
+
 ## [0.13.2] - 2026-11-05
 
 ### Corregido
