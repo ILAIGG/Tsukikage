@@ -2,6 +2,16 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.8] - 2026-11-05
+
+### Cambiado
+- Reemplazar la “L” que parecía un avatar por un botón de Preferencias con ícono y nombre accesible.
+- Adaptar la navegación móvil a un panel lateral desplegable y ajustar el editor, la biblioteca, los diálogos y los controles para pantallas pequeñas.
+
+### Verificado
+- Registrar como completada la comprobación manual informada para la página publicada y el uso offline en varios navegadores y dispositivos.
+- Aclarar que la validación RLS de una instancia Supabase sigue pendiente antes de ofrecer sincronización.
+
 ## [0.6.7] - 2026-11-05
 
 ### Añadido

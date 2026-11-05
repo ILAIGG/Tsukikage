@@ -34,6 +34,12 @@
 - [x] Avisar periódicamente que el guardado local depende de los datos del navegador y facilitar exportar/importar copias JSON desde Mis historias.
 - [x] Posponer el aviso durante una semana; volver a mostrarlo al pasar un mes sin exportar una copia.
 
+## Entregado en 0.6.8
+
+- [x] Sustituir el avatar fijo con “L” por un acceso identificable a Preferencias.
+- [x] Hacer que el panel lateral se abra como menú en móvil y ajustar las vistas principales a pantallas estrechas.
+- [x] Completar la revisión manual de la página publicada y el modo offline en navegadores/dispositivos, según comprobación del usuario.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
@@ -55,7 +61,7 @@
 ## Plan priorizado para las siguientes iteraciones
 
 - [ ] **P0 · Confianza del manuscrito:** comprobar recuperación tras un cierre real del navegador y validar visualmente los archivos DOCX/PDF extensos en aplicaciones lectoras; la prueba PDF actual comprueba el documento de impresión generado, no el cuadro de impresión del navegador.
-- [ ] **P0 · Distribución pública:** habilitar Pages y lanzar manualmente la vista previa; comprobar carga, actualización y funcionamiento offline en Chrome, Firefox y Safari. La revisión RLS realizada es estática: falta aplicarla y probarla en cada instancia Supabase antes de ofrecer sincronización.
+- [ ] **P0 · Sincronización segura antes de habilitarla:** aplicar el esquema y probar las políticas RLS en la instancia Supabase de producción; la revisión actual es estática.
 - [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
 - [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
