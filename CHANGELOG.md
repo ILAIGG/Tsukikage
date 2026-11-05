@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.1] - 2026-11-05
+
+### Cambiado
+- “Capítulo completo” reúne el contenido de todas las escenas en un único editor continuo, con separadores de escena dentro del texto.
+- Los cambios en esa vista se guardan en la escena correspondiente y siguen disponibles al volver a editar cada escena por separado.
+
 ## [0.9.0] - 2026-11-05
 
 ### Añadido

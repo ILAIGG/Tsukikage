@@ -1,5 +1,9 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.1
+
+- [x] Unificar todas las escenas en un solo editor continuo para la vista “Capítulo completo”, conservando su contenido independiente.
+
 ## Entregado en 0.9.0
 
 - [x] Guardar el manuscrito por escena y mostrar todas las escenas en “Capítulo completo”.
