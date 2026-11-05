@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.10] - 2026-11-05
+
+### Corregido
+- Se elimina el rectángulo de fondo del contenedor de sinopsis del Grimorio en Pop y DarkPop, incluida la zona detrás de su etiqueta.
+
 ## [0.12.9] - 2026-11-05
 
 ### Corregido

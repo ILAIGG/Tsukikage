@@ -218,7 +218,6 @@ html[data-theme='pop'] .search-filter-chip,html[data-theme='darkpop'] .search-fi
 html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,
 html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,
 html[data-theme='pop'] .complete-chapter-paper,html[data-theme='darkpop'] .complete-chapter-paper,
-html[data-theme='pop'] .project-synopsis,html[data-theme='darkpop'] .project-synopsis,
 html[data-theme='pop'] .chapter-summary-block,html[data-theme='darkpop'] .chapter-summary-block,
 html[data-theme='pop'] .scene-description-field,html[data-theme='darkpop'] .scene-description-field{
   background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line);
@@ -633,3 +632,5 @@ html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .pr
 }
 
 @media(max-width:600px){.top-actions .top-action-label{display:none}.top-actions .search-trigger,.top-actions .export-trigger{gap:0;grid-template-rows:1fr;grid-template-columns:1fr}}
+
+html[data-theme='pop'] .project-synopsis,html[data-theme='darkpop'] .project-synopsis{background:transparent;color:var(--theme-text)}
