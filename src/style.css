@@ -631,3 +631,5 @@ html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .pr
   .rich-wrapper .paper>.format-toolbar>button{width:29px;height:28px}
   .rich-wrapper .paper>.format-toolbar>span{width:1px;height:18px;margin-inline:3px}
 }
+
+@media(max-width:600px){.top-actions .top-action-label{display:none}.top-actions .search-trigger,.top-actions .export-trigger{gap:0;grid-template-rows:1fr;grid-template-columns:1fr}}

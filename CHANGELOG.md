@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.9] - 2026-11-05
+
+### Corregido
+- Los iconos de Buscar y Exportar quedan centrados dentro de sus botones móviles al eliminar la fila invisible que generaban sus etiquetas.
+
 ## [0.12.8] - 2026-11-05
 
 ### Corregido
