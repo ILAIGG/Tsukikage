@@ -1,5 +1,15 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.8.0
+
+- [x] Añadir navegación para volver desde cada vista.
+- [x] Separar sinopsis de historia y resumen de capítulo.
+- [x] Editar escenas opcionales desde el manuscrito y elegir capítulo con un selector.
+- [x] Guardar el progreso individual de cada capítulo.
+- [x] Simplificar el encabezado y el modo enfoque, y centrar Exportar en móvil.
+- [x] Reducir falsos positivos de palabras comunes en la revisión de consistencia.
+
+
 ## Entregado en 0.6.0
 
 - [x] Agrupar personajes, lugares y línea de tiempo bajo Mundo; dejar Notas como entrada directa de El Grimorio.

@@ -2,6 +2,19 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.8.0] - 2026-11-05
+
+### Añadido
+- Selector de capítulo y planificación de escenas editables dentro del manuscrito.
+- Control para ajustar el progreso de cada capítulo y marcarlo como completado.
+- Botón para volver a la vista anterior y salida clara del modo enfoque.
+
+### Cambiado
+- La sinopsis de la historia se edita en el inicio del proyecto; el resumen del capítulo queda junto al manuscrito.
+- El título de la historia ya no muestra un campo permanente y el género deja de ocupar el encabezado del editor.
+- El modo enfoque muestra solo el texto del capítulo y el control para salir.
+- Exportación centrada en móviles y análisis de consistencia que omite palabras comunes al inicio de las frases.
+
 ## [0.7.0] - 2026-11-05
 
 ### Añadido

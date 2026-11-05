@@ -1,4 +1,4 @@
-export type Chapter = { id: string; title: string; text: string; synopsis?: string; scenes?: string[] };
+export type Chapter = { id: string; title: string; text: string; synopsis?: string; scenes?: string[]; progress?:number };
 export type Entry = { id: string; name: string; description: string; kind: 'character' | 'place' | 'note' | 'event'; chapterId?: string; date?: string };
 export type Revision = { id: string; at: string; html: string; words: number; automatic?:boolean };
 export type RecoverySnapshot = { id:string; novelId:string; chapterId:string; chapter:Chapter; createdAt:number };
