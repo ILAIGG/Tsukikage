@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.0] - 2026-11-05
+
+### Añadido
+- La ficha de personaje incorpora tipo, nombre, apellido, apodo, fecha de nacimiento y descripción libre o guiada con preguntas opcionales agrupadas por categorías.
+- El roadmap aplaza explícitamente la validación de Supabase y continúa con la organización local del mundo.
+
 ## [0.13.3] - 2026-11-05
 
 ### Verificado

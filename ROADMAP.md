@@ -133,8 +133,8 @@
 
 - [x] **P0 · Exportaciones en lectores:** validar un DOCX de 60 capítulos en LibreOffice Writer y la impresión PDF de 60 capítulos en Chromium; ambos conservan el título del último capítulo y se pueden abrir/renderizar.
 - [x] **P0 · Recuperación del manuscrito:** verificada en Chromium real con un perfil persistente temporal: manuscrito guardado, borrador pendiente tras reiniciar, recuperación desde el diálogo y persistencia tras un segundo reinicio. Repetible con `npm run test:browser`.
-- [ ] **P0 · Sincronización segura antes de habilitarla:** aplicar el esquema y probar las políticas RLS en la instancia Supabase de producción; la revisión actual es estática.
-- [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
+- [ ] **Aplazado · Sincronización Supabase:** pospuesto hasta una etapa posterior; no bloquea el trabajo local del producto.
+- [ ] **P1 · Organización del mundo:** se inició la renovación de fichas con el perfil ampliado de personajes. Pendiente: vínculos cruzados entre fichas y capítulos, filtros y navegación desde elementos relacionados.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
 - [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
 - [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.

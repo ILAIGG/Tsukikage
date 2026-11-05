@@ -1,6 +1,7 @@
 export type Scene = { id: string; title: string; text: string; description?: string };
 export type Chapter = { id: string; title: string; text: string; synopsis?: string; scenes?: Scene[]; progress?:number };
-export type Entry = { id: string; name: string; description: string; kind: 'character' | 'place' | 'note' | 'event'; chapterId?: string; date?: string };
+export type CharacterProfile = { role?:string; firstName?:string; surname?:string; nickname?:string; birthDate?:string; descriptionMode?:'free'|'guided'; guided?:Record<string,string> };
+export type Entry = { id: string; name: string; description: string; kind: 'character' | 'place' | 'note' | 'event'; chapterId?: string; date?: string; character?:CharacterProfile };
 export type Revision = { id: string; at: string; html: string; words: number; automatic?:boolean };
 export type RecoverySnapshot = { id:string; novelId:string; chapterId:string; chapter:Chapter; createdAt:number };
 export type Novel = { id: string; title: string; genre: string; chapters: Chapter[]; updated: string; synopsis?: string; entries?: Entry[]; revisions?: Record<string, Revision[]>; template?: string };
