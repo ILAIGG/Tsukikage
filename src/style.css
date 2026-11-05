@@ -79,7 +79,7 @@ html[data-theme='pop'] .new-story-card,html[data-theme='darkpop'] .new-story-car
 .scene-empty{padding:10px 4px;color:var(--muted);font-size:10px}
 .chapter-progress-button{width:100%;min-height:42px;display:flex;align-items:center;gap:9px;padding:8px 11px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--text);text-align:left}
 .chapter-progress-button>svg:first-child{color:var(--accent)}.chapter-progress-button span{flex:1;font-size:10px}.chapter-progress-button b{font:600 11px Manrope,sans-serif}.chapter-progress-button:hover{border-color:var(--accent)}
-.progress-value{display:grid;gap:10px;margin:18px 0}.progress-value>b{font:650 32px Manrope,sans-serif;color:var(--accent)}.progress-meter{height:8px;overflow:hidden;border-radius:9px;background:var(--line)}.progress-meter i{display:block;height:100%;border-radius:inherit;background:var(--accent);transition:width .15s}.progress-range-label{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:10px}.progress-range-label input{flex:1;accent-color:var(--accent)}
+.progress-value{display:grid;gap:0;margin:18px 0 8px}.progress-value>b{font:650 34px Manrope,sans-serif;color:var(--accent);transition:color .2s}.progress-range-label{position:relative;display:flex;align-items:center;height:34px;margin:10px 0 22px}.progress-track{position:absolute;left:9px;right:9px;height:8px;overflow:hidden;border-radius:999px;background:var(--theme-line,var(--line));pointer-events:none}.progress-track i{display:block;height:100%;border-radius:inherit;background:var(--theme-accent,var(--accent));transition:width .28s ease}.progress-range-label input{position:relative;z-index:1;flex:1;width:100%;height:34px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:pointer;accent-color:var(--theme-accent,var(--accent))}.progress-range-label input::-webkit-slider-runnable-track{height:8px;border-radius:999px;background:transparent}.progress-range-label input::-webkit-slider-thumb{width:18px;height:18px;margin-top:-5px;appearance:none;-webkit-appearance:none;border:2px solid var(--theme-accent,var(--accent));border-radius:50%;background:var(--theme-surface,var(--panel));box-shadow:0 1px 2px var(--theme-shadow,#0004)}.progress-range-label input::-moz-range-track{height:8px;border:0;border-radius:999px;background:transparent}.progress-range-label input::-moz-range-thumb{width:14px;height:14px;border:2px solid var(--theme-accent,var(--accent));border-radius:50%;background:var(--theme-surface,var(--panel));box-shadow:0 1px 2px var(--theme-shadow,#0004)}.progress-range-label input:focus-visible{outline:2px solid var(--theme-accent,var(--accent));outline-offset:4px;border-radius:99px}
 .project-synopsis{display:grid;gap:6px;margin:10px 0 14px;color:var(--muted);font-size:10px}.project-synopsis textarea{width:min(100%,620px);resize:vertical;padding:9px 11px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--text);font:12px/1.5 Manrope,sans-serif}
 .focus-mode{position:fixed;inset:0;z-index:100;overflow:auto;min-height:100dvh;background:var(--theme-background,var(--bg))}
 .focus-mode .sidebar,.focus-mode .right-rail,.focus-mode .topbar,.focus-mode .statusbar{display:none!important}
@@ -400,3 +400,45 @@ html[data-theme='pop'] mark,html[data-theme='darkpop'] mark{
 }
 .chapter-search{min-height:38px;align-items:center}
 .chapter-search input{height:30px;padding-block:5px}
+
+/* Keep the chapter canvas aligned with its editor controls, with the width preference retained. */
+.rich-wrapper{--editor-paper-width:min(100%,calc(var(--page-width,760px) + 60px))}
+.rich-wrapper .paper{width:100%;max-width:var(--editor-paper-width)}
+html[data-resolved-theme='light'] .chapter-progress-button{background:#fff;color:#3b3245;border-color:#ddd6e3;box-shadow:0 2px 0 #e3dce9}
+html[data-resolved-theme='light'] .chapter-progress-button>svg:first-child{color:#78569b}
+html[data-resolved-theme='light'] .progress-value>b{color:#8056a0}
+html[data-resolved-theme='light'] .progress-track{background:#e5dfea}
+html[data-resolved-theme='light'] .progress-track i{background:#8056a0}
+html[data-resolved-theme='light'] .progress-range-label input::-webkit-slider-thumb{background:#fff}
+html[data-resolved-theme='light'] .progress-range-label input::-moz-range-thumb{background:#fff}
+html[data-theme='pop'] .progress-value>b{color:var(--theme-accent)}
+html[data-theme='darkpop'] .progress-value>b{color:var(--theme-accent)}
+html[data-theme='pop'] .progress-track,html[data-theme='darkpop'] .progress-track{background:color-mix(in srgb,var(--theme-accent) 18%,var(--theme-surface))}
+html[data-theme='pop'] .progress-track i,html[data-theme='darkpop'] .progress-track i{background:var(--theme-accent)}
+html[data-theme='pop'] .chapter-progress-modal .progress-range-label input,
+html[data-theme='darkpop'] .chapter-progress-modal .progress-range-label input,
+html[data-resolved-theme='light'] .chapter-progress-modal .progress-range-label input,
+html[data-resolved-theme='dark'] .chapter-progress-modal .progress-range-label input{
+  border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important
+}
+html[data-theme='darkpop'] .icon-button,html[data-theme='darkpop'] .format-toolbar button,
+html[data-theme='darkpop'] .tools-actions button,html[data-theme='darkpop'] .chapter-tabs .chapter-tab,
+html[data-theme='darkpop'] .new-chapter,html[data-theme='darkpop'] .secondary-btn,
+html[data-theme='darkpop'] .back-button,html[data-theme='darkpop'] .top-settings{
+  border-width:1px;border-color:var(--theme-line);box-shadow:0 2px 0 var(--theme-shadow)
+}
+html[data-theme='darkpop'] .format-toolbar button:hover,html[data-theme='darkpop'] .format-toolbar button.selected{
+  background:color-mix(in srgb,var(--theme-accent) 22%,var(--theme-surface));border-color:var(--theme-accent)
+}
+html[data-theme='darkpop'] .chapter-tabs .chapter-tab.current{border-color:var(--theme-accent)}
+html[data-theme='pop'] .chapter-progress-button,html[data-theme='darkpop'] .chapter-progress-button{color:var(--theme-accent-ink)}
+html[data-theme='pop'] .chapter-progress-button>svg:first-child,html[data-theme='darkpop'] .chapter-progress-button>svg:first-child{color:var(--theme-accent-ink)}
+html[data-theme='pop'] .chapter-search,html[data-theme='darkpop'] .chapter-search{
+  border:1px solid var(--theme-line);border-radius:7px;background:var(--theme-surface);
+  box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)
+}
+html[data-theme='pop'] .chapter-search input,html[data-theme='darkpop'] .chapter-search input{
+  border:0;border-radius:0;background:transparent;box-shadow:none;color:var(--theme-text)
+}
+@media(max-width:830px){.rich-wrapper{--editor-paper-width:100%}.rich-wrapper .paper{width:100%;max-width:100%}}
+.focus-mode .rich-wrapper .paper{width:100%;max-width:none}

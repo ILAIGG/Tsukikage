@@ -2,6 +2,15 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.10] - 2026-11-05
+
+### Cambiado
+- El panel de progreso muestra el porcentaje y un único slider con pista animada; se quitan la barra duplicada y las etiquetas de extremos.
+- El botón de progreso recibe colores legibles en el tema claro y texto/icono con contraste en Pop y DarkPop.
+- El campo de búsqueda de capítulo tiene esquinas redondeadas y un borde tipo tecla en Pop/DarkPop.
+- El manuscrito se amplía hasta alinearse con sus controles, respetando el ajuste de ancho del editor.
+- Se unifica el grosor y la sombra de los controles del editor en DarkPop.
+
 ## [0.9.9] - 2026-11-05
 
 ### Cambiado
