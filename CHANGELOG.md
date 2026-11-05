@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.11.0] - 2026-11-05
+
+### Añadido
+- El panel del manuscrito ofrece consejos de escritura aleatorios y evita repetir el anterior en la siguiente carga.
+
+### Corregido
+- Los botones de Pop y DarkPop resaltan al pasar el puntero, con el acento y la sombra propios del tema.
+- La cursiva conserva el color legible del texto en todos los temas.
+- La sinopsis del Grimorio y el hover del Esquema usan superficies y colores legibles en el tema claro.
+- Preferencias tiene un hover redondeado y centrado en los temas Claro y Oscuro; el consejo ya no incluye el acceso al cuaderno de mundo.
+
 ## [0.10.0] - 2026-11-05
 
 ### Añadido
