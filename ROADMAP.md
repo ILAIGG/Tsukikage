@@ -1,5 +1,10 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.5
+
+- [x] Unificar el fondo de las tarjetas de capítulos y separar visualmente sus acciones.
+- [x] Dar más espacio y tamaño a los controles de capítulos, secciones del panel y meta diaria.
+
 ## Entregado en 0.9.4
 
 - [x] Unificar tarjetas, botones, campos y navegación de Pop/DarkPop con contorno, relleno de paleta y sombra tipo tecla.

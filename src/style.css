@@ -311,3 +311,21 @@ html[data-theme='pop'] .project-quick-links button:hover,html[data-theme='darkpo
 html[data-theme='pop'] .project-chapter-card:hover,html[data-theme='darkpop'] .project-chapter-card:hover,
 html[data-theme='pop'] .entry-card:hover,html[data-theme='darkpop'] .entry-card:hover,
 html[data-theme='pop'] .chapter-menu-card:hover,html[data-theme='darkpop'] .chapter-menu-card:hover{transform:translateY(-1px)}
+
+/* Keep nested controls visually separate from their parent keycaps. */
+html[data-theme='pop'] .chapter-menu-open,html[data-theme='darkpop'] .chapter-menu-open{
+  background:transparent;border:0;box-shadow:none;padding-inline:4px;gap:10px
+}
+html[data-theme='pop'] .chapter-menu-open:hover,html[data-theme='darkpop'] .chapter-menu-open:hover,
+html[data-theme='pop'] .chapter-menu-open:focus-visible,html[data-theme='darkpop'] .chapter-menu-open:focus-visible{
+  background:transparent;box-shadow:none
+}
+html[data-theme='pop'] .chapter-menu-card>div,html[data-theme='darkpop'] .chapter-menu-card>div{gap:6px;flex:0 0 auto}
+html[data-theme='pop'] .chapter-menu-card>div .icon-button,html[data-theme='darkpop'] .chapter-menu-card>div .icon-button{
+  width:30px;height:30px;padding:0;border-radius:6px
+}
+html[data-theme='pop'] .goal-stepper,html[data-theme='darkpop'] .goal-stepper{gap:5px;padding:4px}
+html[data-theme='pop'] .goal-stepper button,html[data-theme='darkpop'] .goal-stepper button{width:27px;height:27px;padding:0}
+html[data-theme='pop'] .tree-section-head,html[data-theme='darkpop'] .tree-section-head{gap:5px;padding-right:5px}
+html[data-theme='pop'] .tree-add,html[data-theme='darkpop'] .tree-add{width:28px;height:28px;margin:0;flex:0 0 28px}
+html[data-theme='pop'] .chapter-menu-list,html[data-theme='darkpop'] .chapter-menu-list{gap:10px}

@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.5] - 2026-11-05
+
+### Corregido
+- Las tarjetas de capítulos usan una superficie uniforme, sin una franja interior de otro color.
+- Los controles para reordenar/eliminar capítulos, añadir secciones y ajustar la meta diaria tienen más separación y un área de pulsación mayor.
+
 ## [0.9.4] - 2026-11-05
 
 ### Cambiado
