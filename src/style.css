@@ -113,3 +113,22 @@ html[data-theme='pop'] .scene-tabs .chapter-tab.current,html[data-theme='darkpop
 html[data-theme='pop'] .scene-editor-row textarea,html[data-theme='darkpop'] .scene-editor-row textarea,html[data-theme^='custom-'] .scene-editor-row textarea,html[data-theme='pop'] .scene-manager-head .secondary-btn,html[data-theme='darkpop'] .scene-manager-head .secondary-btn,html[data-theme^='custom-'] .scene-manager-head .secondary-btn{background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line)}
 html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,html[data-theme^='custom-'] .chapter-planner,html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,html[data-theme^='custom-'] .scene-manager{background:transparent;border:0;color:var(--theme-text)}
 @media(max-width:600px){.book-heading .chapter-heading-edit{width:calc(100vw - 85px);font-size:25px}.scene-manager-head .secondary-btn{width:auto;font-size:9px;padding:0 9px}.scene-manager-head .secondary-btn svg{flex:none}}
+.chapter-summary-block{margin:5px 0 14px}
+.summary-editor{display:grid;gap:5px;color:var(--muted);font-size:9px}
+.summary-editor textarea,.scene-description-field textarea{width:100%;min-height:52px;resize:vertical;padding:9px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--text);font:11px/1.55 Manrope,sans-serif}
+.summary-editor textarea:focus,.scene-description-field textarea:focus{outline:0;border-color:var(--accent)}
+.summary-preview{width:100%;display:block;padding:4px 0;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--muted);text-align:left}
+.summary-preview:hover{padding:7px 9px;border-color:var(--line);background:var(--panel)}
+.summary-preview>span{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:9px}.summary-preview>span svg{opacity:0;transition:opacity .15s}.summary-preview:hover>span svg{opacity:1}
+.summary-preview p{margin:5px 0 0;color:var(--text);font:12px/1.55 Manrope,sans-serif;white-space:pre-wrap}
+.scene-tabs .chapter-strip{align-items:stretch}.scene-tabs .chapter-tab{height:36px}.scene-tabs .full-chapter-tab{margin-left:auto}
+.scene-writing-list{display:grid;gap:16px}.scene-writing-block{min-width:0}.scene-writing-block>h2{margin:10px 0;font:600 13px Manrope,sans-serif;color:var(--muted)}
+.scene-description-field{position:relative;display:grid;gap:5px;margin:13px 0 17px;padding-right:35px;color:var(--muted);font-size:9px}
+.scene-description-field .remove-scene{position:absolute;right:0;bottom:5px;width:30px;height:30px;border:1px solid var(--line);border-radius:6px}
+.scene-description-field .remove-scene:disabled{opacity:.35;cursor:not-allowed}
+.complete-chapter .scene-writing-block+.scene-writing-block{padding-top:14px;border-top:1px solid var(--line)}
+.complete-chapter .scene-writing-block .paper{margin-bottom:0}
+html[data-resolved-theme='light'] .summary-editor textarea,html[data-resolved-theme='light'] .scene-description-field textarea{background:#fff;color:#39313f;border-color:#dcd5e3}
+html[data-theme='pop'] .summary-editor textarea,html[data-theme='darkpop'] .summary-editor textarea,html[data-theme^='custom-'] .summary-editor textarea,html[data-theme='pop'] .scene-description-field textarea,html[data-theme='darkpop'] .scene-description-field textarea,html[data-theme^='custom-'] .scene-description-field textarea{background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line)}
+.focus-mode .chapter-summary-block,.focus-mode .chapter-planner,.focus-mode .scene-description-field,.focus-mode .scene-writing-block>h2,.focus-mode .chapter-extra{display:none!important}
+@media(max-width:600px){.scene-tabs .chapter-tab{padding-inline:9px}.scene-tabs .full-chapter-tab{margin-left:0}.summary-preview p{font-size:11px}.scene-description-field{padding-right:34px}}

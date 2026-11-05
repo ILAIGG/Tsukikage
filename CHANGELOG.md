@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.0] - 2026-11-05
+
+### Añadido
+- Texto independiente por escena y vista “Capítulo completo” para revisar y editar todas las escenas en secuencia.
+- Migración automática del manuscrito y las descripciones de escenas existentes, conservando ambos contenidos.
+
+### Cambiado
+- El resumen del capítulo aparece bajo su título y queda como texto discreto después de editarlo; se puede pulsar para volver a modificarlo.
+- La descripción de cada escena pasa debajo del manuscrito, junto a los controles del capítulo.
+- Al crear un capítulo se inicia directamente en “Escena 1”.
+
 ## [0.8.1] - 2026-11-05
 
 ### Cambiado

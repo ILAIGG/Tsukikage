@@ -1,5 +1,12 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.0
+
+- [x] Guardar el manuscrito por escena y mostrar todas las escenas en “Capítulo completo”.
+- [x] Mantener y migrar el texto existente y las descripciones de escenas.
+- [x] Mover el resumen bajo el título del capítulo y plegarlo tras editarlo.
+- [x] Colocar la descripción de escena debajo del área de escritura.
+
 ## Entregado en 0.8.1
 
 - [x] Mostrar el título del capítulo en la cabecera del manuscrito.
