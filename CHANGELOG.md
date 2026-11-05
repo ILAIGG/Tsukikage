@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.8] - 2026-11-05
+
+### Corregido
+- El campo de sinopsis del Grimorio mantiene el fondo transparente en todas las paletas para integrarse con el panel del proyecto.
+- Se verificó el centrado de los controles de la barra móvil en la paleta DarkPop.
+
 ## [0.12.7] - 2026-11-05
 
 ### Corregido
