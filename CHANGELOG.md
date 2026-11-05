@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.17.1] - 2026-11-05
+
+### Corregido
+- Crear o abrir un personaje navega a su propia página principal, con cabecera y área de escritura propias, fuera del sistema de ventanas modales.
+
 ## [0.17.0] - 2026-11-05
 
 ### Añadido
