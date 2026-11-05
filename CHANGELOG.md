@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.4] - 2026-11-05
+
+### Cambiado
+- Pop y DarkPop comparten un estilo de tarjetas y controles con bordes, rellenos de paleta y sombras tipo tecla en la biblioteca, el Grimorio, el editor y las preferencias.
+- Se mejora la legibilidad de títulos, etiquetas, capítulos, fichas del mundo, estados y campos de edición en ambos temas.
+- Los botones de acento usan texto oscuro de alto contraste; Pop y DarkPop usan Manrope para la interfaz.
+
 ## [0.9.3] - 2026-11-05
 
 ### Cambiado

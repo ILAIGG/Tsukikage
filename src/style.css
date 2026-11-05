@@ -150,3 +150,164 @@ html[data-theme='pop'] .focus-mode .paper,html[data-theme='darkpop'] .focus-mode
 .sidebar.collapsed .tree-chevron,.sidebar.collapsed .tree-add,.sidebar.collapsed .tree-entries{display:none!important}
 .sidebar:not(.collapsed) .collapsed-sidebar-bottom{display:none}
 @media(max-width:830px){.sidebar{position:fixed;top:0;bottom:0;height:100dvh;overflow:hidden}.sidebar:not(.collapsed){width:min(300px,88vw)!important;flex-basis:auto;align-items:stretch;transform:translateX(0)!important}.sidebar:not(.collapsed) .sidebar-main{align-items:stretch}.sidebar:not(.collapsed) .brand>div:not(.brand-mark),.sidebar:not(.collapsed) .collapse-btn{display:block!important}.sidebar:not(.collapsed) .collapse-btn{display:grid!important}.sidebar:not(.collapsed) .nav-item{display:flex!important;width:100%!important;justify-content:flex-start!important;font-size:12px!important}.sidebar:not(.collapsed) .project-nav-label,.sidebar:not(.collapsed) .tree-section,.sidebar:not(.collapsed) .tree-section-head,.sidebar:not(.collapsed) .tree-section-title,.sidebar:not(.collapsed) .tree-chevron,.sidebar:not(.collapsed) .tree-add{display:flex!important}.sidebar:not(.collapsed) .sidebar-bottom{display:block!important;width:100%;padding-bottom:env(safe-area-inset-bottom)}.sidebar:not(.collapsed) .collapsed-sidebar-bottom{display:none!important}}
+
+/* Pop / DarkPop: one rounded, outlined keycap language across the whole app. */
+html[data-theme='pop']{color-scheme:light;--theme-readable-muted:#5d5263;--theme-accent-ink:#211a2c;--theme-key-ring:#fff8e9}
+html[data-theme='darkpop']{color-scheme:dark;--theme-readable-muted:#d7c4d6;--theme-accent-ink:#211a2c;--theme-key-ring:#f7dce8}
+html[data-theme='pop'] body,html[data-theme='darkpop'] body{font-family:Manrope,'DM Sans',sans-serif}
+html[data-theme='pop'] button,html[data-theme='darkpop'] button,html[data-theme='pop'] input,html[data-theme='darkpop'] input,html[data-theme='pop'] textarea,html[data-theme='darkpop'] textarea,html[data-theme='pop'] select,html[data-theme='darkpop'] select{font-family:Manrope,'DM Sans',sans-serif}
+html[data-theme='pop'] .project-hero,html[data-theme='darkpop'] .project-hero{color:var(--theme-text);background:radial-gradient(ellipse at 88% 12%,color-mix(in srgb,var(--theme-accent) 18%,var(--theme-surface)),var(--theme-surface) 66%);border:1px solid var(--theme-line);box-shadow:inset 0 0 0 2px var(--theme-key-ring),0 5px 0 var(--theme-shadow)}
+html[data-theme='pop'] .project-hero-copy h1,html[data-theme='darkpop'] .project-hero-copy h1{color:var(--theme-text)}
+html[data-theme='pop'] .project-hero-copy p,html[data-theme='darkpop'] .project-hero-copy p{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .project-hero-copy .eyebrow,html[data-theme='darkpop'] .project-hero-copy .eyebrow{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .project-hero>img,html[data-theme='darkpop'] .project-hero>img{filter:drop-shadow(0 4px 0 var(--theme-shadow))}
+html[data-theme='pop'] .project-stats article,html[data-theme='darkpop'] .project-stats article,html[data-theme='pop'] .project-chapter-card,html[data-theme='darkpop'] .project-chapter-card,html[data-theme='pop'] .project-quick-links button,html[data-theme='darkpop'] .project-quick-links button,html[data-theme='pop'] .story-card,html[data-theme='darkpop'] .story-card,html[data-theme='pop'] .entry-card,html[data-theme='darkpop'] .entry-card,html[data-theme='pop'] .chapter-menu-card,html[data-theme='darkpop'] .chapter-menu-card,html[data-theme='pop'] .world-category-card,html[data-theme='darkpop'] .world-category-card,html[data-theme='pop'] .stats-card,html[data-theme='darkpop'] .stats-card,html[data-theme='pop'] .tip-card,html[data-theme='darkpop'] .tip-card,html[data-theme='pop'] .goal-card,html[data-theme='darkpop'] .goal-card,html[data-theme='pop'] .backup-reminder,html[data-theme='darkpop'] .backup-reminder{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 3px 0 var(--theme-shadow)}
+html[data-theme='pop'] .project-stats span,html[data-theme='darkpop'] .project-stats span,html[data-theme='pop'] .project-chapter-info small,html[data-theme='darkpop'] .project-chapter-info small,html[data-theme='pop'] .project-quick-links small,html[data-theme='darkpop'] .project-quick-links small,html[data-theme='pop'] .story-card-content p,html[data-theme='darkpop'] .story-card-content p,html[data-theme='pop'] .story-card-content small,html[data-theme='darkpop'] .story-card-content small,html[data-theme='pop'] .chapter-menu-open small,html[data-theme='darkpop'] .chapter-menu-open small,html[data-theme='pop'] .backup-reminder p,html[data-theme='darkpop'] .backup-reminder p{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .project-stats b,html[data-theme='darkpop'] .project-stats b,html[data-theme='pop'] .project-outline-head h2,html[data-theme='darkpop'] .project-outline-head h2,html[data-theme='pop'] .project-chapter-info>b,html[data-theme='darkpop'] .project-chapter-info>b,html[data-theme='pop'] .project-quick-links b,html[data-theme='darkpop'] .project-quick-links b,html[data-theme='pop'] .story-card-content>input,html[data-theme='darkpop'] .story-card-content>input,html[data-theme='pop'] .chapter-menu-open,html[data-theme='darkpop'] .chapter-menu-open{color:var(--theme-text)}
+html[data-theme='pop'] .story-art,html[data-theme='darkpop'] .story-art{background:radial-gradient(circle at 70% 18%,color-mix(in srgb,var(--theme-accent) 42%,var(--theme-surface)),var(--theme-page) 74%);border-bottom:1px solid var(--theme-line)}
+html[data-theme='pop'] .story-art span,html[data-theme='darkpop'] .story-art span{color:var(--theme-text);background:var(--theme-surface);border:1px solid var(--theme-line);border-radius:20px;padding:4px 8px;box-shadow:0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .sidebar-hint,html[data-theme='darkpop'] .sidebar-hint,html[data-theme='pop'] .profile,html[data-theme='darkpop'] .profile{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);border-radius:7px;box-shadow:0 3px 0 var(--theme-shadow)}
+html[data-theme='pop'] .sidebar-hint,html[data-theme='darkpop'] .sidebar-hint,html[data-theme='pop'] .profile small,html[data-theme='darkpop'] .profile small,html[data-theme='pop'] .sidebar .workspace-label,html[data-theme='darkpop'] .sidebar .workspace-label,html[data-theme='pop'] .project-nav-label,html[data-theme='darkpop'] .project-nav-label,html[data-theme='pop'] .sidebar-bottom .goal-card small,html[data-theme='darkpop'] .sidebar-bottom .goal-card small{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .sidebar .brand b,html[data-theme='darkpop'] .sidebar .brand b,html[data-theme='pop'] .project-nav-title,html[data-theme='darkpop'] .project-nav-title,html[data-theme='pop'] .nav-count,html[data-theme='darkpop'] .nav-count,html[data-theme='pop'] .profile b,html[data-theme='darkpop'] .profile b{color:var(--theme-text)}
+html[data-theme='pop'] .nav-item,html[data-theme='darkpop'] .nav-item,html[data-theme='pop'] .tree-section-head,html[data-theme='darkpop'] .tree-section-head,html[data-theme='pop'] .tree-entries button,html[data-theme='darkpop'] .tree-entries button,html[data-theme='pop'] .tree-add,html[data-theme='darkpop'] .tree-add{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .nav-item:hover,html[data-theme='darkpop'] .nav-item:hover,html[data-theme='pop'] .tree-section-head:hover,html[data-theme='darkpop'] .tree-section-head:hover,html[data-theme='pop'] .tree-entries button:hover,html[data-theme='darkpop'] .tree-entries button:hover,html[data-theme='pop'] .tree-add:hover,html[data-theme='darkpop'] .tree-add:hover{background:color-mix(in srgb,var(--theme-accent) 20%,var(--theme-surface));color:var(--theme-text);transform:translateY(-1px)}
+html[data-theme='pop'] .nav-item.active,html[data-theme='darkpop'] .nav-item.active,html[data-theme='pop'] .tree-section-head.active,html[data-theme='darkpop'] .tree-section-head.active,html[data-theme='pop'] .tree-entries button.selected,html[data-theme='darkpop'] .tree-entries button.selected{background:color-mix(in srgb,var(--theme-accent) 28%,var(--theme-surface));color:var(--theme-text);border-color:var(--theme-accent);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .topbar,html[data-theme='darkpop'] .topbar,html[data-theme='pop'] .statusbar,html[data-theme='darkpop'] .statusbar{background:var(--theme-surface);color:var(--theme-readable-muted);border-color:var(--theme-line)}
+html[data-theme='pop'] .breadcrumbs,html[data-theme='darkpop'] .breadcrumbs,html[data-theme='pop'] .breadcrumbs b,html[data-theme='darkpop'] .breadcrumbs b,html[data-theme='pop'] .save-state,html[data-theme='darkpop'] .save-state{color:var(--theme-text)}
+html[data-theme='pop'] .top-settings,html[data-theme='darkpop'] .top-settings,html[data-theme='pop'] .mobile-menu,html[data-theme='darkpop'] .mobile-menu,html[data-theme='pop'] .back-button,html[data-theme='darkpop'] .back-button,html[data-theme='pop'] .icon-button,html[data-theme='darkpop'] .icon-button,html[data-theme='pop'] .tree-add,html[data-theme='darkpop'] .tree-add,html[data-theme='pop'] .new-chapter,html[data-theme='darkpop'] .new-chapter,html[data-theme='pop'] .format-toolbar button,html[data-theme='darkpop'] .format-toolbar button,html[data-theme='pop'] .tools-actions button,html[data-theme='darkpop'] .tools-actions button,html[data-theme='pop'] .goal-stepper button,html[data-theme='darkpop'] .goal-stepper button,html[data-theme='pop'] .collapsed-sidebar-bottom button,html[data-theme='darkpop'] .collapsed-sidebar-bottom button{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);border-radius:6px;box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .icon-button:hover,html[data-theme='darkpop'] .icon-button:hover,html[data-theme='pop'] .back-button:hover,html[data-theme='darkpop'] .back-button:hover,html[data-theme='pop'] .format-toolbar button:hover,html[data-theme='darkpop'] .format-toolbar button:hover{background:color-mix(in srgb,var(--theme-accent) 22%,var(--theme-surface));color:var(--theme-text);transform:translateY(-1px)}
+html[data-theme='pop'] .primary-btn,html[data-theme='darkpop'] .primary-btn,html[data-theme='pop'] .chapter-progress-button,html[data-theme='darkpop'] .chapter-progress-button{background:var(--theme-accent);color:var(--theme-accent-ink);border:1px solid var(--theme-line);border-radius:7px;box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 3px 0 var(--theme-shadow)}
+html[data-theme='pop'] .secondary-btn,html[data-theme='darkpop'] .secondary-btn,html[data-theme='pop'] .sync-shortcut,html[data-theme='darkpop'] .sync-shortcut,html[data-theme='pop'] .theme-import-btn,html[data-theme='darkpop'] .theme-import-btn,html[data-theme='pop'] .backup-import-label,html[data-theme='darkpop'] .backup-import-label{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);border-radius:7px;box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 3px 0 var(--theme-shadow)}
+html[data-theme='pop'] .primary-btn:hover,html[data-theme='darkpop'] .primary-btn:hover,html[data-theme='pop'] .secondary-btn:hover,html[data-theme='darkpop'] .secondary-btn:hover,html[data-theme='pop'] .sync-shortcut:hover,html[data-theme='darkpop'] .sync-shortcut:hover{transform:translateY(-1px);filter:brightness(1.04);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 4px 0 var(--theme-shadow)}
+html[data-theme='pop'] button:active,html[data-theme='darkpop'] button:active{transform:translateY(2px);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 1px 0 var(--theme-shadow)}
+html[data-theme='pop'] .chapter-menu-open>span,html[data-theme='darkpop'] .chapter-menu-open>span,html[data-theme='pop'] .chapter-tab,html[data-theme='darkpop'] .chapter-tab{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .chapter-tab.current,html[data-theme='darkpop'] .chapter-tab.current,html[data-theme='pop'] .scene-tabs .chapter-tab,html[data-theme='darkpop'] .scene-tabs .chapter-tab{background:var(--theme-surface);border:1px solid var(--theme-line);border-radius:6px;box-shadow:0 2px 0 var(--theme-shadow);color:var(--theme-text)}
+html[data-theme='pop'] .scene-tabs .chapter-tab.current,html[data-theme='darkpop'] .scene-tabs .chapter-tab.current{background:color-mix(in srgb,var(--theme-accent) 24%,var(--theme-surface));border-color:var(--theme-accent)}
+html[data-theme='pop'] .paper,html[data-theme='darkpop'] .paper{background:var(--theme-page);color:var(--theme-text);border:1px solid var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 4px 0 var(--theme-shadow)}
+html[data-theme='pop'] .tiptap-writing,html[data-theme='darkpop'] .tiptap-writing,html[data-theme='pop'] .tiptap-writing p,html[data-theme='darkpop'] .tiptap-writing p,html[data-theme='pop'] .tiptap-writing h1,html[data-theme='darkpop'] .tiptap-writing h1,html[data-theme='pop'] .tiptap-writing h2,html[data-theme='darkpop'] .tiptap-writing h2,html[data-theme='pop'] .tiptap-writing h3,html[data-theme='darkpop'] .tiptap-writing h3{color:var(--theme-text)}
+html[data-theme='pop'] .paper-footer,html[data-theme='darkpop'] .paper-footer,html[data-theme='pop'] .editor-foot,html[data-theme='darkpop'] .editor-foot{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .chapter-search,html[data-theme='darkpop'] .chapter-search,html[data-theme='pop'] .project-search-input,html[data-theme='darkpop'] .project-search-input,html[data-theme='pop'] .search,html[data-theme='darkpop'] .search{background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring)}
+html[data-theme='pop'] .chapter-search input,html[data-theme='darkpop'] .chapter-search input,html[data-theme='pop'] .search input,html[data-theme='darkpop'] .search input,html[data-theme='pop'] .project-search-input input,html[data-theme='darkpop'] .project-search-input input{background:transparent;color:var(--theme-text)}
+html[data-theme='pop'] .search input::placeholder,html[data-theme='darkpop'] .search input::placeholder,html[data-theme='pop'] input::placeholder,html[data-theme='darkpop'] input::placeholder,html[data-theme='pop'] textarea::placeholder,html[data-theme='darkpop'] textarea::placeholder{color:var(--theme-readable-muted);opacity:.82}
+html[data-theme='pop'] .settings-dialog,html[data-theme='darkpop'] .settings-dialog,html[data-theme='pop'] .legal-dialog,html[data-theme='darkpop'] .legal-dialog,html[data-theme='pop'] .modal-card,html[data-theme='darkpop'] .modal-card,html[data-theme='pop'] .export-menu,html[data-theme='darkpop'] .export-menu{background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);box-shadow:0 5px 0 var(--theme-shadow),0 16px 45px color-mix(in srgb,var(--theme-shadow) 40%,transparent)}
+html[data-theme='pop'] .export-menu button,html[data-theme='darkpop'] .export-menu button,html[data-theme='pop'] .menu-label,html[data-theme='darkpop'] .menu-label,html[data-theme='pop'] .setting-row,html[data-theme='darkpop'] .setting-row,html[data-theme='pop'] .theme-setting,html[data-theme='darkpop'] .theme-setting,html[data-theme='pop'] .theme-format-hint,html[data-theme='darkpop'] .theme-format-hint,html[data-theme='pop'] .legal-dialog p,html[data-theme='darkpop'] .legal-dialog p{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .modal-head h2,html[data-theme='darkpop'] .modal-head h2,html[data-theme='pop'] .modal-content,html[data-theme='darkpop'] .modal-content,html[data-theme='pop'] .consistency-item,html[data-theme='darkpop'] .consistency-item,html[data-theme='pop'] .modal-content p,html[data-theme='darkpop'] .modal-content p{color:var(--theme-text)}
+html[data-theme='pop'] .modal-backdrop,html[data-theme='pop'] .settings-backdrop,html[data-theme='pop'] .legal-backdrop{background:color-mix(in srgb,var(--theme-shadow) 48%,transparent)}
+html[data-theme='darkpop'] .modal-backdrop,html[data-theme='darkpop'] .settings-backdrop,html[data-theme='darkpop'] .legal-backdrop{background:color-mix(in srgb,var(--theme-shadow) 70%,transparent)}
+html[data-theme='pop'] .setting-row select,html[data-theme='darkpop'] .setting-row select,html[data-theme='pop'] .modal-content input,html[data-theme='darkpop'] .modal-content input,html[data-theme='pop'] .modal-content textarea,html[data-theme='darkpop'] .modal-content textarea,html[data-theme='pop'] .modal-content select,html[data-theme='darkpop'] .modal-content select,html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .project-synopsis textarea,html[data-theme='pop'] .chapter-summary-block textarea,html[data-theme='darkpop'] .chapter-summary-block textarea,html[data-theme='pop'] .scene-description-field textarea,html[data-theme='darkpop'] .scene-description-field textarea{background:var(--theme-page);color:var(--theme-text);border-color:var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring)}
+html[data-theme='pop'] .setting-row input[type='range'],html[data-theme='darkpop'] .setting-row input[type='range']{accent-color:var(--theme-accent)}
+html[data-theme='pop'] .goal-stepper,html[data-theme='darkpop'] .goal-stepper,html[data-theme='pop'] .goal-input,html[data-theme='darkpop'] .goal-input{background:var(--theme-page);border:1px solid var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .goal-stepper input,html[data-theme='darkpop'] .goal-stepper input,html[data-theme='pop'] .goal-input input,html[data-theme='darkpop'] .goal-input input{background:transparent;color:var(--theme-text)}
+html[data-theme='pop'] .goal-numbers b,html[data-theme='darkpop'] .goal-numbers b{color:var(--theme-text)}
+html[data-theme='pop'] .progress,html[data-theme='darkpop'] .progress,html[data-theme='pop'] .progress-meter,html[data-theme='darkpop'] .progress-meter{background:color-mix(in srgb,var(--theme-accent) 22%,var(--theme-surface));border:1px solid var(--theme-line)}
+html[data-theme='pop'] .progress i,html[data-theme='darkpop'] .progress i,html[data-theme='pop'] .progress-meter i,html[data-theme='darkpop'] .progress-meter i{background:var(--theme-accent);box-shadow:inset 0 0 0 1px var(--theme-key-ring)}
+html[data-theme='pop'] .project-hero-actions .primary-btn,html[data-theme='darkpop'] .project-hero-actions .primary-btn{color:var(--theme-accent-ink)}
+html[data-theme='pop'] .empty-state,html[data-theme='darkpop'] .empty-state,html[data-theme='pop'] .page-heading,html[data-theme='darkpop'] .page-heading,html[data-theme='pop'] .page-heading p,html[data-theme='darkpop'] .page-heading p,html[data-theme='pop'] .rail-title,html[data-theme='darkpop'] .rail-title,html[data-theme='pop'] .stats-card>span,html[data-theme='darkpop'] .stats-card>span,html[data-theme='pop'] .stats-card>small,html[data-theme='darkpop'] .stats-card>small{color:var(--theme-readable-muted)}
+html[data-theme='pop'] .page-heading h1,html[data-theme='darkpop'] .page-heading h1,html[data-theme='pop'] .empty-state h2,html[data-theme='darkpop'] .empty-state h2,html[data-theme='pop'] .stats-card>b,html[data-theme='darkpop'] .stats-card>b{color:var(--theme-text)}
+html[data-theme='pop'] .status-pill,html[data-theme='darkpop'] .status-pill,html[data-theme='pop'] .chapter-progress-button,html[data-theme='darkpop'] .chapter-progress-button,html[data-theme='pop'] .progress-value,html[data-theme='darkpop'] .progress-value{color:var(--theme-text)}
+html[data-theme='pop'] .status-pill{background:var(--theme-surface);border-color:var(--theme-line);box-shadow:0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] .theme-options button,html[data-theme='darkpop'] .theme-options button{color:var(--theme-text);background:var(--theme-surface);border-color:var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
+html[data-theme='pop'] a,html[data-theme='darkpop'] a,html[data-theme='pop'] .text-button,html[data-theme='darkpop'] .text-button{color:var(--theme-link)}
+html[data-theme='pop'] .focus-mode .paper{color:var(--theme-text)}
+
+/* Complete the Pop palettes in the library, project outline and planning flows. */
+html[data-theme='pop'] .new-story-card,html[data-theme='darkpop'] .new-story-card,
+html[data-theme='pop'] .chapter-menu-card,html[data-theme='darkpop'] .chapter-menu-card,
+html[data-theme='pop'] .project-search-result,html[data-theme='darkpop'] .project-search-result,
+html[data-theme='pop'] .search-filter-chip,html[data-theme='darkpop'] .search-filter-chip,
+html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,
+html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,
+html[data-theme='pop'] .complete-chapter-paper,html[data-theme='darkpop'] .complete-chapter-paper,
+html[data-theme='pop'] .project-synopsis,html[data-theme='darkpop'] .project-synopsis,
+html[data-theme='pop'] .chapter-summary-block,html[data-theme='darkpop'] .chapter-summary-block,
+html[data-theme='pop'] .scene-description-field,html[data-theme='darkpop'] .scene-description-field{
+  background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line);
+}
+html[data-theme='pop'] .new-story-card,html[data-theme='darkpop'] .new-story-card,
+html[data-theme='pop'] .project-search-result:hover,html[data-theme='darkpop'] .project-search-result:hover,
+html[data-theme='pop'] .project-search-result:focus-visible,html[data-theme='darkpop'] .project-search-result:focus-visible,
+html[data-theme='pop'] .search-filter-chip:hover,html[data-theme='darkpop'] .search-filter-chip:hover,
+html[data-theme='pop'] .search-filter-chip.selected,html[data-theme='darkpop'] .search-filter-chip.selected{
+  box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 3px 0 var(--theme-shadow);
+}
+html[data-theme='pop'] .new-story-card:hover,html[data-theme='darkpop'] .new-story-card:hover,
+html[data-theme='pop'] .project-search-result:hover,html[data-theme='darkpop'] .project-search-result:hover,
+html[data-theme='pop'] .project-search-result:focus-visible,html[data-theme='darkpop'] .project-search-result:focus-visible{
+  background:color-mix(in srgb,var(--theme-accent) 18%,var(--theme-surface));color:var(--theme-text);transform:translateY(-1px)
+}
+html[data-theme='pop'] .new-story-card span,html[data-theme='darkpop'] .new-story-card span,
+html[data-theme='pop'] .chapter-menu-open small,html[data-theme='darkpop'] .chapter-menu-open small,
+html[data-theme='pop'] .chapter-card-synopsis,html[data-theme='darkpop'] .chapter-card-synopsis,
+html[data-theme='pop'] .entry-card p,html[data-theme='darkpop'] .entry-card p,
+html[data-theme='pop'] .entry-card>small,html[data-theme='darkpop'] .entry-card>small,
+html[data-theme='pop'] .search-result-copy>small,html[data-theme='darkpop'] .search-result-copy>small,
+html[data-theme='pop'] .search-result-excerpt,html[data-theme='darkpop'] .search-result-excerpt,
+html[data-theme='pop'] .project-search-empty,html[data-theme='darkpop'] .project-search-empty,
+html[data-theme='pop'] .scene-manager-head small,html[data-theme='darkpop'] .scene-manager-head small,
+html[data-theme='pop'] .scene-head,html[data-theme='darkpop'] .scene-head,
+html[data-theme='pop'] .scene-editor-row label,html[data-theme='darkpop'] .scene-editor-row label,
+html[data-theme='pop'] .synopsis-label,html[data-theme='darkpop'] .synopsis-label,
+html[data-theme='pop'] .chapter-extra>label,html[data-theme='darkpop'] .chapter-extra>label{
+  color:var(--theme-readable-muted)
+}
+html[data-theme='pop'] .chapter-menu-open,html[data-theme='darkpop'] .chapter-menu-open,
+html[data-theme='pop'] .chapter-menu-open *,html[data-theme='darkpop'] .chapter-menu-open *,
+html[data-theme='pop'] .entry-card,html[data-theme='darkpop'] .entry-card,
+html[data-theme='pop'] .entry-card h3,html[data-theme='darkpop'] .entry-card h3,
+html[data-theme='pop'] .project-search-result,html[data-theme='darkpop'] .project-search-result,
+html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,
+html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager{color:var(--theme-text)}
+html[data-theme='pop'] .chapter-menu-open,html[data-theme='darkpop'] .chapter-menu-open{
+  background:color-mix(in srgb,var(--theme-accent) 12%,var(--theme-surface));border-color:var(--theme-line)
+}
+html[data-theme='pop'] .tree-entries button,html[data-theme='darkpop'] .tree-entries button,
+html[data-theme='pop'] .tree-entry,html[data-theme='darkpop'] .tree-entry,
+html[data-theme='pop'] .novel-link,html[data-theme='darkpop'] .novel-link,
+html[data-theme='pop'] .outline-item,html[data-theme='darkpop'] .outline-item,
+html[data-theme='pop'] .world-tabs button,html[data-theme='darkpop'] .world-tabs button,
+html[data-theme='pop'] .chapter-actions button,html[data-theme='darkpop'] .chapter-actions button,
+html[data-theme='pop'] .card-actions .icon-button,html[data-theme='darkpop'] .card-actions .icon-button{
+  color:var(--theme-text)
+}
+html[data-theme='pop'] .nav-item,html[data-theme='darkpop'] .nav-item,
+html[data-theme='pop'] .tree-section-head,html[data-theme='darkpop'] .tree-section-head,
+html[data-theme='pop'] .tree-entries button,html[data-theme='darkpop'] .tree-entries button,
+html[data-theme='pop'] .outline-item,html[data-theme='darkpop'] .outline-item,
+html[data-theme='pop'] .world-tabs button,html[data-theme='darkpop'] .world-tabs button,
+html[data-theme='pop'] .chapter-menu-open,html[data-theme='darkpop'] .chapter-menu-open{
+  border-radius:6px
+}
+html[data-theme='pop'] .project-search-result,html[data-theme='darkpop'] .project-search-result,
+html[data-theme='pop'] .search-filter-chip,html[data-theme='darkpop'] .search-filter-chip,
+html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,
+html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner{
+  border:1px solid var(--theme-line);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)
+}
+html[data-theme='pop'] .synopsis-label textarea,html[data-theme='darkpop'] .synopsis-label textarea,
+html[data-theme='pop'] .chapter-extra textarea,html[data-theme='darkpop'] .chapter-extra textarea,
+html[data-theme='pop'] .scene-editor-row textarea,html[data-theme='darkpop'] .scene-editor-row textarea,
+html[data-theme='pop'] .scene-row input,html[data-theme='darkpop'] .scene-row input,
+html[data-theme='pop'] .story-card-content>input,html[data-theme='darkpop'] .story-card-content>input,
+html[data-theme='pop'] .story-card-content>input.genre-input,html[data-theme='darkpop'] .story-card-content>input.genre-input{
+  color:var(--theme-text);background:var(--theme-page);border-color:var(--theme-line)
+}
+html[data-theme='pop'] .story-card-content>input.genre-input,html[data-theme='darkpop'] .story-card-content>input.genre-input{background:transparent}
+html[data-theme='pop'] .project-outline-head,html[data-theme='darkpop'] .project-outline-head,
+html[data-theme='pop'] .entry-card-top,html[data-theme='darkpop'] .entry-card-top,
+html[data-theme='pop'] .world-tabs,html[data-theme='darkpop'] .world-tabs,
+html[data-theme='pop'] .scene-row,html[data-theme='darkpop'] .scene-row,
+html[data-theme='pop'] .settings-bottom,html[data-theme='darkpop'] .settings-bottom{border-color:var(--theme-line)}
+html[data-theme='pop'] .theme-setting,html[data-theme='darkpop'] .theme-setting,
+html[data-theme='pop'] .setting-row,html[data-theme='darkpop'] .setting-row,
+html[data-theme='pop'] .settings-bottom,html[data-theme='darkpop'] .settings-bottom,
+html[data-theme='pop'] .goal-settings-row,html[data-theme='darkpop'] .goal-settings-row{color:var(--theme-text)}
+html[data-theme='pop'] .setting-row>span svg,html[data-theme='darkpop'] .setting-row>span svg,
+html[data-theme='pop'] .entry-icon,html[data-theme='darkpop'] .entry-icon,
+html[data-theme='pop'] .search-result-icon,html[data-theme='darkpop'] .search-result-icon{color:var(--theme-accent-ink)}
+html[data-theme='darkpop'] .setting-row>span svg,html[data-theme='darkpop'] .entry-icon,html[data-theme='darkpop'] .search-result-icon{color:var(--theme-accent)}
+html[data-theme='pop'] :focus-visible,html[data-theme='darkpop'] :focus-visible{outline-color:var(--theme-accent)}
+html[data-theme='pop'] .project-home .project-hero,html[data-theme='darkpop'] .project-home .project-hero{border-radius:9px}
+html[data-theme='pop'] .project-quick-links button:hover,html[data-theme='darkpop'] .project-quick-links button:hover,
+html[data-theme='pop'] .project-chapter-card:hover,html[data-theme='darkpop'] .project-chapter-card:hover,
+html[data-theme='pop'] .entry-card:hover,html[data-theme='darkpop'] .entry-card:hover,
+html[data-theme='pop'] .chapter-menu-card:hover,html[data-theme='darkpop'] .chapter-menu-card:hover{transform:translateY(-1px)}

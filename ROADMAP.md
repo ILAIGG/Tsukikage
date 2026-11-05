@@ -1,5 +1,11 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.4
+
+- [x] Unificar tarjetas, botones, campos y navegación de Pop/DarkPop con contorno, relleno de paleta y sombra tipo tecla.
+- [x] Mejorar el contraste de textos secundarios, capítulos, fichas del mundo, diálogos y botones de acento.
+- [x] Aplicar Manrope a la interfaz Pop/DarkPop y conservar la tipografía serif del manuscrito.
+
 ## Entregado en 0.9.3
 
 - [x] Mantener la meta diaria y Preferencias en todas las vistas, también en “Mis historias”.
