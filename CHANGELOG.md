@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.1] - 2026-11-05
+
+### Corregido
+- Los botones móviles de Buscar y Exportar tienen el mismo tamaño que los controles de navegación y mantienen sus iconos centrados.
+- La barra de formato se integra en la superficie del manuscrito y permanece accesible al desplazarse, también en móviles.
+
 ## [0.12.0] - 2026-11-05
 
 ### Corregido
