@@ -29,6 +29,11 @@
 
 - [x] Preparar la configuración de Supabase con clave publishable para desarrollo local y GitHub Pages, manteniendo compatibilidad con la clave anon legacy.
 
+## Entregado en 0.6.7
+
+- [x] Avisar periódicamente que el guardado local depende de los datos del navegador y facilitar exportar/importar copias JSON desde Mis historias.
+- [x] Posponer el aviso durante una semana; volver a mostrarlo al pasar un mes sin exportar una copia.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.

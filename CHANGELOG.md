@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.7] - 2026-11-05
+
+### Añadido
+- Recordatorio periódico en “Mis historias” para descargar una copia JSON y conservarla fuera del navegador.
+- Accesos directos para exportar e importar copias desde el recordatorio, con opción de posponerlo una semana.
+- Mensaje de confirmación tras descargar una copia que indica dónde conviene conservarla.
+
 ## [0.6.6] - 2026-11-05
 
 ### Añadido
