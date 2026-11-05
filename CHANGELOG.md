@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.19.1] - 2026-11-05
+
+### Corregido
+- El panel lateral de DarkPop utiliza un contorno simple y la misma sombra que los controles del editor, eliminando el doble borde brillante en navegación y contador diario.
+
 ## [0.19.0] - 2026-11-05
 
 ### Añadido
