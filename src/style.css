@@ -622,8 +622,9 @@ html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .pr
 @media(max-width:600px){
   .topbar{align-items:center}
   .mobile-menu,.back-button,.top-actions .search-trigger,.top-actions .export-trigger{box-sizing:border-box;flex:0 0 30px;width:30px;height:30px;min-height:30px;margin:0;padding:0;align-self:center;border-radius:6px;display:grid;place-items:center}
-  .top-actions{height:30px;align-self:center;align-items:center}
-  .top-actions>.secondary-btn svg{width:14px;height:14px;margin:0}
+  .top-actions{height:30px;align-self:center;align-items:center;line-height:0}
+  .top-actions>.secondary-btn svg{display:block;flex:none;width:14px;height:14px;margin:0;align-self:center;justify-self:center;transform:none}
+  .topbar .top-actions .search-trigger:hover,.topbar .top-actions .export-trigger:hover{transform:none!important;box-shadow:0 2px 0 var(--theme-shadow,transparent)}
   .rich-wrapper .paper>.format-toolbar{top:0;box-sizing:border-box;width:calc(100% + 34px);min-width:calc(100% + 34px);flex:0 0 calc(100% + 34px);margin:-22px -17px 16px;padding:7px 9px;min-height:40px;gap:5px;flex-wrap:wrap;overflow:visible;overscroll-behavior:initial;touch-action:pan-y}
   .rich-wrapper .paper>.format-toolbar>*{flex:0 0 auto}
   .rich-wrapper .paper>.format-toolbar>button{width:29px;height:28px}

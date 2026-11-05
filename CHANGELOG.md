@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.6] - 2026-11-05
+
+### Corregido
+- Buscar y Exportar mantienen el mismo centro vertical, incluso al pasar el puntero, y sus iconos quedan centrados dentro de los botones en móviles.
+
 ## [0.12.5] - 2026-11-05
 
 ### Corregido
