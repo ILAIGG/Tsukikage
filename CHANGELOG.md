@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.16.0] - 2026-11-05
+
+### Añadido
+- Preferencias muestra al pie la versión actual de la aplicación, sincronizada con la compilación.
+
+### Cambiado
+- Las instrucciones locales de agentes dejan de formar parte de los archivos publicados del repositorio.
+
 ## [0.15.0] - 2026-11-05
 
 ### Cambiado

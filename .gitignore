@@ -4,3 +4,12 @@ dist/
 .env*
 !.env.example
 .DS_Store
+
+# Local assistant configuration
+AGENTS.md
+**/AGENTS.md
+**/SKILL.md
+.agents/
+.codex/
+.claude/
+skills/
