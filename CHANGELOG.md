@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.17.0] - 2026-11-05
+
+### Añadido
+- Mundo vuelve a ofrecer la sección Personajes y la acción Crear nuevo personaje, con guardado y acceso desde la navegación lateral.
+
 ## [0.16.0] - 2026-11-05
 
 ### Añadido
