@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.5] - 2026-11-05
+
+### Corregido
+- La barra de formato móvil queda alineada dentro del papel y permanece visible al desplazarse verticalmente por el manuscrito.
+- El contenedor móvil ya no bloquea el desplazamiento de página y los cuatro controles de la barra superior comparten dimensiones y alineación.
+
 ## [0.12.4] - 2026-11-05
 
 ### Corregido
