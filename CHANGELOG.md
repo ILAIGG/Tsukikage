@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.8] - 2026-11-05
+
+### Corregido
+- Se mejora el contraste de los números de capítulo en DarkPop y el Esquema adopta el estilo de tarjetas del tema.
+- El buscador del capítulo separa el icono del campo y los resaltados de búsqueda usan el acento de Pop/DarkPop.
+- El arrastre permite mover escenas en ambas direcciones, incluida la primera sobre la segunda.
+
 ## [0.9.7] - 2026-11-05
 
 ### Añadido

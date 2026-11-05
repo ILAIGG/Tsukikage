@@ -1,5 +1,11 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.8
+
+- [x] Mejorar el contraste de la numeración y dar estilo de tema a las tarjetas del Esquema.
+- [x] Separar el icono del buscador del capítulo y adaptar el resaltado global a cada paleta.
+- [x] Corregir el reordenamiento de escenas para que funcione en ambas direcciones.
+
 ## Entregado en 0.9.7
 
 - [x] Reordenar escenas con arrastrar y soltar, conservar la escena activa y guardar el orden.
