@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.15.0] - 2026-11-05
+
+### Cambiado
+- Se retiran los flujos de creación y edición de personajes, lugares y acontecimientos para reestructurarlos desde cero. Notas conserva su editor y los datos existentes se mantienen.
+
 ## [0.14.6] - 2026-11-05
 
 ### Corregido
