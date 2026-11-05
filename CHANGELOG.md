@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.2] - 2026-11-05
+
+### Cambiado
+- La descripción guiada recorre una categoría y una pregunta cada vez, permite volver y presenta las respuestas en secciones plegables al terminar o regresar al texto libre.
+- La ficha se edita en una vista amplia propia. Relaciones ofrece entrevista o un árbol gráfico para elegir personajes vinculados.
+
 ## [0.14.1] - 2026-11-05
 
 ### Cambiado
