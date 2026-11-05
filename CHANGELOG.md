@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.2] - 2026-11-05
+
+### Cambiado
+- La vista “Capítulo completo” ya no muestra las descripciones de planificación de las escenas.
+- En modo enfoque, Claro usa un fondo uniforme; Pop y DarkPop conservan su contraste con más margen y un borde sutil.
+
 ## [0.9.1] - 2026-11-05
 
 ### Cambiado

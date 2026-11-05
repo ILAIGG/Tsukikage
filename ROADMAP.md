@@ -1,5 +1,10 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.2
+
+- [x] Ocultar las descripciones de escena en la vista unificada del capítulo.
+- [x] Ajustar el fondo del modo enfoque en Claro y los márgenes, bordes y sombra de Pop/DarkPop.
+
 ## Entregado en 0.9.1
 
 - [x] Unificar todas las escenas en un solo editor continuo para la vista “Capítulo completo”, conservando su contenido independiente.

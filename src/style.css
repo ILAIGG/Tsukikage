@@ -136,6 +136,6 @@ html[data-theme='pop'] .summary-editor textarea,html[data-theme='darkpop'] .summ
 .scene-break-marker::before,.scene-break-marker::after{content:"";height:1px;flex:1;background:var(--line)}
 .scene-break-marker span{padding:3px 9px;border:1px solid var(--line);border-radius:12px;color:var(--muted);font:500 9px Manrope,sans-serif;white-space:nowrap}
 .complete-chapter-paper .paper{min-height:555px}
-.complete-scene-descriptions{display:grid;gap:2px;margin-top:16px}
-.complete-scene-descriptions .scene-description-field+.scene-description-field{padding-top:14px;border-top:1px solid var(--line)}
-.focus-mode .scene-break-marker{margin:20px 0}.focus-mode .complete-scene-descriptions{display:none}
+.focus-mode .scene-break-marker{margin:20px 0}
+html[data-resolved-theme='light'] .focus-mode .paper{background:transparent!important;border:0!important;box-shadow:none!important}
+html[data-theme='pop'] .focus-mode .paper,html[data-theme='darkpop'] .focus-mode .paper{width:calc(100% - 24px);margin-inline:auto;padding:24px clamp(20px,4vw,36px) 18px;border:1px solid var(--theme-shadow);border-radius:8px;box-shadow:0 3px 0 var(--theme-shadow);}
