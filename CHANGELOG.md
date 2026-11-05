@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.8.1] - 2026-11-05
+
+### Cambiado
+- El encabezado del manuscrito muestra y permite editar el título del capítulo activo.
+- Se quita el selector de capítulos del editor; se puede cambiar desde el panel lateral o volver a la lista.
+- La navegación de escenas recupera las pestañas compactas y sus controles adoptan los colores de cada tema.
+
 ## [0.8.0] - 2026-11-05
 
 ### Añadido

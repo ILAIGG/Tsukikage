@@ -93,3 +93,23 @@ html[data-theme='pop'] .new-story-card,html[data-theme='darkpop'] .new-story-car
 .focus-exit:hover{border-color:var(--accent)}
 html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,html[data-theme^='custom-'] .chapter-planner,html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,html[data-theme^='custom-'] .scene-manager,html[data-theme='pop'] .chapter-progress-button,html[data-theme='darkpop'] .chapter-progress-button,html[data-theme^='custom-'] .chapter-progress-button{background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line)}
 @media(max-width:600px){.topbar{position:relative}.breadcrumbs{flex:1}.breadcrumbs>span,.breadcrumbs>svg,.breadcrumbs>b{display:none!important}.top-actions{position:absolute;inset:8px 10px;display:block;pointer-events:none}.top-actions>*{pointer-events:auto}.top-actions .search-trigger,.top-actions .export-trigger,.top-actions .top-settings{position:absolute;top:0;width:35px;height:35px}.top-actions .search-trigger{left:66px}.top-actions .export-trigger{left:50%;transform:translateX(-50%)}.top-actions .top-settings{right:0}.back-button,.mobile-menu{position:relative;z-index:1}.writing-layout{padding:16px 12px 30px}.book-title-edit{max-width:calc(100vw - 75px);font-size:24px}.scene-manager{padding:9px}.scene-manager-head{align-items:flex-start}.scene-manager-head small{max-width:210px;line-height:1.4}.scene-manager-head .secondary-btn{font-size:0;width:32px;justify-content:center;padding:0}.scene-manager-head .secondary-btn svg{flex:none}.current-chapter-select{max-width:none}.focus-mode .editor-column{padding:68px 20px 40px}.focus-mode .tiptap-writing{min-height:80vh;font-size:var(--writing-size,17px)}.focus-exit{top:10px;right:10px;min-height:34px;font-size:0}.focus-exit svg{width:18px;height:18px}.project-synopsis textarea{width:100%}}
+
+/* The manuscript header edits the active chapter; scene navigation matches the former slim tab strip. */
+.book-heading .chapter-heading-edit{width:min(720px,calc(100vw - 95px));max-width:100%;font:650 30px Manrope,sans-serif;letter-spacing:-1px;color:var(--text)}
+.chapter-planner{gap:0;margin-top:6px}
+.scene-manager{gap:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--text)}
+.scene-manager-head{margin-bottom:4px}
+.scene-tabs{margin:0 0 10px}
+.scene-tabs .chapter-strip{border-bottom-color:var(--line)}
+.scene-tabs .chapter-tab{color:var(--muted)}
+.scene-tabs .chapter-tab:hover{color:var(--text)}
+.scene-tabs .chapter-tab.current{border-bottom-color:var(--theme-accent,var(--accent));color:var(--text)}
+.scene-editor-row textarea{background:var(--theme-surface,var(--panel));color:var(--theme-text,var(--text));border-color:var(--theme-line,var(--line))}
+.scene-manager-head .secondary-btn{background:var(--theme-surface,var(--panel));color:var(--theme-text,var(--text));border-color:var(--theme-line,var(--line))}
+html[data-resolved-theme='light'] .scene-editor-row textarea,html[data-resolved-theme='light'] .scene-manager-head .secondary-btn{background:#fff;color:#39313f;border-color:#dcd5e3}
+html[data-theme='pop'] .scene-tabs .chapter-strip,html[data-theme='darkpop'] .scene-tabs .chapter-strip,html[data-theme^='custom-'] .scene-tabs .chapter-strip{border-color:var(--theme-line)}
+html[data-theme='pop'] .scene-tabs .chapter-tab,html[data-theme='darkpop'] .scene-tabs .chapter-tab,html[data-theme^='custom-'] .scene-tabs .chapter-tab{color:var(--theme-muted,var(--theme-text));}
+html[data-theme='pop'] .scene-tabs .chapter-tab.current,html[data-theme='darkpop'] .scene-tabs .chapter-tab.current,html[data-theme^='custom-'] .scene-tabs .chapter-tab.current{color:var(--theme-text);border-color:var(--theme-accent)}
+html[data-theme='pop'] .scene-editor-row textarea,html[data-theme='darkpop'] .scene-editor-row textarea,html[data-theme^='custom-'] .scene-editor-row textarea,html[data-theme='pop'] .scene-manager-head .secondary-btn,html[data-theme='darkpop'] .scene-manager-head .secondary-btn,html[data-theme^='custom-'] .scene-manager-head .secondary-btn{background:var(--theme-surface);color:var(--theme-text);border-color:var(--theme-line)}
+html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,html[data-theme^='custom-'] .chapter-planner,html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager,html[data-theme^='custom-'] .scene-manager{background:transparent;border:0;color:var(--theme-text)}
+@media(max-width:600px){.book-heading .chapter-heading-edit{width:calc(100vw - 85px);font-size:25px}.scene-manager-head .secondary-btn{width:auto;font-size:9px;padding:0 9px}.scene-manager-head .secondary-btn svg{flex:none}}

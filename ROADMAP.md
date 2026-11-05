@@ -1,5 +1,11 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.8.1
+
+- [x] Mostrar el título del capítulo en la cabecera del manuscrito.
+- [x] Quitar la navegación de capítulos del editor y restaurar pestañas compactas para escenas.
+- [x] Corregir los colores de controles de escenas en Claro, Pop y DarkPop.
+
 ## Entregado en 0.8.0
 
 - [x] Añadir navegación para volver desde cada vista.
