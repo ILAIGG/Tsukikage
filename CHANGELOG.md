@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.4] - 2026-11-05
+
+### Cambiado
+- Las fichas de mundo se abren como vistas principales dentro del área de trabajo, con la navegación lateral visible y sin ventana superpuesta. La creación de personaje solicita tipo, nombre y apellido antes de abrir su ficha.
+
 ## [0.14.3] - 2026-11-05
 
 ### Cambiado
