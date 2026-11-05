@@ -521,24 +521,6 @@ html[data-theme^='custom-'] .icon-button:hover{
 html[data-theme^='custom-'] .goal-stepper button:hover:not(:disabled),html[data-theme^='custom-'] .profile:hover{box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 2px 0 var(--theme-shadow)}
 html[data-resolved-theme='light'] .profile-icon{background:#f1ebf8;border-color:#cfc2df;color:#694d85}
 
-/* Theme-aware emphasis for buttons and writing advice. */
-html[data-theme='pop'] button:not(.primary-btn):not(.text-button):not(.statusbar button):not(.chapter-menu-open):hover:not(:disabled),
-html[data-theme='darkpop'] button:not(.primary-btn):not(.text-button):not(.statusbar button):not(.chapter-menu-open):hover:not(:disabled){
-  background-color:color-mix(in srgb,var(--theme-accent) 20%,var(--theme-surface));
-  color:var(--theme-text);border-color:var(--theme-accent);
-  box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 3px 0 var(--theme-shadow);
-  transform:translateY(-1px)
-}
-html[data-theme='pop'] .primary-btn:hover,html[data-theme='darkpop'] .primary-btn:hover{
-  filter:brightness(1.08);transform:translateY(-1px);box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 4px 0 var(--theme-shadow)
-}
-html[data-theme='pop'] .project-chapter-card:hover,html[data-theme='darkpop'] .project-chapter-card:hover,
-html[data-theme='pop'] .project-quick-links button:hover,html[data-theme='darkpop'] .project-quick-links button:hover,
-html[data-theme='pop'] .chapter-menu-card:hover,html[data-theme='darkpop'] .chapter-menu-card:hover,
-html[data-theme='pop'] .world-category-card:hover,html[data-theme='darkpop'] .world-category-card:hover{
-  background:color-mix(in srgb,var(--theme-accent) 16%,var(--theme-surface));border-color:var(--theme-accent);
-  box-shadow:inset 0 0 0 1px var(--theme-key-ring),0 4px 0 var(--theme-shadow);transform:translateY(-1px)
-}
 html[data-theme='pop'] .tip-icon,html[data-theme='darkpop'] .tip-icon,html[data-theme^='custom-'] .tip-icon{
   color:var(--theme-accent);background:color-mix(in srgb,var(--theme-accent) 20%,var(--theme-surface));
   border:1px solid color-mix(in srgb,var(--theme-accent) 55%,var(--theme-line))
@@ -653,6 +635,3 @@ html[data-theme='pop'] .project-synopsis,html[data-theme='darkpop'] .project-syn
 html[data-resolved-theme='light'] .character-page{color:#352f3b}html[data-resolved-theme='light'] .character-page input,html[data-resolved-theme='light'] .character-page textarea,html[data-resolved-theme='light'] .character-role-picker>summary,html[data-resolved-theme='light'] .character-role-options{background:#fff;color:#352f3b;border-color:#d8d2df}.character-page input::placeholder,.character-page textarea::placeholder{color:var(--theme-muted,var(--muted));opacity:1}.world-page .entry-card p{white-space:pre-wrap}html[data-resolved-theme='light'] .world-page .entry-card h3{color:#352f3b}html[data-resolved-theme='light'] .world-page .entry-card p{color:#655c70}
 
 .character-description{min-width:0}.character-description>h2{font-size:12px;font-weight:400;margin:0 0 9px}.character-description .paper{color:inherit}.character-description .tiptap-writing{color:var(--theme-text,#cfccd1)}html[data-resolved-theme='light'] .character-description .tiptap-writing{color:#352f3b}
-/* DarkPop sidebar uses the same single contour as the editor controls. */
-html[data-theme='darkpop'] .sidebar{--theme-key-ring:transparent}
-html[data-theme='darkpop'] .sidebar :is(.nav-item,.tree-section-head,.tree-entries button,.goal-card,.profile,.goal-stepper,.tree-add,.collapse-btn,.goal-stepper button,.goal-heading .icon-button),html[data-theme='darkpop'] .sidebar :is(.nav-item,.tree-section-head,.tree-entries button,.goal-card,.profile,.goal-stepper,.tree-add,.collapse-btn,.goal-stepper button,.goal-heading .icon-button):hover{border-width:1px;border-style:solid;border-color:var(--theme-line);box-shadow:0 2px 0 var(--theme-shadow)}

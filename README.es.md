@@ -77,3 +77,7 @@ Consulta [`ROADMAP.md`](ROADMAP.md) para ver el trabajo entregado y las mejoras 
 ### Recuperación en un navegador real
 
 Ejecuta `npm run test:browser` con Chromium instalado (`CHROMIUM_BIN` permite indicar otro ejecutable). La prueba usa los puertos locales 5188 y 9228 y un perfil temporal independiente. Comprueba la recuperación tras reiniciar el navegador y que el texto restaurado persista después de otra apertura. Al terminar elimina el perfil temporal.
+
+### Revisión visual de Pop / DarkPop
+
+Ejecuta `npm run test:themes` con Chromium instalado para generar capturas de escritorio y móvil en ambas paletas. El comando indica el directorio temporal de las imágenes. Consulta [el sistema visual compartido y la cobertura](docs/POP_THEMES.md).

@@ -2,6 +2,16 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.20.0] - 2026-11-05
+
+### Cambiado
+- Pop y DarkPop comparten contornos, radios, sombras de tecla y estados de selección, hover, pulsación y foco en navegación, botones, tarjetas, editores y diálogos.
+- Se incorporan acentos menta discretos en cabeceras, Mundo y consejos; se mejora la legibilidad de etiquetas y campos, incluidos Notas y Preferencias.
+- Los sliders y menús mantienen la paleta del tema; el hover conserva la alineación y la pulsación hunde visualmente los controles.
+
+### Verificación
+- Se incorpora una revisión reproducible de las vistas principales y sus controles en Chromium, en escritorio y móvil, con capturas y comprobaciones de desbordamiento, centrado y estados de interacción.
+
 ## [0.19.2] - 2026-11-05
 
 ### Documentación

@@ -1,6 +1,6 @@
 {
   "name": "tsukikage",
-  "version": "0.19.2",
+  "version": "0.20.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "test": "node --import tsx --test tests/*.test.ts",
-    "test:browser": "node tests/browser-recovery.mjs"
+    "test:browser": "node tests/browser-recovery.mjs",
+    "test:themes": "node tests/theme-visual.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

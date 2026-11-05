@@ -77,3 +77,7 @@ See [`ROADMAP.md`](ROADMAP.md) for completed work and planned improvements.
 ### Recovery in a real browser
 
 Run `npm run test:browser` with Chromium installed (`CHROMIUM_BIN` can point to another executable). The check starts Vite and Chromium on local ports 5188 and 9228 with an isolated temporary profile. It verifies draft recovery after a browser restart, then checks that the restored text survives another restart. The temporary profile is removed afterward.
+
+### Pop / DarkPop visual checks
+
+Run `npm run test:themes` with Chromium installed to capture desktop and mobile views in both palettes. The command prints the temporary screenshot directory. See [the shared visual system and test coverage](docs/POP_THEMES.md).

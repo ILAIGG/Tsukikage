@@ -1,0 +1,208 @@
+/* Shared visual primitives for the two Pop palettes. Keep interactions here. */
+html:is([data-theme='pop'],[data-theme='darkpop']) {
+  --pop-radius: 9px;
+  --pop-key-depth: 3px;
+  --pop-ring: color-mix(in srgb, var(--theme-key-ring) 24%, transparent);
+  --pop-edge: var(--theme-line);
+  --pop-hover: color-mix(in srgb, var(--theme-accent) 18%, var(--theme-surface));
+  --pop-selected: color-mix(in srgb, var(--theme-accent) 30%, var(--theme-surface));
+  --pop-key-shadow: inset 0 0 0 1px var(--pop-ring), 0 var(--pop-key-depth) 0 var(--theme-shadow);
+  --muted: var(--theme-readable-muted);
+  --text: var(--theme-text);
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) body .app-shell {
+  color: var(--theme-text);
+  font-family: Manrope, 'DM Sans', sans-serif;
+}
+/* Keys: navigation, actions and editor controls share a single contour and depth. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .primary-btn,.secondary-btn,.chapter-progress-button,.focus-exit,.icon-button,.back-button,.mobile-menu,.nav-item,
+  .tree-section-head,.tree-add,.tree-entries button,.new-chapter,.outline-item,
+  .profile,.goal-stepper button,.format-toolbar button,.chapter-tab,.kind-pills button,
+  .theme-options button,.sync-shortcut,.theme-import-btn,.search-filter-chip,
+  .character-role-picker>summary,.export-menu button
+) {
+  border: 1px solid var(--pop-edge) !important;
+  border-radius: var(--pop-radius) !important;
+  background: var(--theme-surface) !important;
+  color: var(--theme-text) !important;
+  box-shadow: var(--pop-key-shadow) !important;
+  transform: none !important;
+  filter: none !important;
+  transition: background-color 140ms ease, border-color 140ms ease, translate 100ms ease, box-shadow 100ms ease;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell button.primary-btn {
+  background: var(--theme-accent) !important;
+  color: var(--theme-accent-ink) !important;
+  font-weight: 650;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .nav-item.active,.tree-section-head.active,.tree-entries button.selected,
+  .outline-item.outline-selected,.format-toolbar button.selected,.chapter-tab.current,
+  .theme-options button.picked,.kind-pills button.picked,.search-filter-chip.selected,
+  .character-role-options button[aria-pressed='true']
+) {
+  background: var(--pop-selected) !important;
+  border-color: var(--theme-accent) !important;
+  color: var(--theme-text) !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .primary-btn,.secondary-btn,.chapter-progress-button,.focus-exit,.icon-button,.back-button,.mobile-menu,.nav-item,
+  .tree-section-head,.tree-add,.tree-entries button,.new-chapter,.outline-item,
+  .profile,.goal-stepper button,.format-toolbar button,.chapter-tab,.kind-pills button,
+  .theme-options button,.sync-shortcut,.theme-import-btn,.search-filter-chip,
+  .character-role-picker>summary,.export-menu button
+):hover:not(:disabled) {
+  background: var(--pop-hover) !important;
+  color: var(--theme-text) !important;
+  border-color: var(--theme-accent) !important;
+  box-shadow: var(--pop-key-shadow) !important;
+  transform: none !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell button.primary-btn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--theme-accent) 88%, var(--theme-surface)) !important;
+  color: var(--theme-accent-ink) !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .primary-btn,.secondary-btn,.chapter-progress-button,.focus-exit,.icon-button,.back-button,.mobile-menu,.nav-item,
+  .tree-section-head,.tree-add,.tree-entries button,.new-chapter,.outline-item,
+  .profile,.goal-stepper button,.format-toolbar button,.chapter-tab,.kind-pills button,
+  .theme-options button,.sync-shortcut,.theme-import-btn,.search-filter-chip,
+  .character-role-picker>summary,.export-menu button
+):active:not(:disabled) {
+  translate: 0 2px;
+  box-shadow: inset 0 0 0 1px var(--pop-ring), 0 1px 0 var(--theme-shadow) !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell button:disabled {
+  opacity: .48;
+  cursor: not-allowed;
+  translate: none;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :focus-visible {
+  outline: 2px solid var(--theme-accent) !important;
+  outline-offset: 3px;
+}
+/* Compound navigation is one key; its plus action stays independently clickable. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tree-section-head :is(.tree-section-title,.tree-chevron),
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tree-section-head :is(.tree-section-title,.tree-chevron):hover {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  color: inherit !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tree-section-head { margin-bottom: 5px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tree-section-head:has(.tree-add:active) { translate: none; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tree-add { margin: 5px; }
+/* Cards and dialogs use the same frame without adding borders to their labels. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .story-card,.entry-card,.project-hero,.project-stats article,.project-chapter-card,
+  .project-quick-links button,.chapter-menu-card,.world-category-card,.stats-card,
+  .goal-card,.tip-card,.backup-reminder,.new-story-card,.settings-dialog,.modal-card,
+  .legal-dialog,.export-menu,.character-role-options
+) {
+  color: var(--theme-text);
+  border: 1px solid var(--pop-edge);
+  border-radius: 12px;
+  background-color: var(--theme-surface);
+  box-shadow: inset 0 0 0 1px var(--pop-ring), 0 4px 0 var(--theme-shadow);
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .project-chapter-card,.project-quick-links button,.world-category-card,.new-story-card
+):hover {
+  background-color: var(--pop-hover) !important;
+  border-color: var(--theme-accent);
+  transform: none !important;
+  box-shadow: inset 0 0 0 1px var(--pop-ring), 0 4px 0 var(--theme-shadow) !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .project-chapter-card,.project-quick-links button,.world-category-card,.new-story-card
+):active { translate: 0 2px; box-shadow: inset 0 0 0 1px var(--pop-ring), 0 2px 0 var(--theme-shadow) !important; }
+/* Flat actions: content rows and editable summaries retain their parent surface. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.chapter-menu-open,.character-role-options button,.project-search-result) {
+  background: transparent; color: var(--theme-text); box-shadow: none !important; transform: none !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.chapter-menu-open,.character-role-options button,.project-search-result):hover {
+  background: var(--pop-hover) !important; box-shadow: none !important; transform: none !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.summary-preview,.synopsis-preview):hover {
+  background: var(--pop-hover) !important; border-radius: 10px; box-shadow: none !important; transform: none !important;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .page-heading h1,.page-heading h2,.project-outline-head h2,.modal-head h2,
+  .entry-card h3,.character-page-heading h1,.settings-dialog legend,.settings-dialog label,
+  .character-role-field,.chapter-menu-open,.project-chapter-info>b
+) { color: var(--theme-text); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .page-heading p,.entry-card p,.entry-card>small,.eyebrow,.settings-version,
+  .project-nav-label,.synopsis-preview>span,.character-image-placeholder,.paper-footer,
+  .scene-manager-head small,.project-stats span,.theme-format-hint,.settings-bottom
+) { color: var(--theme-readable-muted); }
+/* Fields are writing surfaces, not raised keys. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
+  .modal-content input,.modal-content textarea,.modal-content select,.setting-row select,
+  .character-page input,.character-page textarea,.character-page select,
+  .summary-editor textarea,.scene-description-field textarea
+) {
+  border: 1px solid var(--pop-edge); border-radius: 8px;
+  background: var(--theme-page); color: var(--theme-text); box-shadow: none;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(input,textarea)::placeholder {
+  color: var(--theme-readable-muted); opacity: .8;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .paper {
+  color: var(--theme-text); border: 1px solid var(--pop-edge);
+  background: var(--theme-page); border-radius: 10px;
+  box-shadow: inset 0 0 0 1px var(--pop-ring), 0 4px 0 var(--theme-shadow);
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing p.is-editor-empty:first-child::before {
+  color: var(--theme-readable-muted); opacity: .65;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .rich-wrapper .paper>.format-toolbar {
+  background: var(--theme-page); border-bottom-color: var(--pop-edge); border-radius: 9px 9px 0 0;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.export-menu,.character-role-options) {
+  padding: 8px; gap: 7px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu button,
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu .menu-label {
+  margin-block: 0 7px; width: 100%; min-height: 34px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .theme-options { gap: 9px; padding-bottom: 4px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .profile { gap: 10px; align-items: center; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .goal-card { padding: 14px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .mobile-goal-card { padding: 10px 12px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell input[type='range'] { accent-color: var(--theme-accent); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .chapter-progress-button {
+  background: var(--theme-surface); color: var(--theme-text);
+  border-color: var(--pop-edge); box-shadow: var(--pop-key-shadow); border-radius: var(--pop-radius);
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-fullscreen { border: 0; border-radius: 0; box-shadow: none; }
+@media(prefers-reduced-motion:reduce) {
+  html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell * { transition: none !important; animation: none !important; }
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.goal-heading,.goal-numbers span,.goal-card small,.theme-choice-label,.project-chapter-no,.chapter-menu-index) { color: var(--theme-readable-muted); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input[type='range'] { appearance: none; height: 26px; background: transparent; border: 0; padding: 0; box-shadow: none; cursor: pointer; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-runnable-track { height: 7px; border: 1px solid var(--pop-edge); border-radius: 10px; background: var(--theme-page); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; margin-top: -7px; border: 1px solid var(--pop-edge); border-radius: 50%; background: var(--theme-accent); box-shadow: 0 2px 0 var(--theme-shadow); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-moz-range-track { height: 6px; border: 1px solid var(--pop-edge); border-radius: 10px; background: var(--theme-page); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-moz-range-thumb { width: 16px; height: 16px; border: 1px solid var(--pop-edge); border-radius: 50%; background: var(--theme-accent); box-shadow: 0 2px 0 var(--theme-shadow); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu .menu-label { border:1px solid var(--pop-edge);border-radius:var(--pop-radius);background:var(--theme-surface);color:var(--theme-text);box-shadow:var(--pop-key-shadow);padding:9px 12px;cursor:pointer; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu .menu-label:hover { background:var(--pop-hover);border-color:var(--theme-accent); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .goal-heading span { color:var(--theme-readable-muted); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .outline-item :is(span,small) { color: var(--theme-readable-muted); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.modal-content>label,.sync-content>label,.kind-pills,.chapter-summary-block>label,.scene-description-field>label) { color:var(--theme-text); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-screen-backdrop .entry-fullscreen { border:0;border-radius:0;box-shadow:none;background:var(--theme-background); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-fullscreen>.modal-content { align-content:start;gap:20px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-fullscreen .modal-content input,
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-fullscreen .modal-content select { min-height:40px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-dialog :is(.setting-row,.theme-setting,.theme-format-hint,.settings-bottom) { background:transparent;border-color:color-mix(in srgb,var(--theme-line) 55%,transparent); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.consistency-item,.recovery-preview,.toast) { background:var(--theme-surface);color:var(--theme-text);border:1px solid var(--theme-line);border-radius:var(--pop-radius);box-shadow:0 3px 0 var(--theme-shadow); }
+/* Small mint accents echo the playful hardware palette without tinting the manuscript. */
+html[data-theme='pop'] { --pop-secondary: #277c78; }
+html[data-theme='darkpop'] { --pop-secondary: #93d5cf; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.page-heading,.character-page-heading) .eyebrow { display:inline-flex;align-items:center;gap:8px; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.page-heading,.character-page-heading) .eyebrow::before { content:'';width:7px;height:7px;flex:none;border:1px solid var(--pop-edge);border-radius:2px;background:var(--pop-secondary);box-shadow:0 2px 0 var(--theme-shadow); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .world-category-card>svg { color:var(--pop-secondary); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tip-icon { color:var(--pop-secondary);border-color:var(--pop-secondary);background:color-mix(in srgb,var(--pop-secondary) 12%,var(--theme-surface)); }
