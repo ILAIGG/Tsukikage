@@ -40,6 +40,11 @@
 - [x] Hacer que el panel lateral se abra como menú en móvil y ajustar las vistas principales a pantallas estrechas.
 - [x] Completar la revisión manual de la página publicada y el modo offline en navegadores/dispositivos, según comprobación del usuario.
 
+## Entregado en 0.7.0
+
+- [x] Buscar en todo el proyecto activo: capítulos y sus escenas/sinopsis, fichas del mundo y acontecimientos.
+- [x] Filtrar por tipo, resaltar coincidencias en los fragmentos y abrir la ubicación del resultado.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
@@ -65,7 +70,6 @@
 - [ ] **P1 · Organización del mundo:** vínculos cruzados entre personajes, lugares, acontecimientos y capítulos; filtros y navegación desde una ficha relacionada.
 - [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
 - [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
-- [ ] **P2 · Buscar en todo el proyecto:** búsqueda con resaltado y filtros por capítulo, ficha, nota y acontecimiento.
 - [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.
 - [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.
 

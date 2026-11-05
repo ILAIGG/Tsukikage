@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.7.0] - 2026-11-05
+
+### Añadido
+- Búsqueda dentro del proyecto abierto en títulos, manuscritos, sinopsis, escenas, personajes, lugares, notas y acontecimientos.
+- Filtros por tipo de contenido, fragmentos con el término resaltado y navegación directa al capítulo o ficha encontrada.
+- Interfaz de búsqueda traducida al español y al inglés, con cierre mediante Escape.
+
 ## [0.6.8] - 2026-11-05
 
 ### Cambiado
