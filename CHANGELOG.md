@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.6] - 2026-11-05
+
+### Corregido
+- Se elimina de la ficha el selector que permitía cambiar su categoría entre personaje, lugar, nota y acontecimiento. El tipo queda fijo al crearla.
+
 ## [0.14.5] - 2026-11-05
 
 ### Corregido
