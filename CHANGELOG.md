@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.18.2] - 2026-11-05
+
+### Corregido
+- El desplegable de tipo de personaje usa la paleta del tema también en su lista de opciones, selección y hover.
+- Se corrigen los colores de campos y textos de personajes en Claro y se conservan los saltos de línea de sus descripciones.
+
 ## [0.18.1] - 2026-11-05
 
 ### Cambiado
