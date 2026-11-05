@@ -1,5 +1,11 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.6
+
+- [x] Quitar bordes duplicados del planificador y espaciar las pestañas de escenas.
+- [x] Separar el control para eliminar escena del campo de descripción.
+- [x] Centrar verticalmente el acceso a Preferencias y dar margen al botón de añadir del árbol lateral.
+
 ## Entregado en 0.9.5
 
 - [x] Unificar el fondo de las tarjetas de capítulos y separar visualmente sus acciones.

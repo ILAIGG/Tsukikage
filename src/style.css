@@ -329,3 +329,30 @@ html[data-theme='pop'] .goal-stepper button,html[data-theme='darkpop'] .goal-ste
 html[data-theme='pop'] .tree-section-head,html[data-theme='darkpop'] .tree-section-head{gap:5px;padding-right:5px}
 html[data-theme='pop'] .tree-add,html[data-theme='darkpop'] .tree-add{width:28px;height:28px;margin:0;flex:0 0 28px}
 html[data-theme='pop'] .chapter-menu-list,html[data-theme='darkpop'] .chapter-menu-list{gap:10px}
+
+/* Remove nested outlines from the scene planner and give its controls room. */
+html[data-theme='pop'] .chapter-planner,html[data-theme='darkpop'] .chapter-planner,
+html[data-theme='pop'] .scene-manager,html[data-theme='darkpop'] .scene-manager{
+  border:0;background:transparent;box-shadow:none;padding:0
+}
+html[data-theme='pop'] .scene-tabs .chapter-strip,html[data-theme='darkpop'] .scene-tabs .chapter-strip{
+  align-items:center;gap:8px;border:0;padding:3px 2px 5px
+}
+html[data-theme='pop'] .scene-tabs .chapter-tab,html[data-theme='darkpop'] .scene-tabs .chapter-tab{
+  flex:none;margin:0;box-shadow:0 2px 0 var(--theme-shadow)
+}
+html[data-theme='pop'] .scene-tabs .full-chapter-tab,html[data-theme='darkpop'] .scene-tabs .full-chapter-tab{margin-left:auto}
+html[data-theme='pop'] .scene-tabs .new-chapter,html[data-theme='darkpop'] .scene-tabs .new-chapter{flex:none;margin-left:0}
+html[data-theme='pop'] .scene-description-field,html[data-theme='darkpop'] .scene-description-field{
+  display:grid;grid-template-columns:minmax(0,1fr) 36px;align-items:end;gap:8px;padding-right:0
+}
+html[data-theme='pop'] .scene-description-field>label,html[data-theme='darkpop'] .scene-description-field>label{min-width:0;margin:0}
+html[data-theme='pop'] .scene-description-field .remove-scene,html[data-theme='darkpop'] .scene-description-field .remove-scene{
+  position:static;grid-column:2;grid-row:1;align-self:end;width:32px;height:32px;margin-bottom:1px
+}
+html[data-theme='pop'] .tree-add,html[data-theme='darkpop'] .tree-add{margin-right:5px}
+html[data-theme='pop'] .sidebar .profile,html[data-theme='darkpop'] .sidebar .profile{
+  height:52px;min-height:52px;align-items:center;padding:0 10px;margin-top:8px
+}
+html[data-theme='pop'] .sidebar .profile>svg,html[data-theme='darkpop'] .sidebar .profile>svg,
+html[data-theme='pop'] .sidebar .profile .avatar,html[data-theme='darkpop'] .sidebar .profile .avatar{flex:none}

@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.6] - 2026-11-05
+
+### Corregido
+- El planificador y las pestañas de escenas ya no dibujan marcos dobles.
+- El botón para eliminar una escena queda separado del campo de descripción.
+- Preferencias alinea su icono y texto al centro vertical del botón del panel.
+- El botón para añadir contenido en el árbol lateral deja más margen al borde del grupo.
+
 ## [0.9.5] - 2026-11-05
 
 ### Corregido
