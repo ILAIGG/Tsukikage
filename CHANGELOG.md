@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.18.1] - 2026-11-05
+
+### Cambiado
+- Nombre y Apellido aparecen juntos en la misma fila de la página del personaje, con Tipo debajo.
+
 ## [0.18.0] - 2026-11-05
 
 ### Añadido
