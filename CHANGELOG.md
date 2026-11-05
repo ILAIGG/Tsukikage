@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.7] - 2026-11-05
+
+### Corregido
+- La barra superior móvil tiene más altura y centra los botones de navegación, búsqueda y exportación respecto de toda la barra.
+
 ## [0.12.6] - 2026-11-05
 
 ### Corregido
