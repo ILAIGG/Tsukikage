@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.2] - 2026-11-05
+
+### Corregido
+- En móviles, los controles de formato se acomodan en varias filas para mostrar todas las opciones y no capturan el desplazamiento horizontal, permitiendo seguir desplazándose por el manuscrito.
+
 ## [0.12.1] - 2026-11-05
 
 ### Corregido
