@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.11] - 2026-11-05
+
+### Corregido
+- Los nuevos proyectos comienzan con la sinopsis vacía, conservando la indicación de qué escribir como texto de ayuda.
+- El campo de sinopsis del Grimorio ya no se puede redimensionar manualmente.
+
 ## [0.12.10] - 2026-11-05
 
 ### Corregido
