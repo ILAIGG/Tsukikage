@@ -25,6 +25,10 @@
 - [x] Ajustar la tarjeta de creación de historia a los temas claro, Pop y DarkPop.
 - [x] Completar traducciones de los flujos de biblioteca, proyecto, capítulos y panel de navegación al inglés.
 
+## Entregado en 0.6.6
+
+- [x] Preparar la configuración de Supabase con clave publishable para desarrollo local y GitHub Pages, manteniendo compatibilidad con la clave anon legacy.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.

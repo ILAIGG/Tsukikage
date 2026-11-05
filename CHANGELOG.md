@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.6] - 2026-11-05
+
+### Añadido
+- Configuración para usar la clave publishable de Supabase en desarrollo local y GitHub Pages, conservando compatibilidad con la variable anon anterior.
+- Guía de correo OTP, URL autorizadas y variables de GitHub Actions para habilitar sincronización en el sitio publicado.
+
 ## [0.6.5] - 2026-11-05
 
 ### Corregido

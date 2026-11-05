@@ -40,9 +40,11 @@ La política de privacidad está en [`PRIVACY.md`](PRIVACY.md). Adapta el contac
 ## Sincronización opcional con Supabase
 
 1. Crea un proyecto Supabase y ejecuta [`supabase/schema.sql`](supabase/schema.sql) en su SQL Editor.
-2. Copia `.env.example` a `.env.local` y configura `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY` (solo la clave pública anon/publishable).
+2. Copia `.env.example` a `.env.local` y configura `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` (o la clave anon legacy).
 3. Reinicia `npm run dev` y abre **Exportar → Sincronización**.
 4. Inicia sesión con el código enviado a tu correo. Luego elige cuándo subir o restaurar una copia.
+
+Para conectar el sitio de GitHub Pages, añade variables de Actions al repositorio llamadas `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` en **Settings → Secrets and variables → Actions → Variables** y vuelve a ejecutar el workflow de Pages. Ambos valores son configuración pública del cliente; nunca pongas aquí una clave secreta/service-role. En Supabase, habilita el acceso por correo, configura Site URL como `https://ilaigg.github.io/Tsukikage/`, permite esa URL y `http://localhost:5173/**`, y asegúrate de que la plantilla de correo **Magic Link** incluya `{{ .Token }}`: Tsukikage solicita un código de seis dígitos.
 
 El contenido en la nube queda asociado a tu cuenta Supabase y protegido por RLS; no tiene cifrado de extremo a extremo. Al restaurar, se descarga primero una copia JSON local. Todavía no hay sincronización automática ni resolución de conflictos.
 

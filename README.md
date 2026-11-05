@@ -40,9 +40,11 @@ The privacy policy is in [`PRIVACY.md`](PRIVACY.md). Adapt its contact and servi
 ## Optional Supabase sync
 
 1. Create a Supabase project and run [`supabase/schema.sql`](supabase/schema.sql) in its SQL Editor.
-2. Copy `.env.example` to `.env.local` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` (the public anon/publishable key only).
+2. Copy `.env.example` to `.env.local` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (or the legacy anon key).
 3. Restart `npm run dev` and open **Export → Sync**.
 4. Sign in with the code sent to your email. Choose when to upload or restore a backup.
+
+For the GitHub Pages site, add repository Actions variables named `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` under **Settings → Secrets and variables → Actions → Variables**, then run the Pages workflow again. Both values are public client configuration; never use a secret/service-role key here. In Supabase, enable email sign-in, set the Site URL to `https://ilaigg.github.io/Tsukikage/`, allow that URL and `http://localhost:5173/**`, and set the **Magic Link** email template to include `{{ .Token }}` because Tsukikage asks for a six-digit code.
 
 Cloud content is associated with your Supabase account and protected by RLS; it is not end-to-end encrypted. Restoring downloads a local JSON backup first. Automatic sync and conflict resolution are not implemented.
 
