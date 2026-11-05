@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.11.1] - 2026-11-05
+
+### Corregido
+- La cursiva vuelve a representarse claramente y conserva el color del texto del manuscrito.
+- Los botones de formato reflejan en tiempo real el estilo aplicado donde está el cursor o la selección.
+- En Pop y DarkPop, la flecha y el nombre de cada sección comparten el hover de una sola fila; el botón «+» permanece independiente.
+
 ## [0.11.0] - 2026-11-05
 
 ### Añadido
