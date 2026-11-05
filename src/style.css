@@ -139,3 +139,14 @@ html[data-theme='pop'] .summary-editor textarea,html[data-theme='darkpop'] .summ
 .focus-mode .scene-break-marker{margin:20px 0}
 html[data-resolved-theme='light'] .focus-mode .paper{background:transparent!important;border:0!important;box-shadow:none!important}
 html[data-theme='pop'] .focus-mode .paper,html[data-theme='darkpop'] .focus-mode .paper{width:calc(100% - 24px);margin-inline:auto;padding:24px clamp(20px,4vw,36px) 18px;border:1px solid var(--theme-shadow);border-radius:8px;box-shadow:0 3px 0 var(--theme-shadow);}
+.sidebar{position:sticky;top:0;height:100vh;height:100dvh;min-height:0;overflow:hidden}
+.sidebar-main{display:flex;flex:1 1 auto;flex-direction:column;width:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.sidebar-bottom{flex:0 0 auto;width:100%;margin-top:auto}
+.collapsed-sidebar-bottom{display:grid;justify-items:center;gap:6px;padding-top:8px;border-top:1px solid var(--line)}
+.collapsed-sidebar-bottom .icon-button{width:38px;height:34px}
+.sidebar.collapsed .sidebar-main{align-items:center}
+.sidebar.collapsed .collapsed-sidebar-bottom{display:grid!important}
+.sidebar.collapsed .tree-section-title{width:38px;justify-content:center;font-size:0}
+.sidebar.collapsed .tree-chevron,.sidebar.collapsed .tree-add,.sidebar.collapsed .tree-entries{display:none!important}
+.sidebar:not(.collapsed) .collapsed-sidebar-bottom{display:none}
+@media(max-width:830px){.sidebar{position:fixed;top:0;bottom:0;height:100dvh;overflow:hidden}.sidebar:not(.collapsed){width:min(300px,88vw)!important;flex-basis:auto;align-items:stretch;transform:translateX(0)!important}.sidebar:not(.collapsed) .sidebar-main{align-items:stretch}.sidebar:not(.collapsed) .brand>div:not(.brand-mark),.sidebar:not(.collapsed) .collapse-btn{display:block!important}.sidebar:not(.collapsed) .collapse-btn{display:grid!important}.sidebar:not(.collapsed) .nav-item{display:flex!important;width:100%!important;justify-content:flex-start!important;font-size:12px!important}.sidebar:not(.collapsed) .project-nav-label,.sidebar:not(.collapsed) .tree-section,.sidebar:not(.collapsed) .tree-section-head,.sidebar:not(.collapsed) .tree-section-title,.sidebar:not(.collapsed) .tree-chevron,.sidebar:not(.collapsed) .tree-add{display:flex!important}.sidebar:not(.collapsed) .sidebar-bottom{display:block!important;width:100%;padding-bottom:env(safe-area-inset-bottom)}.sidebar:not(.collapsed) .collapsed-sidebar-bottom{display:none!important}}

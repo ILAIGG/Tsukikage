@@ -1,5 +1,10 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.9.3
+
+- [x] Mantener la meta diaria y Preferencias en todas las vistas, también en “Mis historias”.
+- [x] Separar el desplazamiento de la navegación del Grimorio del área fija inferior del panel.
+
 ## Entregado en 0.9.2
 
 - [x] Ocultar las descripciones de escena en la vista unificada del capítulo.

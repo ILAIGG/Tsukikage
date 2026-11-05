@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.9.3] - 2026-11-05
+
+### Cambiado
+- El panel lateral mantiene la meta diaria y Preferencias tanto dentro del Grimorio como en “Mis historias”.
+- La navegación del Grimorio se desplaza dentro de su propio panel para dejar visibles los controles inferiores.
+- En el panel contraído quedan accesos compactos a la meta y a Preferencias.
+
 ## [0.9.2] - 2026-11-05
 
 ### Cambiado
