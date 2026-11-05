@@ -622,10 +622,8 @@ html[data-theme='pop'] .project-synopsis textarea,html[data-theme='darkpop'] .pr
 @media(max-width:600px){
   .top-actions .search-trigger,.top-actions .export-trigger{box-sizing:border-box;flex-basis:30px;width:30px;height:30px;min-height:30px;padding:0;border-radius:6px;display:grid;place-items:center}
   .top-actions>.secondary-btn svg{width:14px;height:14px;margin:0}
-  .rich-wrapper .paper>.format-toolbar{top:0;box-sizing:border-box;width:calc(100% + 56px);min-width:calc(100% + 56px);flex:0 0 calc(100% + 56px);margin:-20px -28px 16px;padding:7px 9px;min-height:40px;gap:5px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;scrollbar-width:thin;scrollbar-color:var(--theme-accent,var(--accent)) transparent}
+  .rich-wrapper .paper>.format-toolbar{top:0;box-sizing:border-box;width:calc(100% + 56px);min-width:calc(100% + 56px);flex:0 0 calc(100% + 56px);margin:-20px -28px 16px;padding:7px 9px;min-height:40px;gap:5px;flex-wrap:wrap;overflow:visible;overscroll-behavior:initial;touch-action:pan-y}
   .rich-wrapper .paper>.format-toolbar>*{flex:0 0 auto}
   .rich-wrapper .paper>.format-toolbar>button{width:29px;height:28px}
   .rich-wrapper .paper>.format-toolbar>span{width:1px;height:18px;margin-inline:3px}
-  .rich-wrapper .paper>.format-toolbar::-webkit-scrollbar{height:4px}
-  .rich-wrapper .paper>.format-toolbar::-webkit-scrollbar-thumb{border-radius:4px;background:var(--theme-accent,var(--accent))}
 }

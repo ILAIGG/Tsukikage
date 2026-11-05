@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.4] - 2026-11-05
+
+### Corregido
+- En móviles, la barra de formato se distribuye en varias filas y acompaña el desplazamiento vertical para mantener sus controles disponibles mientras se escribe.
+
 ## [0.12.3] - 2026-11-05
 
 ### Corregido
