@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.3] - 2026-11-05
+
+### Corregido
+- La barra de formato móvil conserva una sola fila desplazable horizontalmente y el separador inferior ocupa todo el ancho del editor.
+
 ## [0.12.2] - 2026-11-05
 
 ### Corregido
