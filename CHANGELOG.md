@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.5] - 2026-11-05
+
+### Corregido
+- La vista de ficha deja de quedar centrada dentro del fondo de modal y ocupa el área principal de trabajo, conservando visible la navegación.
+
 ## [0.14.4] - 2026-11-05
 
 ### Cambiado
