@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.12.0] - 2026-11-05
+
+### Corregido
+- La barra superior coloca Buscar y Exportar junto al borde derecho en pantallas pequeñas; el botón de Exportar deja de desplazarse lateralmente en Pop y DarkPop.
+- El panel lateral mantiene sus secciones en columna en móviles y muestra la meta diaria como un contador compacto; Preferencias cierra el panel al abrirse.
+- Se oculta el ajuste de ancho del editor en móviles y la barra de formato permanece accesible al desplazarse.
+- Se elimina la búsqueda redundante dentro del capítulo y se normaliza el fondo de la sinopsis en Pop y DarkPop.
+
 ## [0.11.1] - 2026-11-05
 
 ### Corregido

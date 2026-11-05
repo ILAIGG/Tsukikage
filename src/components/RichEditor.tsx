@@ -1,22 +1,18 @@
 import { useEffect, useMemo } from 'react';
 import { EditorContent, useEditor, useEditorState } from '@tiptap/react';
-import { Extension, Mark, mergeAttributes, Node as TiptapNode } from '@tiptap/core';
-import { Plugin, PluginKey } from '@tiptap/pm/state';
-import { Decoration, DecorationSet } from '@tiptap/pm/view';
+import { Mark, mergeAttributes, Node as TiptapNode } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
 import { Bold, Heading1, Heading2, Heading3, Italic, List, ListOrdered, Redo2, Strikethrough, Underline as UnderlineIcon, Undo2 } from 'lucide-react';
 import type { Chapter } from '../model';
 import { htmlToText, sanitizeHtml, wordCount } from '../export';
 
-function searchDecorations(doc:Parameters<typeof DecorationSet.create>[0],term:string){if(!term.trim())return DecorationSet.empty;const regex=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');const decorations:Decoration[]=[];doc.descendants((node,pos)=>{if(!node.isText||!node.text)return;regex.lastIndex=0;let match:RegExpExecArray|null;while((match=regex.exec(node.text))!==null){decorations.push(Decoration.inline(pos+match.index,pos+match.index+match[0].length,{class:'search-highlight'}));if(!match[0].length)regex.lastIndex++;}});return DecorationSet.create(doc,decorations);}
-
 const SceneBreak = TiptapNode.create({name:'sceneBreak',group:'block',atom:true,selectable:true,addAttributes(){return {sceneId:{default:null,parseHTML:element=>element.getAttribute('data-scene-id'),renderHTML:attributes=>attributes.sceneId?{'data-scene-id':attributes.sceneId}:{}},sceneTitle:{default:null,parseHTML:element=>element.getAttribute('data-scene-title'),renderHTML:attributes=>attributes.sceneTitle?{'data-scene-title':attributes.sceneTitle}:{}}};},parseHTML(){return [{tag:'div[data-tsukikage-scene-break]'}];},renderHTML({HTMLAttributes}){const title=HTMLAttributes['data-scene-title']||'Scene';return ['div',mergeAttributes(HTMLAttributes,{'data-tsukikage-scene-break':'true','contenteditable':'false','class':'scene-break-marker'}),['span',{},title]];}});
 const Underline = Mark.create({name:'underline',parseHTML(){return [{tag:'u'},{style:'text-decoration=underline'}];},renderHTML({HTMLAttributes}){return ['u',mergeAttributes(HTMLAttributes),0];}});
 
-export default function RichEditor({ chapter, onChange, focus, fontSize, language, searchTerm, placeholderText, withSceneBreaks=false, syncContent=true }: { chapter: Chapter; onChange: (html: string) => void; focus: boolean; fontSize:number; language: 'es'|'en'; searchTerm?:string; placeholderText?:string; withSceneBreaks?:boolean; syncContent?:boolean }) {
+export default function RichEditor({ chapter, onChange, focus, fontSize, language, placeholderText, withSceneBreaks=false, syncContent=true }: { chapter: Chapter; onChange: (html: string) => void; focus: boolean; fontSize:number; language: 'es'|'en';  placeholderText?:string; withSceneBreaks?:boolean; syncContent?:boolean }) {
  const placeholder = placeholderText || (language === 'es' ? 'Deja que la historia empiece…' : 'Let the story begin…');
- const extensions = useMemo(() => [StarterKit,Underline,...(withSceneBreaks?[SceneBreak]:[]),Placeholder.configure({ placeholder }),Extension.create({name:'searchHighlight',addProseMirrorPlugins(){const term=searchTerm||'';const key=new PluginKey('searchHighlight');return [new Plugin({key,state:{init:(_,state)=>searchDecorations(state.doc,term),apply:(transaction,current)=>transaction.docChanged?searchDecorations(transaction.doc,term):current.map(transaction.mapping,transaction.doc)},props:{decorations(state){return key.getState(state)}}})]}})], [placeholder,searchTerm,withSceneBreaks]);
+ const extensions = useMemo(() => [StarterKit,Underline,...(withSceneBreaks?[SceneBreak]:[]),Placeholder.configure({ placeholder })], [placeholder,withSceneBreaks]);
  const editor = useEditor({ extensions, content: sanitizeHtml(chapter.text || ''), onUpdate: ({ editor }) => { if (!editor.isDestroyed) onChange(editor.getHTML()); }, editorProps: { attributes: { class: 'tiptap-writing', spellcheck: 'true' } } });
  const activeFormats=useEditorState({editor,selector:({editor})=>editor?({bold:editor.isActive('bold'),italic:editor.isActive('italic'),underline:editor.isActive('underline'),strike:editor.isActive('strike'),heading1:editor.isActive('heading',{level:1}),heading2:editor.isActive('heading',{level:2}),heading3:editor.isActive('heading',{level:3}),bulletList:editor.isActive('bulletList'),orderedList:editor.isActive('orderedList')}):null});
  useEffect(() => { if (!syncContent||!editor || editor.isDestroyed || !editor.schema) return; const content = sanitizeHtml(chapter.text || '') || '<p></p>'; if (editor.getHTML() !== content) editor.commands.setContent(content, { emitUpdate: false }); }, [editor, chapter.id, chapter.text,syncContent]);
