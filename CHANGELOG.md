@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.14.3] - 2026-11-05
+
+### Cambiado
+- Crear un personaje empieza con Tipo, Nombre y Apellido; al continuar, abre directamente su ficha a pantalla completa.
+- Crear o editar una ficha ocupa la vista completa de la aplicación, como el espacio del manuscrito.
+
 ## [0.14.2] - 2026-11-05
 
 ### Cambiado
