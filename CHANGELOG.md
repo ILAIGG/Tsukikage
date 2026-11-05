@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.6.5] - 2026-11-05
+
+### Corregido
+- La tarjeta para crear una historia sigue la paleta del tema claro, Pop y DarkPop.
+- El idioma inglés se aplica a los textos de navegación, la biblioteca, las vistas de proyecto y capítulos, y las preferencias que aparecían en español.
+
 ## [0.6.4] - 2026-11-04
 
 ### Añadido

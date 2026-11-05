@@ -20,6 +20,11 @@
 - [x] Añadir política de privacidad y enlazarla desde Licencias; revisar las políticas Supabase con RLS y acceso limitado al propietario.
 - [x] Preparar el workflow manual de vista previa GitHub Pages, rutas para subdirectorios y manifiesto PWA con iconos PNG de 192 y 512 px.
 
+## Entregado en 0.6.5
+
+- [x] Ajustar la tarjeta de creación de historia a los temas claro, Pop y DarkPop.
+- [x] Completar traducciones de los flujos de biblioteca, proyecto, capítulos y panel de navegación al inglés.
+
 ## Entregado en 0.3.0
 
 - [x] Copia completa e importación JSON de historias y preferencias.
