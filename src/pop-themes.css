@@ -40,7 +40,7 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(
   .nav-item.active,.tree-section-head.active,.tree-entries button.selected,
   .outline-item.outline-selected,.format-toolbar button.selected,.chapter-tab.current,
   .theme-options button.picked,.kind-pills button.picked,.search-filter-chip.selected,
-  .character-role-options button[aria-pressed='true']
+  .character-role-options button[aria-pressed='true'],.character-description-switch button[aria-pressed='true']
 ) {
   background: var(--pop-selected) !important;
   border-color: var(--theme-accent) !important;

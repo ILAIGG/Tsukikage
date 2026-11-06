@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.21.0] - 2026-11-06
+
+### Añadido
+- La página del personaje ofrece descripción Libre y Guiada, con contenido independiente que se conserva al cambiar de modo y al guardar.
+- La entrevista guiada reúne 34 preguntas opcionales en seis categorías, con preguntas disparadoras, ejemplos, navegación anterior/siguiente y resumen de respuestas plegables.
+- Las respuestas guiadas guardadas se muestran en el listado de personajes y se incluyen en la búsqueda del proyecto; las respuestas antiguas se conservan al cambiar de idioma.
+
 ## [0.20.1] - 2026-11-05
 
 ### Corregido

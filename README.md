@@ -15,7 +15,7 @@
 | --- | --- |
 | Manuscript | Write rich text, organize chapters and scenes, and enter focus mode. |
 | Grimoire | Keep the story synopsis and browse the project outline. |
-| World | Create characters with their own page, first name, surname, role, and rich-text description. |
+| World | Create characters with their own page, first name, surname, role, and free or guided interview descriptions. |
 | Notes | Collect ideas and project reference material. |
 | Backups & exports | Save JSON backups and export Markdown, EPUB, DOCX, or PDF through printing. |
 | Appearance | Choose Light, Dark, Pop, DarkPop, or import a JSON palette. |
