@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.23.3] - 2026-11-06
+
+### Corregido
+- El avión de papel del logo se distingue de la luna mediante alas asimétricas, un pliegue visible y mayor contraste, conservando la identidad lunar de Tsukikage.
+- Los iconos de instalación de 192 y 512 píxeles se regeneran desde el vector para evitar el aspecto borroso y se actualiza la caché de la aplicación.
+
 ## [0.23.2] - 2026-11-06
 
 ### Mantenimiento

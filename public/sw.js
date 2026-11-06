@@ -1,4 +1,4 @@
-const CACHE = 'tsukikage-shell-v3';
+const CACHE = 'tsukikage-shell-v4';
 const BASE_PATH = new URL('.', self.location.href).pathname;
 const ROOT = new URL(BASE_PATH, self.location.origin).href;
 const SHELL_FILES = ['manifest.webmanifest','tsukikage-mark.svg','icon-192.png','icon-512.png','LICENSE','THIRD_PARTY_NOTICES.md','THIRD_PARTY_LICENSES.md','PRIVACY.md','theme-example.json'];
