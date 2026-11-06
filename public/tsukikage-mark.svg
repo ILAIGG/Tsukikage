@@ -10,10 +10,12 @@
   <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#night)" stroke="#8267A2" stroke-width="1.5"/>
   <path d="M39.7 12.8c-2.5 1.1-4.8 3-6.3 5.6-4.4 7.3-2 16.8 5.3 21.2 4 2.4 8.7 2.7 12.7 1.2A20 20 0 1 1 39.7 12.8Z" fill="url(#moon)"/>
   <!-- A folded paper plane: broad upper wing, shaded lower wing and tucked tail. -->
+  <g transform="translate(4.8 8.6) scale(0.8)">
   <path d="M28 42.5v8l6-5.5Z" fill="#A587BC" stroke="#594166" stroke-width="1.1" stroke-linejoin="round"/>
   <path d="m12 38 36-12-13 27-7-10Z" fill="#FCF7FF" stroke="#594166" stroke-width="1.2" stroke-linejoin="round"/>
   <path d="m28 43 20-17-13 27Z" fill="#D7C1EB"/>
   <path d="m28 43 20-17" stroke="#8B6BA5" stroke-width="1.1" stroke-linecap="round"/>
   <path d="m12 38 36-12-13 27-7-10Z" stroke="#594166" stroke-width="1.2" stroke-linejoin="round"/>
+  </g>
   <path d="m42.5 13.5 1.1 3.4 3.4 1.1-3.4 1.1-1.1 3.4-1.1-3.4-3.4-1.1 3.4-1.1 1.1-3.4Z" fill="#F6E8FF"/>
 </svg>

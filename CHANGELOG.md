@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.23.4] - 2026-11-06
+
+### Corregido
+- El avión de papel del logo es un 20 % más pequeño para dar mayor protagonismo a la luna, manteniendo sus pliegues y el contraste. Se actualizan también los iconos de instalación.
+
 ## [0.23.3] - 2026-11-06
 
 ### Corregido
