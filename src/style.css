@@ -708,3 +708,17 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
 
 /* Keep text fields at their designed dimensions across every view and theme. */
 .app-shell textarea{resize:none!important}
+
+/* Keep toolbar and manuscript content on one compact, shared paper grid. */
+.rich-wrapper .paper{padding:16px 22px 14px}
+.rich-wrapper .paper>.format-toolbar{width:calc(100% + 44px);min-width:calc(100% + 44px);flex:0 0 calc(100% + 44px);margin:-16px -22px 10px;padding:7px 10px;box-sizing:border-box}
+.rich-wrapper .paper>.tiptap-writing{padding:0;min-height:55vh}
+.character-page .rich-wrapper .paper{padding:16px 22px 14px}
+.character-page .rich-wrapper .paper>.format-toolbar{width:calc(100% + 44px);min-width:calc(100% + 44px);flex-basis:calc(100% + 44px);margin:-16px -22px 10px}
+.character-page .rich-wrapper .paper>.tiptap-writing{padding:0}
+@media(max-width:600px){
+ .rich-wrapper .paper{padding:12px 14px 12px}
+ .rich-wrapper .paper>.format-toolbar{width:calc(100% + 28px);min-width:calc(100% + 28px);flex-basis:calc(100% + 28px);margin:-12px -14px 8px;padding:6px 8px}
+ .character-page .rich-wrapper .paper{padding:12px 14px}
+ .character-page .rich-wrapper .paper>.format-toolbar{width:calc(100% + 28px);min-width:calc(100% + 28px);flex-basis:calc(100% + 28px);margin:-12px -14px 8px;padding:6px 8px}
+}

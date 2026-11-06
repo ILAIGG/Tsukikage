@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.3] - 2026-11-06
+
+### Corregido
+- Se elimina el espacio extra entre la barra de formato y el texto. Se reducen y unifican los márgenes interiores del manuscrito y las descripciones del personaje en escritorio y móvil.
+
 ## [0.24.2] - 2026-11-06
 
 ### Corregido
