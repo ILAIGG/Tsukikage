@@ -818,7 +818,7 @@ html[data-resolved-theme='light'] .scene-references{border-color:#d8d2df}
 html[data-resolved-theme='light'] .place-card-path button{color:#684c84}
 html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{background:#fff;color:#352e3d;border-bottom-color:#d8d2df}
 .reference-picker summary:focus-visible,.reference-options input[type=search]:focus-visible,.place-list-search:focus-visible{outline:2px solid var(--theme-accent,var(--accent));outline-offset:2px}
-.character-places .place-list-filters{margin:0;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end}
-.character-places .place-list-filters>label:first-child{grid-column:1/-1}
-.character-place-filter-count{font-size:12px}
-@media(max-width:600px){.character-places .place-list-filters{grid-template-columns:minmax(0,1fr)}}
+
+.character-list .entry-card{min-width:0;overflow-wrap:anywhere}
+.character-list .entry-card-top>div{display:flex;gap:5px;flex:none}
+.character-list .entry-card>small{display:block;margin:6px 0;line-height:1.5}

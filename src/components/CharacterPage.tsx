@@ -1,3 +1,4 @@
+import { characterRoles } from '../character-roles';
 import RolePicker from './ThemedPicker';
 import { CharacterPlaces, EntryAppearances } from './WorldReferences';
 import { Suspense, lazy, useEffect, useRef, useState } from 'react';
@@ -21,7 +22,7 @@ export default function CharacterPage({entry,characters,language,fontSize,saving
  useEffect(()=>{if(previous.current===draft)return;previous.current=draft;latestSave.current({...draft,name:draft.name||(es?'Sin nombre':'Unnamed')})},[draft,es]);
  const profile=draft.character!;
  const patch=(change:Partial<NonNullable<Entry['character']>>)=>setDraft(d=>{const character={...d.character,...change};return {...d,character,name:[character.firstName?.trim(),character.surname?.trim()].filter(Boolean).join(' ')||(es?'Sin nombre':'Unnamed')}});
- const roles=es?[['protagonist','Protagonista'],['main','Personaje principal'],['secondary','Personaje secundario'],['antagonist','Antagonista'],['supporting','Personaje recurrente'],['extra','Personaje incidental'],['other','Otro']]:[['protagonist','Protagonist'],['main','Main character'],['secondary','Supporting character'],['antagonist','Antagonist'],['supporting','Recurring character'],['extra','Minor character'],['other','Other']];
+ const roles=characterRoles.map(role=>[role.id,role[language]]);
  const edit=(mode?:'free'|'guided',initial?:{category:number;question:number})=>{if(mode)patch({descriptionMode:mode});setQuestion(initial);setOverview(false)};
  const photo=<div className="character-portrait">{profile.image?<img src={profile.image} alt={draft.name||(es?'Personaje':'Character')}/>:<div className="character-image-placeholder" role="img" aria-label={es?'Sin imagen de personaje':'No character image'}><UserRound size={42}/><span>{es?'Imagen del personaje':'Character image'}</span></div>}</div>;
  const editor=(text:string,onChange:(s:string)=>void,placeholder:string,label:string)=><div className="rich-wrapper"><Suspense fallback={<div className="paper loading-paper">{es?'Preparando el editor…':'Preparing the editor…'}</div>}><RichEditor chapter={{id:draft.id,title:draft.name,text}} onChange={onChange} focus={false} fontSize={fontSize} language={language} placeholderText={placeholder} accessibleLabel={label}/></Suspense></div>;

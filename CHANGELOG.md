@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.27.1] - 2026-11-06
+
+### Corregido
+- La lista principal de Personajes incorpora búsqueda por nombre, apellido o apodo y filtros combinables de tipo y lugar relacionado, con contador de resultados y limpieza de filtros, siguiendo el diseño de Lugares.
+- Se retiran los filtros añadidos por error dentro de «Lugares del personaje», que vuelve a su selector sencillo sin alterar los vínculos guardados.
+
 ## [0.27.0] - 2026-11-06
 
 ### Añadido

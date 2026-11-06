@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import type {Entry,Novel} from '../src/model';
-import {duplicatePlace,entryAppearances,filterPlaces,placeAncestors,removeWorldEntry} from '../src/world-links';
+import {duplicatePlace,entryAppearances,filterPlaces,filterCharacters,placeAncestors,removeWorldEntry} from '../src/world-links';
 const places:Entry[]=[{id:'country',kind:'place',name:'Reino',description:'',place:{type:'region'}},{id:'city',kind:'place',name:'Ciudad',description:'',place:{type:'city',parentId:'country'}},{id:'palace',kind:'place',name:'Palacio',description:'<p>Antiguo.</p>',place:{type:'building',parentId:'city',aliases:'Alcázar',guided:{origin:'<p>Un refugio.</p>'},answerStates:{danger:'pending'}}},{id:'room',kind:'place',name:'Biblioteca',description:'',place:{type:'room',parentId:'palace'}}];
 test('place filters combine alias searches, accents, type and direct parent',()=>{
  assert.deepEqual(filterPlaces(places,'alcazar','building','city').map(e=>e.id),['palace']);
@@ -34,4 +34,11 @@ test('removing a world entry cleans references while preserving manuscripts, chi
  assert.deepEqual(removed.entries!.find(e=>e.id==='hero')!.character!.placeLinks,[]);assert.deepEqual(removed.entries!.find(e=>e.id==='note'),novel.entries!.find(e=>e.id==='note'));
  assert.equal(removed.chapters[0].text,novel.chapters[0].text);assert.deepEqual(removed.chapters[0].scenes![0].placeIds,['room']);assert.equal(JSON.stringify(novel),snapshot);
  const noHero=removeWorldEntry(novel,'hero');assert.deepEqual(noHero.chapters[0].characterIds,[]);assert.deepEqual(noHero.chapters[1].scenes![0].characterIds,[]);
+});
+
+
+test('character list filters combine names, surnames, nicknames, role and related place',()=>{
+ const entries:Entry[]=[{id:'lia',name:'Lía Sol',kind:'character',description:'',character:{firstName:'Lía',surname:'Sol',nickname:'La Campana',role:'protagonist',placeLinks:[{placeId:'city',role:'birth'}]}},{id:'noa',name:'Noa',kind:'character',description:''},...places];
+ assert.deepEqual(filterCharacters(entries,'lia').map(e=>e.id),['lia']);assert.equal(filterCharacters(entries,'Sol').length,1);assert.equal(filterCharacters(entries,'campana','protagonist','city').length,1);
+ assert.equal(filterCharacters(entries,'campana','secondary').length,0);assert.deepEqual(filterCharacters(entries,'','secondary','none').map(e=>e.id),['noa']);assert.equal(filterCharacters(entries,'','all','missing').length,0);assert.equal(filterCharacters(entries).length,2);
 });
