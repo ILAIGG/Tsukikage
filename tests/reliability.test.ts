@@ -112,3 +112,18 @@ test('place hierarchy, image, aliases, rich answers and statuses survive storage
  assert.deepEqual(restored.novels[0].entries?.[0].place,profile);
  assert.equal(restored.novels[0].entries?.[1].description,'Texto antiguo sin formato');
 });
+
+test('chapter and scene appearances and character-place links survive migration, storage and JSON backup',async()=>{
+ const workspace:Workspace={settings:defaultSettings,novels:[{id:'links',title:'Vínculos',genre:'',updated:'',chapters:[{id:'chapter',title:'Capítulo',text:'<p>Texto</p>',characterIds:['hero'],placeIds:['city'],scenes:[{id:'scene',title:'Escena',text:'<p>Texto</p>',characterIds:['hero'],placeIds:['room']}]}],entries:[{id:'hero',name:'Lía',kind:'character',description:'',character:{placeLinks:[{placeId:'room',role:'birth'},{placeId:'city',role:'home'}]}},{id:'city',name:'Ciudad',kind:'place',description:''},{id:'room',name:'Habitación',kind:'place',description:'',place:{parentId:'city'}}]}]};
+ await saveWorkspace(workspace);const stored=await loadWorkspace();const restored=parseWorkspaceBackup(serializeWorkspaceBackup(stored));
+ for(const w of [stored,restored]){const c=w.novels[0].chapters[0];assert.deepEqual(c.characterIds,['hero']);assert.deepEqual(c.placeIds,['city']);assert.deepEqual(c.scenes![0].characterIds,['hero']);assert.deepEqual(c.scenes![0].placeIds,['room']);assert.deepEqual(w.novels[0].entries![0].character!.placeLinks,workspace.novels[0].entries![0].character!.placeLinks);}
+});
+
+
+test('legacy world-to-chapter links become editable appearances while note chapter links remain unchanged',async()=>{
+ const workspace:Workspace={settings:defaultSettings,novels:[{id:'legacy-links',title:'Antes',genre:'',updated:'',chapters:[{id:'c',title:'Uno',text:'',characterIds:['hero']}],entries:[{id:'hero',kind:'character',name:'Lía',description:'',chapterId:'c'},{id:'home',kind:'place',name:'Casa',description:'',chapterId:'c'},{id:'note',kind:'note',name:'Nota',description:'Conservar',chapterId:'c'}]}]};
+ const restored=parseWorkspaceBackup(serializeWorkspaceBackup(workspace));const n=restored.novels[0];
+ assert.deepEqual(n.chapters[0].characterIds,['hero']);assert.deepEqual(n.chapters[0].placeIds,['home']);
+ assert.equal(n.entries![0].chapterId,undefined);assert.equal(n.entries![1].chapterId,undefined);assert.equal(n.entries![2].chapterId,'c');
+ const twice=parseWorkspaceBackup(serializeWorkspaceBackup(restored));assert.deepEqual(twice.novels[0],n);
+});

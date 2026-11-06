@@ -1,6 +1,8 @@
-export type Scene = { id: string; title: string; text: string; description?: string };
-export type Chapter = { id: string; title: string; text: string; synopsis?: string; scenes?: Scene[]; progress?:number };
-export type CharacterProfile = { role?:string; firstName?:string; surname?:string; image?:string; relationshipNotes?:string; relationshipLabels?:Record<string,string>; nickname?:string; birthDate?:string; descriptionMode?:'free'|'guided'; guided?:Record<string,string>; relationshipMode?:'interview'|'graph'; relatedCharacterIds?:string[] };
+export type StoryReferences={characterIds?:string[];placeIds?:string[]};
+export type CharacterPlaceLink={placeId:string;role:'home'|'work'|'birth'|'important'};
+export type Scene = StoryReferences & { id: string; title: string; text: string; description?: string };
+export type Chapter = StoryReferences & { id: string; title: string; text: string; synopsis?: string; scenes?: Scene[]; progress?:number };
+export type CharacterProfile = { placeLinks?:CharacterPlaceLink[]; role?:string; firstName?:string; surname?:string; image?:string; relationshipNotes?:string; relationshipLabels?:Record<string,string>; nickname?:string; birthDate?:string; descriptionMode?:'free'|'guided'; guided?:Record<string,string>; relationshipMode?:'interview'|'graph'; relatedCharacterIds?:string[] };
 export type PlaceType='world'|'region'|'city'|'building'|'room'|'nature'|'mobile'|'abstract'|'other';
 export type PlaceProfile={type?:PlaceType;aliases?:string;image?:string;parentId?:string;descriptionMode?:'free'|'guided';guided?:Record<string,string>;answerStates?:Record<string,'pending'|'notApplicable'>};
 export type Entry = { id: string; name: string; description: string; kind: 'character' | 'place' | 'note' | 'event'; chapterId?: string; date?: string; character?:CharacterProfile; place?:PlaceProfile };

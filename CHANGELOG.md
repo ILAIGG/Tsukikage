@@ -2,6 +2,18 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.26.0] - 2026-11-06
+
+### Añadido
+- Planificación permite seleccionar personajes y lugares por capítulo y por escena. Las apariciones de escenas también se muestran en el capítulo, y las páginas de personajes y lugares enlazan de vuelta al capítulo o escena correspondiente.
+- Los personajes pueden vincularse a lugares como residencia, trabajo, nacimiento o lugar importante. Los lugares muestran los personajes relacionados y permiten abrir sus páginas.
+- La lista de Lugares permite buscar por nombre o nombre alternativo y combinar filtros de tipo y ubicación superior.
+- Los lugares muestran su jerarquía completa con cada nivel pulsable. Se pueden duplicar desde la lista o su página; la copia conserva su descripción, imagen y ubicación superior, sin trasladar hijos ni apariciones del original.
+
+### Corregido
+- Los vínculos de escenas se conservan al cargar proyectos e importar copias JSON. Las asignaciones antiguas a capítulos pasan a los nuevos selectores. Eliminar elementos del mundo limpia sus referencias sin borrar el texto del manuscrito.
+- Los nuevos paneles de consulta y la barra de formato conservan superficies claras en el tema Claro.
+
 ## [0.25.2] - 2026-11-06
 
 ### Cambiado
