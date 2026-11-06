@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.0] - 2026-11-06
+
+### Añadido
+- Navegación jerárquica pulsable desde Mis historias hasta el proyecto, capítulos, Mundo, personajes y notas. La página actual se identifica y las rutas largas se pueden desplazar también en móvil.
+
+### Corregido
+- Se eliminan los títulos duplicados de la cabecera y se muestra el nombre real del capítulo o personaje abierto.
+
 ## [0.23.4] - 2026-11-06
 
 ### Corregido

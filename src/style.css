@@ -685,3 +685,23 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
 
 .character-page .character-image-upload{display:flex;align-items:center;justify-content:center;gap:7px;height:auto;min-height:36px;padding:8px 12px;line-height:1.4}
 .character-relationships .character-reading{min-height:0;padding:18px;border:1px solid var(--theme-line,var(--line));border-radius:10px;background:var(--theme-page,var(--panel));margin:16px 0;overflow-wrap:anywhere}
+
+/* Breadcrumb ancestors are navigation controls; the final item names this page. */
+.breadcrumb-controls{display:flex;align-items:center;gap:5px;flex:none}
+.breadcrumb-trail{min-width:0;overflow-x:auto;scrollbar-width:thin;color:var(--theme-text,#e8e8ec);padding:5px 3px}
+.breadcrumb-trail ol{display:flex;align-items:center;gap:7px;list-style:none;margin:0;padding:0;width:max-content;min-width:100%}
+.breadcrumb-trail li{display:flex;align-items:center;gap:7px;flex:none;max-width:300px;min-width:0}
+.breadcrumb-trail li>svg{flex:none;color:var(--theme-muted,var(--muted))}
+.breadcrumb-trail .breadcrumb-link{border:0;background:transparent;box-shadow:none;color:inherit;padding:5px 7px;border-radius:var(--pop-radius,7px);font:inherit;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.breadcrumb-trail .breadcrumb-link:hover{background:var(--pop-hover,color-mix(in srgb,var(--theme-accent,var(--accent)) 16%,transparent));color:var(--theme-text,inherit)}
+.breadcrumb-trail .breadcrumb-link:focus-visible{outline:2px solid var(--theme-accent,var(--accent));outline-offset:1px}
+.breadcrumb-trail [aria-current=page]{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:5px 0;max-width:260px}
+@media(max-width:600px){
+ .topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:40px auto;gap:4px 8px}
+ .topbar .breadcrumbs{display:contents}
+ .breadcrumb-controls{grid-column:1;grid-row:1}
+ .topbar .top-actions{grid-column:2;grid-row:1}
+ .breadcrumb-trail{grid-column:1/-1;grid-row:2;width:100%;font-size:10px;padding:2px 0 4px}
+ .breadcrumb-trail li{max-width:220px}
+ .breadcrumb-trail [aria-current=page],.breadcrumb-trail .breadcrumb-link{max-width:195px}
+}
