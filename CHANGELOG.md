@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.32.0] - 2026-11-06
+
+### Añadido
+- Proyecto de muestra en español o inglés según el idioma de la primera apertura: tres capítulos completos con seis escenas, personajes, lugares jerárquicos, relaciones, apariciones y notas. Se identifica como proyecto de prueba y solo se incorpora cuando no hay un espacio guardado.
+
 ## [0.31.5] - 2026-11-06
 
 ### Documentación

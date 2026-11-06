@@ -1,3 +1,4 @@
+import { createSampleProject } from './sample-project';
 export type StoryReferences={characterIds?:string[];placeIds?:string[]};
 export type CharacterPlaceLink={placeId:string;role:'home'|'work'|'birth'|'important'};
 export type Scene = StoryReferences & { id: string; title: string; text: string; description?: string };
@@ -25,10 +26,7 @@ export const builtinThemes: CustomTheme[] = [
   {id:'darkpop',name:'DarkPop',mode:'dark',colors:{background:'#211a2c',surface:'#30253c',sidebar:'#281f34',text:'#fff3e8',muted:'#c0adc5',line:'#e9c9dc',accent:'#ff83bd',accentStrong:'#ffacd2',link:'#ffacd2',page:'#32283d',shadow:'#120d18'}}
 ];
 export const defaultSettings: Settings = { language: preferredLanguage(), dailyGoal: 1500, theme: 'system', customThemes:builtinThemes, dailyWords: 0, dailyDate: localDate(), fontSize: 18, pageWidth: 760 };
-export const starter: Novel[] = [{ id: 'moon', title: 'La ciudad bajo la luna', genre: 'Fantasía · 1ª versión', updated: 'Hace 2 min', chapters: [
-  { id: 'c1', title: 'Prólogo — La última campana', text: '<p>La campana sonó trece veces aquella noche.</p><p>En Asteria, hasta los relojes sabían cuándo guardar silencio. Lía contó cada golpe desde el tejado, con la lluvia deslizándose por las tejas y una carta ardiendo lentamente entre sus dedos.</p><p>Cuando llegó el último eco, la luna se apagó.</p>' },
-  { id: 'c2', title: 'Capítulo 1 — Una carta imposible', text: '' }, { id: 'c3', title: 'Capítulo 2 — El mapa de ceniza', text: '' }
-] }];
+export const starter: Novel[] = createSampleProject(defaultSettings.language);
 export const templates: Record<string, { genre: string; titles: string[]; synopsis: string }> = {
   novel: { genre: 'Novela', titles: ['Prólogo', 'Capítulo 1', 'Capítulo 2'], synopsis: 'Una historia que merece ser contada.' },
   short: { genre: 'Relato', titles: ['Inicio', 'Nudo', 'Desenlace'], synopsis: 'Una idea breve, un mundo completo.' },
