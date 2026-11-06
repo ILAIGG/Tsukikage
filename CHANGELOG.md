@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.28.0] - 2026-11-06
+
+### Añadido
+- Las páginas de personajes y lugares permiten eliminarlos con confirmación y regresar a su lista; se limpian sus vínculos sin borrar los textos de capítulos ni las notas.
+
+### Corregido
+- Las secciones vacías de Personajes y Lugares del panel lateral muestran un mensaje compacto al desplegarse, respetando el diseño de cada tema.
+
 ## [0.27.3] - 2026-11-06
 
 ### Corregido

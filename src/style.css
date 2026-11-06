@@ -825,3 +825,9 @@ html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{backgroun
 .character-relationship-question{display:grid;gap:16px;min-width:0}
 .character-relationship-question>p{margin:0;color:var(--theme-readable-muted,var(--muted));line-height:1.7}
 .character-relationship-question .character-connection-picker{margin-top:0}
+.entry-page-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px}
+.entry-page-actions>button{margin:0;height:auto;min-height:34px;padding:8px 12px;white-space:normal}
+.entry-page-actions>button>svg{flex:none}
+.app-shell .sidebar:not(.collapsed) .tree-subsection>.tree-entries.tree-entries-empty{margin-top:6px;margin-bottom:0;padding-block:2px;gap:0}
+.tree-empty-message{display:block;padding:4px 8px;font-size:10px;line-height:1.5;color:var(--theme-readable-muted,var(--muted));overflow-wrap:anywhere}
+@media(max-width:600px){.entry-page-actions{justify-content:flex-start}}
