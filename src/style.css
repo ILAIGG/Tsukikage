@@ -846,3 +846,5 @@ html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{backgroun
 .genre-empty,.genre-tags>small{font-size:12px;color:var(--theme-readable-muted,var(--muted));line-height:1.5}
 
 .app-shell .modal-card .genre-suggestions .secondary-btn[aria-pressed=true]{background:color-mix(in srgb,var(--accent) 24%,var(--panel));border-color:var(--accent);color:inherit}
+
+.settings-install{padding:16px 0;border-top:1px solid var(--line)}.settings-install>button{width:100%;justify-content:center;min-height:36px}.settings-install>p{font-size:12px;line-height:1.6;color:var(--theme-readable-muted,var(--muted));margin:12px 0 0}

@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.3] - 2026-11-06
+
+### Corregido
+- Preferencias muestra un botón visible para instalar Tsukikage, abre la instalación nativa cuando está disponible y ofrece instrucciones en otros navegadores. Reconoce la aplicación instalada.
+
 ## [0.31.2] - 2026-11-06
 
 ### Corregido
