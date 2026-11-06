@@ -4,6 +4,8 @@ import App from './App';
 import './style.css';
 import './pop-themes.css';
 
+document.documentElement.lang=/^(en)(-|$)/i.test(navigator.languages?.find(language=>/^(es|en)(-|$)/i.test(language))||navigator.language||'')?'en':'es';
+
 type BoundaryState = { error: Error | null };
 class RootErrorBoundary extends React.Component<{ children: React.ReactNode }, BoundaryState> {
   state: BoundaryState = { error: null };
@@ -16,4 +18,4 @@ class RootErrorBoundary extends React.Component<{ children: React.ReactNode }, B
 }
 
 createRoot(document.getElementById('root')!).render(<React.StrictMode><RootErrorBoundary><App /></RootErrorBoundary></React.StrictMode>);
-if ('serviceWorker' in navigator) window.addEventListener('load', () => void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`));
+if (import.meta.env.PROD && 'serviceWorker' in navigator) window.addEventListener('load', () => void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(error=>console.warn('Offline installation unavailable',error)));

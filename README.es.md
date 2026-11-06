@@ -1,84 +1,101 @@
-<p align="center">
-  <img src="public/tsukikage-mark.svg" width="112" height="112" alt="Tsukikage" />
-</p>
+<p align="center"><img src="public/tsukikage-mark.svg" width="96" height="96" alt="Tsukikage" /></p>
 <h1 align="center">Tsukikage</h1>
-<p align="center">Un taller de historias para planificar, escribir y dar forma a tus mundos. Tus proyectos se guardan en el navegador.</p>
-<p align="center"><strong>Sin conexión · Español e inglés · GPL-3.0-only</strong></p>
+<p align="center">Un taller para tus historias</p>
+<p align="center"><strong>Beta · Local first · PWA · Español / English · GPL-3.0-only</strong></p>
 
-[Abrir la aplicación](https://ilaigg.github.io/Tsukikage/) · [English](README.md) · [Hoja de ruta](ROADMAP.md) · [Cambios](CHANGELOG.md)
+[Abrir / Open](https://ilaigg.github.io/Tsukikage/) · [English](README.md) · [Español](README.es.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md)
 
----
+## Estado de la beta
 
-## Tu espacio de escritura
+Tsukikage es una aplicación de escritura que funciona en el navegador, sin cuenta. La beta guarda tus historias en este dispositivo; exporta copias JSON regularmente. Borrar los datos del sitio, usar navegación privada o cambiar de navegador puede hacer que pierdas acceso a ellas. Las copias y los datos locales no están cifrados por Tsukikage.
 
-| Espacio | Qué puedes hacer |
+**Cambiar de GitHub Pages a Vercel o a un dominio propio no transfiere tus proyectos:** exporta una copia en el sitio antiguo e impórtala en el nuevo. Cada dirección tiene su propio almacenamiento. Conserva un dominio estable para el lanzamiento.
+
+## Funciones
+
+| Espacio | Funciones |
 | --- | --- |
-| Manuscrito | Escribe con formato, organiza capítulos y escenas y usa el modo concentración. |
-| Grimorio | Guarda la sinopsis y consulta la estructura del proyecto. |
-| Mundo | Crea personajes con página propia, nombre, apellido, tipo y descripciones Libre o Guiada mediante entrevista. |
-| Lugares | Describe y duplica lugares, recorre su jerarquía completa, filtra por nombre/tipo/ubicación y vincúlalos con personajes, capítulos y escenas. |
-| Notas | Conserva ideas y material de referencia del proyecto. |
-| Copias y exportación | Guarda copias JSON y exporta Markdown, EPUB, DOCX o PDF mediante impresión. |
-| Apariencia | Elige Claro, Oscuro, Pop, DarkPop o importa una paleta JSON. |
+| Biblioteca | Varios proyectos, orden por arrastre y géneros como etiquetas. |
+| Grimorio | Sinopsis editable y estructura de la historia. |
+| Escritura | Capítulos y escenas, formato enriquecido, enfoque, progreso, contador y meta diaria. |
+| Personajes | Página completa, imagen, identidad, descripción libre y entrevista opcional, relaciones y vista rápida. |
+| Lugares | Página completa, jerarquía, imagen, preguntas según el tipo, filtros y duplicación. |
+| Conexiones | Personajes y lugares vinculados con capítulos, escenas y entre sí. |
+| Referencia | Notas, búsqueda global y revisión orientativa de contenido pendiente. |
+| Copias | Importar/exportar el espacio completo en JSON y recuperar borradores e historial de capítulos. |
+| Exportación | Markdown, EPUB, DOCX y PDF mediante impresión del navegador. |
+| Preferencias | Español/inglés, tamaño de texto, Claro, Oscuro, Sistema, Pop, DarkPop y paletas JSON. |
 
-> Los proyectos se guardan en este navegador. Exporta una copia JSON para conservarlos también fuera de él. Supabase está aplazado en el roadmap; la escritura local funciona sin cuenta.
+Las preguntas guiadas son opcionales. La revisión es heurística; no garantiza continuidad narrativa. El historial actual es por capítulo, no un historial completo del proyecto. No hay colaboración ni sincronización automática.
 
-## Empezar
+## Desarrollo y compilación
 
-Requiere Node.js 20.19+ o 22.12+.
+Usa Node.js 22.12 o posterior de la rama 22, y npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Abre la URL que muestra Vite. Genera una compilación de producción con `npm run build`; el sitio estático queda en `dist/`. Ejecuta `npm test` para revisar copias, recuperación local y exportaciones con proyectos grandes.
+```bash
+npm test
+npm run build
+npm run preview
+```
 
-## Arquitectura
+Vite genera `dist/`. El Service Worker solo se registra en producción. No publiques el servidor de desarrollo. La versión de Preferencias se toma de `package.json` durante la compilación.
 
-- **React, TypeScript y Vite** ofrecen una interfaz cliente; el renderizado en servidor no hace falta para esta herramienta de escritura personal.
-- **IndexedDB** guarda manuscritos de forma asíncrona en el navegador. Los datos quedan allí hasta que ordenes subirlos explícitamente.
-- **Tiptap/ProseMirror** proporciona edición de texto enriquecido; el contenido importado y exportado se sanitiza.
-- **Markdown, EPUB 3, DOCX y HTML preparado para imprimir** cubren flujos comunes de escritura y publicación. Puedes guardar la vista de impresión como PDF desde el navegador.
-- **La PWA** permite instalar la app y usarla sin conexión. Los cambios offline permanecen en IndexedDB.
-- **La sincronización opcional con Supabase** utiliza códigos de acceso por correo, un espacio JSON por cuenta y seguridad a nivel de fila. Las acciones de subir y restaurar son manuales.
-- **Temas** Claro, Oscuro, Según el sistema, Pop, DarkPop e importación local de temas JSON.
+## Publicar en Vercel
 
-## Funciones
+1. Importa este repositorio y selecciona Vite, Node.js 22, `npm run build` y salida `dist`.
+2. Usa la raíz `/`: deja `VITE_BASE_PATH` sin definir. No añadas credenciales para esta beta local.
+3. Publica una vista previa y comprueba los pasos de validación de abajo antes de anunciarla.
+4. `vercel.json` configura cabeceras de seguridad, bloquea marcos y conexiones remotas de la aplicación y revalida el Service Worker y el HTML.
 
-Crea varios proyectos de libro. Cada uno reúne sinopsis, manuscrito, capítulos, escenas, Mundo (actualmente personajes; los demás apartados están en reestructuración), notas, historial y exportaciones. La biblioteca permite elegir un proyecto y el panel lateral abre cada una de sus secciones.
+El CSP permite Google Fonts y estilos en línea necesarios para los temas; no permite scripts en línea. No actives Supabase con esta política: la beta mantiene la nube aplazada. Las cabeceras deben confirmarse en la URL real, porque la vista previa local reproduce las cabeceras generales de seguridad, pero no valida las reglas de caché y rutas de Vercel. [Configuración de Vercel](https://vercel.com/docs/project-configuration/vercel-json).
 
-También incluye editor enriquecido, historial manual, contador y meta diaria de palabras, interfaz en español e inglés, plantillas, copias JSON y exportaciones Markdown/EPUB/DOCX/PDF. Incluye una historia de ejemplo que puedes editar o borrar. [Descarga un tema de ejemplo](public/theme-example.json).
+GitHub Pages sigue disponible mediante el workflow manual de vista previa; este calcula la ruta base del repositorio. Las cabeceras de Vercel no se aplican a Pages.
 
-## Licencia y distribución
+## Instalar y probar sin conexión
 
-Tsukikage se distribuye bajo **GNU GPL v3 solamente** (`GPL-3.0-only`). Consulta [`LICENSE`](LICENSE), [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) y [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md). Cada dependencia conserva su licencia.
+Abre la versión de producción por HTTPS (o localhost), espera a que termine de instalarse el Service Worker y usa **Preferencias → Instalar Tsukikage**. El diálogo nativo depende del navegador; si no está disponible, el botón explica cómo instalar desde su menú. En iPhone/iPad usa Compartir → Añadir a la pantalla de inicio.
 
-Compila el sitio estático con `npm ci && npm run build`. GitHub Actions ejecuta CI ante cambios y empaqueta un ZIP de `dist/` al publicar una etiqueta `v*` que coincida con la versión del paquete. Para una vista previa en GitHub Pages, configura **Settings → Pages → Build and deployment → GitHub Actions** y ejecuta manualmente **Actions → Preview on GitHub Pages**. El workflow prueba y compila antes de publicar; no se activa con cada push. La PWA requiere HTTPS para instalarse.
+La compilación precarga los archivos de la interfaz, incluido el editor y los módulos de exportación. Las fuentes externas pueden usar alternativas locales sin conexión. Las actualizaciones esperan al cierre de las pestañas de la versión anterior para no mezclar archivos de dos compilaciones.
 
-La política de privacidad está en [`PRIVACY.md`](PRIVACY.md). Adapta el contacto y los servicios antes de operar una instancia propia. No subas `.env.local` ni claves privadas. La clave anon/publishable de Supabase está diseñada para ser pública, pero úsala solo con políticas RLS revisadas; nunca expongas una clave service-role. `private: true` evita publicar Tsukikage accidentalmente en npm, pero no impide que el código esté público en GitHub.
+Para validar: abre una vez con conexión, comprueba Application → Service Workers, cierra y vuelve a abrir, activa Network → Offline y recarga. Crea/edita un proyecto, abre el editor por primera vez sin red, recarga y verifica que el texto persista. Vuelve a conexión y prueba una actualización sin borrar el almacenamiento.
 
-## Sincronización opcional con Supabase
+## Validación antes del anuncio público
 
-Estado: aplazada. Esta sección documenta la configuración existente; la validación de producción sigue pendiente.
+- Crear, editar, reordenar y borrar proyectos, capítulos, escenas, personajes y lugares, con confirmaciones de borrado.
+- Exportar una copia JSON e importarla; comprobar textos, imágenes y relaciones. Revisar EPUB/DOCX/PDF en sus lectores.
+- Probar teclado, foco y cierre de diálogos, móvil y los cuatro temas. Una auditoría formal con lector de pantalla sigue pendiente.
+- Revisar instalación/offline/actualización y cabeceras en el dominio final; comprobar la consola del navegador.
+- Confirmar que no hay secretos ni servicios de nube activados y publicar el canal de soporte y la política aplicable a la instancia.
 
-1. Crea un proyecto Supabase y ejecuta [`supabase/schema.sql`](supabase/schema.sql) en su SQL Editor.
-2. Copia `.env.example` a `.env.local` y configura `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` (o la clave anon legacy).
-3. Reinicia `npm run dev` y abre **Exportar → Sincronización**.
-4. Inicia sesión con el código enviado a tu correo. Luego elige cuándo subir o restaurar una copia.
+Pruebas disponibles con Chromium instalado (`CHROMIUM_BIN` permite elegir ejecutable):
 
-Para conectar el sitio de GitHub Pages, añade variables de Actions al repositorio llamadas `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` en **Settings → Secrets and variables → Actions → Variables** y vuelve a ejecutar el workflow de Pages. Ambos valores son configuración pública del cliente; nunca pongas aquí una clave secreta/service-role. En Supabase, habilita el acceso por correo, configura Site URL como `https://ilaigg.github.io/Tsukikage/`, permite esa URL y `http://localhost:5173/**`, y asegúrate de que la plantilla de correo **Magic Link** incluya `{{ .Token }}`: Tsukikage solicita un código de seis dígitos.
+```bash
+npm run test:browser
+npm run test:themes
+npm run test:places
+npm run test:world-links
+npm run test:character-relationships
+npm run test:world-deletion
+node tests/genre-tags-browser.mjs
+npm run test:beta
+npm run test:security
+```
 
-El contenido en la nube queda asociado a tu cuenta Supabase y protegido por RLS; no tiene cifrado de extremo a extremo. Al restaurar, se descarga primero una copia JSON local. Todavía no hay sincronización automática ni resolución de conflictos.
+Usan perfiles temporales y no modifican tus proyectos reales. Las comprobaciones locales no sustituyen la validación del despliegue final.
 
-## Hoja de ruta
+## Seguridad, privacidad y nube
 
-Consulta [`ROADMAP.md`](ROADMAP.md) para ver el trabajo entregado y las mejoras previstas.
+La interfaz usa React/TypeScript, IndexedDB y Tiptap. El HTML se sanitiza con DOMPurify antes de mostrarse o exportarse; se eliminan contenido activo y recursos incrustados externos. No hay analíticas ni anuncios. Google Fonts y el proveedor de alojamiento reciben solicitudes de navegación; consulta [Privacidad](PRIVACY.md) y [Seguridad](SECURITY.md).
 
-### Recuperación en un navegador real
+Supabase es una integración experimental existente, aplazada para producción. MongoDB Atlas y otras alternativas se evaluarán cuando se diseñe la sincronización. La beta no requiere variables de entorno. Nunca incluyas secretos en variables `VITE_*`: se incorporan al cliente. No subas `.env.local`, claves privadas ni una clave service-role.
 
-Ejecuta `npm run test:browser` con Chromium instalado (`CHROMIUM_BIN` permite indicar otro ejecutable). La prueba usa los puertos locales 5188 y 9228 y un perfil temporal independiente. Comprueba la recuperación tras reiniciar el navegador y que el texto restaurado persista después de otra apertura. Al terminar elimina el perfil temporal.
+## Contribuir y licencia
 
-### Revisión visual de Pop / DarkPop
+Reporta errores en [Issues](https://github.com/ILAIGG/Tsukikage/issues) indicando versión, navegador, tema y pasos; usa proyectos de ejemplo y evita publicar manuscritos o datos privados. Consulta [SECURITY.md](SECURITY.md) para vulnerabilidades.
 
-Ejecuta `npm run test:themes` con Chromium instalado para generar capturas de escritorio y móvil en ambas paletas. El comando indica el directorio temporal de las imágenes. Consulta [el sistema visual compartido y la cobertura](docs/POP_THEMES.md).
+Licencia **GPL-3.0-only**: [LICENSE](LICENSE), [avisos](THIRD_PARTY_NOTICES.md) y [licencias de dependencias](THIRD_PARTY_LICENSES.md). `private: true` evita publicar el paquete en npm; permite alojar la aplicación. [Tema de ejemplo](public/theme-example.json).

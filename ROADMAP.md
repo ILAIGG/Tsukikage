@@ -157,3 +157,9 @@ La cuenta y la base remota serán opcionales. La integración experimental de Su
 ## Ideas a futuro
 - [ ] Sistema de plantillas personalizables para distintos proyectos.
 - [ ] Validar la beta en Vercel con PWA/offline y lectores de pantalla antes de anunciarla como estable.
+
+## Preparación de beta 0.31.4
+- [x] README bilingüe actualizado, cabeceras para Vercel, revisión de contenido enriquecido y precarga offline por compilación.
+- [ ] Confirmar cabeceras, instalación y actualización PWA en el dominio público final.
+- [ ] Auditoría formal con lector de pantalla y validación manual en Safari/iOS y Firefox.
+- [ ] Revisión independiente de seguridad antes de habilitar cuentas o nube.

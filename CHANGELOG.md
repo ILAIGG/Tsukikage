@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.4] - 2026-11-06
+
+### Corregido
+- La instalación offline precarga el editor y las exportaciones con cachés por compilación, sin eliminar cachés ajenas ni mezclar versiones.
+- El contenido enriquecido elimina recursos incrustados y atributos activos antes de convertirse a texto, mostrarse o exportarse.
+- Configuración de seguridad para la beta local en Vercel y README renovado en español e inglés, con límites, instalación, copias y migración entre dominios.
+
 ## [0.31.3] - 2026-11-06
 
 ### Corregido

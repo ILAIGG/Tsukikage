@@ -1,6 +1,6 @@
 {
   "name": "tsukikage",
-  "version": "0.31.3",
+  "version": "0.31.4",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,7 +13,9 @@
     "test:places": "node tests/place-browser.mjs",
     "test:world-links": "node tests/world-links-browser.mjs",
     "test:character-relationships": "node tests/character-relationships-browser.mjs",
-    "test:world-deletion": "node tests/world-entry-deletion-browser.mjs"
+    "test:world-deletion": "node tests/world-entry-deletion-browser.mjs",
+    "test:beta": "node tests/beta-browser.mjs",
+    "test:security": "node tests/content-security-browser.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",
