@@ -2,6 +2,15 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.22.0] - 2026-11-06
+
+### Cambiado
+- Las respuestas de la entrevista del personaje utilizan el mismo editor enriquecido de los capítulos, con barra de formato, contador y tamaño de texto de Preferencias; conservan los ejemplos como placeholders.
+- El resumen plegable conserva el formato de las respuestas y los textos antiguos siguen siendo editables. Las respuestas vacías no se cuentan como completadas y los listados y búsquedas muestran texto legible.
+
+### Corregido
+- Deshacer y Rehacer del editor no activan accidentalmente el guardado del personaje.
+
 ## [0.21.3] - 2026-11-06
 
 ### Corregido
