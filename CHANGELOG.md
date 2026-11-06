@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.21.1] - 2026-11-06
+
+### Corregido
+- La pregunta de Género se centra en la identidad y su expresión; los pronombres se preguntan únicamente en su apartado correspondiente, en ambos idiomas.
+
 ## [0.21.0] - 2026-11-06
 
 ### Añadido
