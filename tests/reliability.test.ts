@@ -99,9 +99,10 @@ test('character portraits, interview answers and relationships survive storage a
  const workspace:Workspace={settings:defaultSettings,novels:[{id:'characters',title:'Personajes',genre:'',updated:'',chapters:[],entries:[{id:'lia',kind:'character',name:'Lía Sol',description:'<p>Guardiana.</p>',character},{id:'noa',kind:'character',name:'Noa',description:''}]}]};
  await saveWorkspace(workspace);
  const stored=await loadWorkspace();
- assert.deepEqual(stored.novels[0].entries?.[0].character,character);
+ const {relationshipMode,relationshipNotes,...rest}=character;const expected={...rest,guided:{...character.guided,relationships:relationshipNotes}};
+ assert.deepEqual(stored.novels[0].entries?.[0].character,expected);
  const restored=parseWorkspaceBackup(serializeWorkspaceBackup(stored));
- assert.deepEqual(restored.novels[0].entries?.[0].character,character);
+ assert.deepEqual(restored.novels[0].entries?.[0].character,expected);
  assert.equal(restored.novels[0].entries?.[1].id,'noa');
 });
 

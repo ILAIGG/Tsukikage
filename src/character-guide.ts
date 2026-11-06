@@ -1,6 +1,6 @@
 export type GuideLanguage = 'es' | 'en';
 type LocalText = Record<GuideLanguage, string>;
-export type GuideQuestion = { id: string; label: LocalText; prompt: LocalText; example: LocalText };
+export type GuideQuestion = { id: string; label: LocalText; prompt: LocalText; example: LocalText; kind?:'graph' };
 export type GuideCategory = { id: string; title: LocalText; questions: GuideQuestion[] };
 const q = (id:string, es:string, en:string, promptEs:string, promptEn:string, exampleEs:string, exampleEn:string):GuideQuestion => ({id,label:{es,en},prompt:{es:promptEs,en:promptEn},example:{es:exampleEs,en:exampleEn}});
 export const characterGuide: GuideCategory[] = [
@@ -41,7 +41,8 @@ export const characterGuide: GuideCategory[] = [
  {id:'relationships',title:{es:'Relaciones',en:'Relationships'},questions:[
   q('family','Familia','Family','¿A quién considera su familia, y por qué?','Who do they consider family, and why?','Su verdadera familia son las personas con las que compartió el viaje.','Their true family are the people who shared their journey.'),
   q('relationships','Relaciones importantes','Important relationships','¿Quién lo comprende mejor? ¿Con quién mantiene un conflicto sin resolver?','Who understands them best? With whom is there unresolved conflict?','Confía en su antigua maestra, aunque nunca le perdonó una mentira.','They trust their former teacher but never forgave one lie.'),
-  q('trust','Confianza e intimidad','Trust and intimacy','¿Cómo demuestra afecto y qué necesita para confiar?','How do they show affection, and what do they need to trust someone?','Arregla las cosas de otros en silencio; le cuesta pedir ayuda.','They quietly fix other people’s belongings but struggle to ask for help.')
+  q('trust','Confianza e intimidad','Trust and intimacy','¿Cómo demuestra afecto y qué necesita para confiar?','How do they show affection, and what do they need to trust someone?','Arregla las cosas de otros en silencio; le cuesta pedir ayuda.','They quietly fix other people’s belongings but struggle to ask for help.'),
+  {...q('relationshipGraph','Gráfica de relaciones','Relationship graph','¿Con qué personajes se relaciona y qué vínculo los une?','Which characters are they connected to, and how?','Selecciona personajes y describe sus vínculos.','Select characters and describe their connections.'),kind:'graph'}
  ]},
  {id:'story',title:{es:'Papel en la historia',en:'Role in the story'},questions:[
   q('goal','Objetivo en la historia','Story goal','¿Qué quiere conseguir y qué cree que eso solucionará?','What do they want, and what do they believe it will solve?','Busca una llave para volver a casa, convencida de que allí todo seguirá igual.','They seek a key to return home, believing everything there will be unchanged.'),

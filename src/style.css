@@ -822,3 +822,6 @@ html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{backgroun
 .character-list .entry-card{min-width:0;overflow-wrap:anywhere}
 .character-list .entry-card-top>div{display:flex;gap:5px;flex:none}
 .character-list .entry-card>small{display:block;margin:6px 0;line-height:1.5}
+.character-relationship-question{display:grid;gap:16px;min-width:0}
+.character-relationship-question>p{margin:0;color:var(--theme-readable-muted,var(--muted));line-height:1.7}
+.character-relationship-question .character-connection-picker{margin-top:0}

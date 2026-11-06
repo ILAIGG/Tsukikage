@@ -18,3 +18,9 @@ test('both languages display the same saved answers with their own question titl
  assert.match(guideAnswerText(answers,'es'),/custom: Otros detalles/);
  assert.equal(new Set(characterGuide.flatMap(c=>c.questions.map(q=>q.id))).size,characterGuide.flatMap(c=>c.questions).length);
 });
+
+
+test('the relationship graph is the fourth guided relationship question',()=>{
+ const relationships=characterGuide.find(c=>c.id==='relationships')!;assert.equal(relationships.questions.length,4);
+ assert.deepEqual(relationships.questions.map(q=>q.id),['family','relationships','trust','relationshipGraph']);assert.equal(relationships.questions[3].kind,'graph');
+});

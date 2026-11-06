@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.27.2] - 2026-11-06
+
+### Corregido
+- La gráfica de relaciones es ahora la cuarta pregunta de «Relaciones» dentro de la descripción guiada, con navegación anterior/siguiente y consulta desde el resumen de respuestas.
+- Se elimina el apartado independiente y su selector Entrevista/Gráfica. Los textos de la antigua entrevista se integran en «Relaciones importantes», conservando las respuestas existentes y su formato.
+- Los vínculos gráficos y sus etiquetas se conservan, incluidos los vínculos recibidos desde otros personajes, y se incluyen en el progreso de la categoría.
+
 ## [0.27.1] - 2026-11-06
 
 ### Corregido
