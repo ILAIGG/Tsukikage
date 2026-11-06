@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.27.0] - 2026-11-06
+
+### Añadido
+- «Lugares del personaje» incorpora búsqueda por nombre o nombre alternativo, filtros combinables de tipo y ubicación superior, contador de resultados y limpieza de filtros, con el mismo diseño que la lista de Lugares.
+- Los filtros permiten encontrar tanto lugares para añadir como vínculos ya guardados. Cambiar un filtro limpia la selección pendiente sin eliminar vínculos existentes.
+
 ## [0.26.0] - 2026-11-06
 
 ### Añadido
