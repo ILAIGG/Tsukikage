@@ -206,3 +206,25 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.page-heading,
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.page-heading,.character-page-heading) .eyebrow::before { content:'';width:7px;height:7px;flex:none;border:1px solid var(--pop-edge);border-radius:2px;background:var(--pop-secondary);box-shadow:0 2px 0 var(--theme-shadow); }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .world-category-card>svg { color:var(--pop-secondary); }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tip-icon { color:var(--pop-secondary);border-color:var(--pop-secondary);background:color-mix(in srgb,var(--pop-secondary) 12%,var(--theme-surface)); }
+/* Sidebar rows keep one size, regardless of whether they include a plus key. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .nav-item {
+  height:42px;min-height:42px;flex-shrink:0;margin:0 0 10px;box-sizing:border-box;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-section {
+  margin-bottom:10px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-section-head {
+  height:42px;min-height:42px;margin:0;box-sizing:border-box;padding:4px 7px 4px 0;align-items:center;gap:3px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-add {
+  width:28px;height:28px;min-width:28px;flex:0 0 28px;margin:0;padding:0;opacity:1;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-section-title {
+  min-height:0;height:100%;align-items:center;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-entries {
+  margin-top:9px;margin-bottom:10px;gap:8px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-submenu {
+  margin-top:10px;gap:10px;
+}

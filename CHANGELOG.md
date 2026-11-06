@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.20.1] - 2026-11-05
+
+### Corregido
+- Los botones principales del panel lateral de Pop y DarkPop comparten altura y tienen más separación; los botones de añadir mantienen un tamaño uniforme sin agrandar sus filas.
+
 ## [0.20.0] - 2026-11-05
 
 ### Cambiado
