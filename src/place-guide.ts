@@ -1,7 +1,7 @@
 import type { Entry, PlaceType } from './model';
 export type LocalText={es:string;en:string};
 export const placeTypes: {id:PlaceType;label:LocalText}[]=[
- {id:'world',label:{es:'Mundo',en:'World'}},{id:'region',label:{es:'Región',en:'Region'}},{id:'city',label:{es:'Ciudad o población',en:'City or settlement'}},{id:'building',label:{es:'Edificio',en:'Building'}},{id:'room',label:{es:'Habitación o espacio interior',en:'Room or interior'}},{id:'nature',label:{es:'Espacio natural',en:'Natural setting'}},{id:'mobile',label:{es:'Lugar itinerante',en:'Moving place'}},{id:'abstract',label:{es:'Lugar abstracto',en:'Abstract place'}},{id:'other',label:{es:'Otro',en:'Other'}}
+ {id:'world',label:{es:'Mundo',en:'World'}},{id:'region',label:{es:'Región / Nación / Reino',en:'Region / Nation / Kingdom'}},{id:'city',label:{es:'Ciudad / Pueblo / Asentamiento',en:'City / Town / Settlement'}},{id:'building',label:{es:'Edificio',en:'Building'}},{id:'room',label:{es:'Habitación o espacio interior',en:'Room or interior'}},{id:'nature',label:{es:'Espacio natural',en:'Natural setting'}},{id:'mobile',label:{es:'Lugar itinerante',en:'Moving place'}},{id:'abstract',label:{es:'Lugar abstracto',en:'Abstract place'}},{id:'other',label:{es:'Otro',en:'Other'}}
 ];
 export type PlaceQuestion={id:string;label:LocalText;prompt:LocalText;example:LocalText;types?:PlaceType[]};
 export type PlaceCategory={id:string;title:LocalText;questions:PlaceQuestion[]};

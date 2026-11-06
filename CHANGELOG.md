@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.25.1] - 2026-11-06
+
+### Cambiado
+- Las opciones de tipo de lugar ahora muestran «Región / Nación / Reino» y «Ciudad / Pueblo / Asentamiento», con sus equivalentes en inglés.
+
 ## [0.25.0] - 2026-11-06
 
 ### Añadido
