@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.27.3] - 2026-11-06
+
+### Corregido
+- El personaje o lugar abierto queda resaltado en el panel lateral con el estado seleccionado de su tema, también al guardarse por primera vez.
+- Abrir personajes o lugares desde vínculos despliega su sección en el panel para mostrar la selección activa.
+
 ## [0.27.2] - 2026-11-06
 
 ### Corregido
