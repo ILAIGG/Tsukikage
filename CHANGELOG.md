@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.1] - 2026-11-06
+
+### Corregido
+- Los campos de texto mantienen el tamaño y la apariencia definidos por cada tema, sin controles manuales para redimensionarlos.
+
 ## [0.24.0] - 2026-11-06
 
 ### Añadido

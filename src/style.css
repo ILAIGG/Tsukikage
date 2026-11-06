@@ -705,3 +705,6 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
  .breadcrumb-trail li{max-width:220px}
  .breadcrumb-trail [aria-current=page],.breadcrumb-trail .breadcrumb-link{max-width:195px}
 }
+
+/* Keep text fields at their designed dimensions across every view and theme. */
+.app-shell textarea{resize:none!important}
