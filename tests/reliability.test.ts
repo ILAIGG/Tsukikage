@@ -92,3 +92,15 @@ test('DOCX and print-ready PDF handle a long manuscript', async () => {
   assert.equal((printHtml.match(/<h2>/g)||[]).length, novel.chapters.length);
   assert.match(printHtml, /Capítulo 60/);
 });
+
+
+test('character portraits, interview answers and relationships survive storage and JSON backups', async()=>{
+ const character={firstName:'Lía',surname:'Sol',nickname:'La campana',birthDate:'1998-06-15',image:'data:image/webp;base64,UklGRg==',role:'protagonist',descriptionMode:'guided' as const,guided:{gender:'<p><em>Una mujer.</em></p>',custom:'Un recuerdo antiguo'},relationshipMode:'graph' as const,relatedCharacterIds:['noa'],relationshipLabels:{noa:'Hermano'},relationshipNotes:'<p>Se protegen mutuamente.</p>'};
+ const workspace:Workspace={settings:defaultSettings,novels:[{id:'characters',title:'Personajes',genre:'',updated:'',chapters:[],entries:[{id:'lia',kind:'character',name:'Lía Sol',description:'<p>Guardiana.</p>',character},{id:'noa',kind:'character',name:'Noa',description:''}]}]};
+ await saveWorkspace(workspace);
+ const stored=await loadWorkspace();
+ assert.deepEqual(stored.novels[0].entries?.[0].character,character);
+ const restored=parseWorkspaceBackup(serializeWorkspaceBackup(stored));
+ assert.deepEqual(restored.novels[0].entries?.[0].character,character);
+ assert.equal(restored.novels[0].entries?.[1].id,'noa');
+});

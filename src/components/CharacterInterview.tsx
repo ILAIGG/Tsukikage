@@ -4,12 +4,12 @@ import { characterGuide, type GuideLanguage } from '../character-guide';
 import { characterTextHtml, hasCharacterText } from '../character-text';
 const RichEditor=lazy(()=>import('./RichEditor'));
 
-type Props={fontSize:number;language:GuideLanguage;answers:Record<string,string>;onChange:(answers:Record<string,string>)=>void};
-export default function CharacterInterview({language,answers,onChange,fontSize}:Props){
+type Props={initialQuestion?:{category:number;question:number};fontSize:number;language:GuideLanguage;answers:Record<string,string>;onChange:(answers:Record<string,string>)=>void};
+export default function CharacterInterview({language,answers,onChange,fontSize,initialQuestion}:Props){
  const es=language==='es';
- const [view,setView]=useState<'categories'|'question'|'summary'>(()=>Object.values(answers).some(hasCharacterText)?'summary':'categories');
- const [categoryIndex,setCategoryIndex]=useState(0);
- const [questionIndex,setQuestionIndex]=useState(0);
+ const [view,setView]=useState<'categories'|'question'|'summary'>(()=>initialQuestion?'question':Object.values(answers).some(hasCharacterText)?'summary':'categories');
+ const [categoryIndex,setCategoryIndex]=useState(initialQuestion?.category||0);
+ const [questionIndex,setQuestionIndex]=useState(initialQuestion?.question||0);
  const [notice,setNotice]=useState('');
  const surface=useRef<HTMLElement>(null);
  useEffect(()=>{surface.current?.closest('.character-description')?.scrollIntoView({block:'start'});},[view,categoryIndex,questionIndex]);
@@ -23,7 +23,7 @@ export default function CharacterInterview({language,answers,onChange,fontSize}:
   <div className="interview-breadcrumb"><button type="button" className="secondary-btn" onClick={()=>setView('categories')}><ArrowLeft size={14}/>{es?'Categorías':'Categories'}</button><span>{category.title[language]} · {questionIndex+1} / {category.questions.length}</span></div>
   <h3 id="interview-question">{question.label[language]}</h3><p className="interview-prompt">{question.prompt[language]}</p>
   <div className="rich-wrapper interview-rich-editor"><Suspense fallback={<div className="paper loading-paper">{es?'Preparando el editor…':'Preparing the editor…'}</div>}><RichEditor key={question.id} chapter={{id:question.id,title:question.label[language],text:characterTextHtml(answers[question.id]||'')}} onChange={html=>onChange({...answers,[question.id]:hasCharacterText(html)?html:''})} focus={false} fontSize={fontSize} language={language} placeholderText={`${es?'Ejemplo':'Example'}: ${question.example[language]}`} accessibleLabel={question.label[language]}/></Suspense></div>
-  <small>{es?'Puedes dejar esta respuesta vacía. Escribe con libertad y guarda el personaje al terminar.':'You may leave this answer empty. Write freely and save the character when finished.'}</small>
+  <small>{es?'Puedes dejar esta respuesta vacía. Tus cambios se guardan automáticamente.':'You may leave this answer empty. Your changes save automatically.'}</small>
   <div className="interview-actions"><button type="button" className="secondary-btn" disabled={questionIndex===0} onClick={()=>setQuestionIndex(i=>i-1)}><ArrowLeft size={14}/>{es?'Pregunta anterior':'Previous question'}</button><button type="button" className="primary-btn" onClick={()=>{if(questionIndex+1<category.questions.length)setQuestionIndex(i=>i+1);else{setView('categories');setNotice(es?`Terminaste el recorrido de ${category.title.es}. Puedes elegir otra categoría o ver tus respuestas.`:`You finished ${category.title.en}. Choose another category or review your answers.`)}}}>{questionIndex+1===category.questions.length?(es?'Terminar categoría':'Finish category'):(es?'Pregunta siguiente':'Next question')}<ArrowRight size={14}/></button></div>
   <button type="button" className="secondary-btn interview-exit" onClick={()=>setView('summary')}>{es?'Salir de la entrevista y ver respuestas':'Exit interview and view answers'}</button>
  </section>;

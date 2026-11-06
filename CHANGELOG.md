@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.23.0] - 2026-11-06
+
+### Añadido
+- Los personajes guardan automáticamente sus cambios y muestran el estado de guardado, con un resumen al abrirlos y accesos para editar su identidad, descripción libre y respuestas guiadas.
+- Apodo y fecha de nacimiento opcionales, e imágenes que se pueden elegir, reemplazar o quitar. Las imágenes se optimizan y se conservan en las copias JSON.
+- Relaciones con entrevista de texto enriquecido y una gráfica de vínculos entre personajes del mismo proyecto, etiquetas opcionales y navegación a cada personaje. Los vínculos también se muestran desde el personaje relacionado.
+
+### Corregido
+- Editar un personaje conserva su posición en la lista y no reinicia el editor al guardarlo por primera vez.
+- Los textos con formato del personaje conservan el color de su tema, también en el resumen.
+
 ## [0.22.2] - 2026-11-06
 
 ### Corregido
