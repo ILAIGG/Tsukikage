@@ -748,3 +748,22 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
 .app-shell .chapter-control-panel .scene-description-field{padding:0;margin:0;grid-template-columns:minmax(0,1fr);gap:12px;align-items:stretch}
 .app-shell .chapter-control-panel .scene-description-field .remove-scene{grid-column:1;grid-row:auto;position:static;width:100%;height:auto;margin:0;min-height:36px}
 .app-shell .chapter-control-panel .chapter-progress-button>svg:first-child{color:var(--theme-accent,var(--accent))}
+
+/* Places reuse character page and manuscript primitives across all palettes. */
+.place-page .place-hierarchy{display:grid;gap:12px;padding:18px;border:1px solid var(--theme-line,var(--line));border-radius:var(--pop-radius,10px);background:var(--theme-surface,var(--panel));min-width:0}
+.place-hierarchy h2{font:600 16px Manrope,sans-serif;margin:0}
+.place-hierarchy p{margin:0;line-height:1.7;overflow-wrap:anywhere;color:var(--theme-readable-muted,var(--muted))}
+.place-hierarchy ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0}
+.place-hierarchy button{height:auto;min-height:34px;white-space:normal;overflow-wrap:anywhere;max-width:100%;padding:8px 12px}
+.place-page .place-parent-link{margin-left:8px}
+.place-page .character-role-field small{color:var(--theme-readable-muted,var(--muted));line-height:1.6}
+.place-answer-states{display:flex;flex-wrap:wrap;gap:10px}
+.place-answer-states button[aria-pressed=true]{background:color-mix(in srgb,var(--theme-accent,var(--accent)) 24%,var(--theme-surface,var(--panel)));border-color:var(--theme-accent,var(--accent))}
+.place-show-all,.place-interview>.interview-exit{justify-self:start;white-space:normal;height:auto;min-height:34px;padding:9px 12px}
+.place-page .character-role-picker>summary span{overflow-wrap:anywhere;min-width:0}
+.place-page .character-role-picker button{overflow-wrap:anywhere;white-space:normal}
+.place-guide-summary{min-width:0}
+.place-view-toggle{flex:none}
+@media(max-width:600px){.place-page .character-identity-fields{grid-template-columns:minmax(0,1fr)}.place-page .place-hierarchy{padding:14px}.place-view-toggle{margin-bottom:10px}}
+html[data-resolved-theme='light'] .breadcrumb-trail{color:#352e3d}
+.place-guide-summary .interview-summary-heading>h2{font:600 20px Manrope,sans-serif;margin:0}

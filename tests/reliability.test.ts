@@ -104,3 +104,11 @@ test('character portraits, interview answers and relationships survive storage a
  assert.deepEqual(restored.novels[0].entries?.[0].character,character);
  assert.equal(restored.novels[0].entries?.[1].id,'noa');
 });
+
+test('place hierarchy, image, aliases, rich answers and statuses survive storage and backup',async()=>{
+ const profile={type:'room' as const,aliases:'La cámara',parentId:'palace',image:'data:image/webp;base64,UklGRg==',descriptionMode:'guided' as const,guided:{objects:'<p><em>Una silla gastada.</em></p>'},answerStates:{origin:'pending' as const,climate:'notApplicable' as const}};
+ const workspace:Workspace={settings:defaultSettings,novels:[{id:'places',title:'Mundo',genre:'',updated:'',chapters:[],entries:[{id:'room',name:'Cuarto',kind:'place',description:'<p>Antiguo.</p>',place:profile},{id:'palace',name:'Palacio',kind:'place',description:'Texto antiguo sin formato'}]}]};
+ await saveWorkspace(workspace);const stored=await loadWorkspace();const restored=parseWorkspaceBackup(serializeWorkspaceBackup(stored));
+ assert.deepEqual(restored.novels[0].entries?.[0].place,profile);
+ assert.equal(restored.novels[0].entries?.[1].description,'Texto antiguo sin formato');
+});

@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.25.0] - 2026-11-06
+
+### Añadido
+- Lugares tiene páginas completas dentro de Mundo, con resumen editable, guardado automático, nombre, nombres alternativos, tipo e imagen optimizada.
+- Descripción libre con el editor de capítulos y entrevista guiada en seis categorías, con preguntas adaptadas al tipo de lugar, ejemplos y navegación anterior/siguiente. Todas las preguntas son opcionales; se puede explorar la entrevista completa y marcar «Por definir» o «No aplica» sin borrar respuestas.
+- Ubicación dentro de otro lugar y navegación entre lugares superiores e inferiores del mismo proyecto. Se impiden vínculos consigo mismo y ciclos; al borrar un lugar, sus hijos se conservan sin esa ubicación superior.
+- Los nombres alternativos y las respuestas guiadas se incluyen en la búsqueda del proyecto; imágenes, jerarquías y estados se conservan en las copias JSON.
+
+### Corregido
+- La ruta de navegación conserva un color legible en el tema Claro.
+
 ## [0.24.5] - 2026-11-06
 
 ### Corregido

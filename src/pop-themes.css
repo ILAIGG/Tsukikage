@@ -243,3 +243,4 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>b
   height:34px;min-height:34px;margin:0;display:inline-flex;align-items:center;justify-content:center;line-height:1;padding:0 10px;
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>.icon-button { width:34px;padding:0; }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .place-answer-states button[aria-pressed='true'] { background:var(--pop-selected)!important;border-color:var(--theme-accent)!important;color:var(--theme-text)!important; }

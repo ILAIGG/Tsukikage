@@ -16,6 +16,7 @@
 | Manuscrito | Escribe con formato, organiza capítulos y escenas y usa el modo concentración. |
 | Grimorio | Guarda la sinopsis y consulta la estructura del proyecto. |
 | Mundo | Crea personajes con página propia, nombre, apellido, tipo y descripciones Libre o Guiada mediante entrevista. |
+| Lugares | Crea lugares con página propia, imagen, descripciones libre o guiada y ubicaciones superiores e inferiores navegables. |
 | Notas | Conserva ideas y material de referencia del proyecto. |
 | Copias y exportación | Guarda copias JSON y exporta Markdown, EPUB, DOCX o PDF mediante impresión. |
 | Apariencia | Elige Claro, Oscuro, Pop, DarkPop o importa una paleta JSON. |
