@@ -244,3 +244,20 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>b
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>.icon-button { width:34px;padding:0; }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .place-answer-states button[aria-pressed='true'] { background:var(--pop-selected)!important;border-color:var(--theme-accent)!important;color:var(--theme-text)!important; }
+
+/* Library action keys have an explicit square hit area so their icon stays centered. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .story-card .card-actions .icon-button{
+  width:28px;
+  height:28px;
+  min-width:28px;
+  min-height:28px;
+  padding:0;
+  display:grid;
+  place-items:center;
+  line-height:1;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .story-card .card-actions .icon-button svg{
+  display:block;
+  margin:0;
+  flex:none;
+}

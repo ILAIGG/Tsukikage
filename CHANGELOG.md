@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.2] - 2026-11-06
+
+### Corregido
+- Los botones para borrar proyectos en Pop y DarkPop centran su icono dentro de una superficie cuadrada uniforme.
+
 ## [0.31.1] - 2026-11-06
 
 ### Corregido
