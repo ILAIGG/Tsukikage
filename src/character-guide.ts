@@ -26,6 +26,10 @@ export const characterGuide: GuideCategory[] = [
   q('insecurities','Inseguridades','Insecurities','¿Qué duda de sí mismo evita mostrar? ¿Qué activa esa inseguridad?','Which self-doubt do they hide? What triggers it?','Bromea sobre sus logros porque teme que descubran que no se siente capaz.','They joke about their achievements to hide feeling inadequate.'),
   q('contradictions','Contradicciones','Contradictions','¿Qué hace que contradice lo que dice creer?','What do they do that contradicts their stated beliefs?','Defiende la sinceridad, pero oculta su verdadero nombre.','They defend honesty but hide their real name.')
  ]},
+ {id:'expression',title:{es:'Voz y comportamiento',en:'Voice and behaviour'},questions:[
+  q('speech','Forma de hablar','Speech patterns','¿Qué palabras, ritmo o silencios lo distinguen?','Which words, rhythm or silences distinguish them?','Evita decir adiós y termina las discusiones con una pregunta.','They avoid saying goodbye and end arguments with a question.'),
+  q('pressure','Bajo presión','Under pressure','¿Cómo cambia su conducta cuando pierde el control?','How does their behaviour change when they lose control?','Se queda en silencio y organiza objetos para recuperar la calma.','They fall silent and arrange objects to regain calm.')
+ ]},
  {id:'habits',title:{es:'Valores, gustos y hábitos',en:'Values, interests and habits'},questions:[
   q('values','Valores','Values','¿Qué principio se niega a traicionar? ¿Qué podría ponerlo a prueba?','Which principle will they not betray? What could test it?','Nunca abandona a alguien, incluso cuando eso pone en riesgo su misión.','They never abandon anyone, even when it endangers their mission.'),
   q('passions','Pasiones e intereses','Passions and interests','¿Qué hace por placer cuando nadie le exige nada?','What do they do for pleasure when nobody needs anything from them?','Dibuja mapas de lugares imaginarios en los márgenes de sus cartas.','They sketch imaginary maps in the margins of letters.'),
@@ -40,7 +44,7 @@ export const characterGuide: GuideCategory[] = [
  ]},
  {id:'relationships',title:{es:'Relaciones',en:'Relationships'},questions:[
   q('family','Familia','Family','¿A quién considera su familia, y por qué?','Who do they consider family, and why?','Su verdadera familia son las personas con las que compartió el viaje.','Their true family are the people who shared their journey.'),
-  q('relationships','Relaciones importantes','Important relationships','¿Quién lo comprende mejor? ¿Con quién mantiene un conflicto sin resolver?','Who understands them best? With whom is there unresolved conflict?','Confía en su antigua maestra, aunque nunca le perdonó una mentira.','They trust their former teacher but never forgave one lie.'),
+  q('relationships','Relaciones importantes','Important relationships','¿Qué siente por las personas importantes y cómo cambian esos vínculos durante la historia?','Who understands them best? With whom is there unresolved conflict?','Confía en su antigua maestra, aunque nunca le perdonó una mentira.','They trust their former teacher but never forgave one lie.'),
   q('trust','Confianza e intimidad','Trust and intimacy','¿Cómo demuestra afecto y qué necesita para confiar?','How do they show affection, and what do they need to trust someone?','Arregla las cosas de otros en silencio; le cuesta pedir ayuda.','They quietly fix other people’s belongings but struggle to ask for help.'),
   {...q('relationshipGraph','Gráfica de relaciones','Relationship graph','¿Con qué personajes se relaciona y qué vínculo los une?','Which characters are they connected to, and how?','Selecciona personajes y describe sus vínculos.','Select characters and describe their connections.'),kind:'graph'}
  ]},
@@ -48,6 +52,10 @@ export const characterGuide: GuideCategory[] = [
   q('goal','Objetivo en la historia','Story goal','¿Qué quiere conseguir y qué cree que eso solucionará?','What do they want, and what do they believe it will solve?','Busca una llave para volver a casa, convencida de que allí todo seguirá igual.','They seek a key to return home, believing everything there will be unchanged.'),
   q('motivation','Motivación','Motivation','¿Por qué actúa ahora? ¿Qué pasaría si no hiciera nada?','Why act now? What would happen if they did nothing?','La última persona que recuerda su ciudad está empezando a olvidarla.','The last person who remembers their city is beginning to forget it.'),
   q('conflict','Conflicto','Conflict','¿Qué obstáculo externo y qué lucha interna se interponen?','Which external obstacle and inner struggle stand in the way?','Debe pedir ayuda al enemigo al que juró no volver a hablar.','They must ask for help from the enemy they swore never to speak to again.'),
+  q('stakes','Lo que está en juego','Stakes','¿Qué puede perder si fracasa y qué sacrifica al triunfar?','What could they lose by failing, and sacrifice by succeeding?','Salvar la ciudad podría costarle la confianza de su hermana.','Saving the city could cost them their sister’s trust.'),
+  q('startingPoint','Al comienzo','At the beginning','¿Cómo vive y qué cree al comenzar la historia?','How do they live and what do they believe at the start?','Cree que depender de otros siempre termina en una traición.','They believe relying on others always ends in betrayal.'),
+  q('turningPoint','Punto de cambio','Turning point','¿Qué decisión pone a prueba su forma de ver el mundo?','Which decision tests their view of the world?','Debe confiar el mapa a alguien que antes le mintió.','They must entrust the map to someone who once lied to them.'),
+  q('endingPoint','Al final','At the end','¿Qué cambió en sus decisiones y qué sigue sin resolver?','What changed in their decisions, and what remains unresolved?','Aprende a pedir ayuda, aunque todavía teme despedirse.','They learn to ask for help but still fear saying goodbye.'),
   q('arc','Arco del personaje','Character arc','¿Qué tendrá que aprender, aceptar o dejar atrás?','What must they learn, accept or leave behind?','Aprende que volver a casa no significa regresar al pasado.','They learn that returning home does not mean returning to the past.')
  ]}
 ];

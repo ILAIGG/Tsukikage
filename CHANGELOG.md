@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.29.0] - 2026-11-06
+
+### Añadido
+- Vista rápida del personaje con sus objetivos, conflictos, voz y evolución a partir de las respuestas guardadas.
+- Preguntas opcionales sobre comportamiento bajo presión, forma de hablar, riesgos y etapas del arco narrativo.
+- Las relaciones invitan a describir sentimientos y cambios a lo largo de la historia.
+
 ## [0.28.0] - 2026-11-06
 
 ### Añadido

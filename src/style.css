@@ -831,3 +831,5 @@ html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{backgroun
 .app-shell .sidebar:not(.collapsed) .tree-subsection>.tree-entries.tree-entries-empty{margin-top:6px;margin-bottom:0;padding-block:2px;gap:0}
 .tree-empty-message{display:block;padding:4px 8px;font-size:10px;line-height:1.5;color:var(--theme-readable-muted,var(--muted));overflow-wrap:anywhere}
 @media(max-width:600px){.entry-page-actions{justify-content:flex-start}}
+
+.character-quick-summary{margin-block:28px}.character-quick-summary dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}.character-quick-summary dl>div{padding:16px;border:1px solid var(--border);border-radius:12px}.character-quick-summary dt{font-weight:600}.character-quick-summary dd{margin:8px 0 0;overflow-wrap:anywhere}.character-quick-summary>p{color:var(--theme-readable-muted,var(--muted));font-size:12px}
