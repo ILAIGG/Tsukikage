@@ -5,7 +5,7 @@ export type GuideCategory = { id: string; title: LocalText; questions: GuideQues
 const q = (id:string, es:string, en:string, promptEs:string, promptEn:string, exampleEs:string, exampleEn:string):GuideQuestion => ({id,label:{es,en},prompt:{es:promptEs,en:promptEn},example:{es:exampleEs,en:exampleEn}});
 export const characterGuide: GuideCategory[] = [
  {id:'physical',title:{es:'Físico y presencia',en:'Appearance and presence'},questions:[
-  q('gender','Género','Gender','¿Cómo vive y expresa su identidad de género?','How do they experience and express their gender identity?','Se identifica como mujer; su expresión cambia según el entorno.','She identifies as a woman; her expression changes with her surroundings.'),
+  q('gender','Género','Gender','¿Cuál es su género?','What is their gender?','Ella es una mujer; etc.','She is a woman; etc.'),
   q('skin','Piel','Skin','¿Cómo es su piel y qué huellas deja su entorno en ella?','What is their skin like, and how does their environment leave its mark?','El sol ha curtido sus brazos; siempre tiene manchas de tinta en los dedos.','The sun has weathered their arms; ink always stains their fingers.'),
   q('marks','Marcas o cicatrices','Marks or scars','¿Qué marcas tiene y qué historia se esconde detrás?','Which marks do they have, and what stories lie behind them?','Oculta una quemadura que le recuerda a la persona que salvó.','They hide a burn that reminds them of someone they saved.'),
   q('height','Altura','Height','¿Cómo influye su altura en su forma de moverse o en cómo lo perciben?','How does their height affect their movement or how others perceive them?','Es muy alto, pero se encorva para no llamar la atención.','They are tall but stoop to avoid attracting attention.'),
