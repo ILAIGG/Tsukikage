@@ -722,3 +722,9 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
  .character-page .rich-wrapper .paper{padding:12px 14px}
  .character-page .rich-wrapper .paper>.format-toolbar{width:calc(100% + 28px);min-width:calc(100% + 28px);flex-basis:calc(100% + 28px);margin:-12px -14px 8px;padding:6px 8px}
 }
+
+/* Let the writing area determine paper height; keep the footer at its bottom. */
+.app-shell:not(.focus-mode) .rich-wrapper .paper{min-height:0}
+.app-shell:not(.focus-mode) .writing-layout .rich-wrapper{--editor-paper-width:100%;width:100%}
+.app-shell:not(.focus-mode) .writing-layout .rich-wrapper .paper{width:100%;max-width:none;margin-inline:0}
+.rich-wrapper .paper>.paper-footer{margin-bottom:0;flex:none}

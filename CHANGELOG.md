@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.4] - 2026-11-06
+
+### Corregido
+- El editor de capítulos ocupa el mismo ancho que los controles de su sección en todos los temas.
+- El papel ajusta su altura al contenido de escritura y al contador, eliminando el hueco inferior causado por una altura mínima adicional, también en personajes.
+
 ## [0.24.3] - 2026-11-06
 
 ### Corregido
