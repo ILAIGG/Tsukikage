@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.21.3] - 2026-11-06
+
+### Corregido
+- El campo de respuesta de la entrevista muestra solo el ejemplo como ayuda; la pregunta aparece una única vez, encima del campo.
+
 ## [0.21.2] - 2026-11-06
 
 ### Cambiado
