@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.23.2] - 2026-11-06
+
+### Mantenimiento
+- Se retiran del repositorio las pautas internas de trabajo de los temas y se amplían las exclusiones de configuración local para mantener limpia la documentación pública.
+
 ## [0.23.1] - 2026-11-06
 
 ### Corregido

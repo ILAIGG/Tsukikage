@@ -5,11 +5,31 @@ dist/
 !.env.example
 .DS_Store
 
-# Local assistant configuration
-AGENTS.md
-**/AGENTS.md
-**/SKILL.md
+# Local assistant configuration and internal working instructions (at any depth)
+[Aa][Gg][Ee][Nn][Tt]*.md
+[Ss][Kk][Ii][Ll][Ll]*.md
+[Cc][Ll][Aa][Uu][Dd][Ee]*.md
+[Gg][Ee][Mm][Ii][Nn][Ii]*.md
+*.instructions.md
+*.agent.md
+*.prompt.md
 .agents/
+agents/
+.gemini/
+.opencode/
 .codex/
 .claude/
+.cursor/
+.cursorrules
+.windsurf/
+.windsurfrules
 skills/
+agent-instructions/
+assistant-instructions/
+.github/agents/
+.github/instructions/
+.github/prompts/
+.github/copilot-instructions.md
+
+# Local project-specific working instructions
+docs/POP_THEMES.md
