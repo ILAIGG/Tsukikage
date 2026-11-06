@@ -728,3 +728,23 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
 .app-shell:not(.focus-mode) .writing-layout .rich-wrapper{--editor-paper-width:100%;width:100%}
 .app-shell:not(.focus-mode) .writing-layout .rich-wrapper .paper{width:100%;max-width:none;margin-inline:0}
 .rich-wrapper .paper>.paper-footer{margin-bottom:0;flex:none}
+
+/* Planning stays near the manuscript controls rather than below the writing page. */
+.chapter-controls-inline{display:none}
+.chapter-control-panel{display:grid;gap:16px;min-width:0;padding-bottom:20px;border-bottom:1px solid var(--theme-line,var(--line));margin-bottom:20px;color:var(--theme-text,var(--text))}
+.chapter-control-panel h2{font:600 14px Manrope,sans-serif;margin:0}
+.chapter-control-panel .scene-description-field{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}
+.chapter-control-panel .scene-description-field label{display:grid;gap:8px;min-width:0;font-size:11px;line-height:1.6}
+.chapter-control-panel .scene-description-field textarea{min-height:96px;width:100%;font:12px/1.6 Manrope,sans-serif}
+.chapter-control-panel .remove-scene{position:static;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:auto;min-height:36px;padding:8px 10px;white-space:normal}
+.chapter-control-panel small{font-size:10px;line-height:1.5;color:var(--theme-readable-muted,var(--muted))}
+.writing-layout .right-rail{padding-top:0;align-self:start;min-width:0}
+.writing-layout .rail-title{align-items:center}
+.writing-layout .outline-item{width:100%;min-width:0}
+.writing-layout .outline-item>span:nth-child(2){flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(min-width:1101px){.app-shell:not(.focus-mode) .writing-layout{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:28px;align-items:start}.app-shell:not(.focus-mode) .writing-layout .right-rail{display:block}}
+@media(max-width:1100px){.app-shell:not(.focus-mode) .writing-layout{grid-template-columns:minmax(0,1fr)}.writing-layout .right-rail{display:none}.chapter-controls-inline{display:block;margin:0 0 20px}.chapter-control-panel{margin-bottom:0}.chapter-control-panel .scene-description-field textarea{min-height:74px}}
+.focus-mode .chapter-controls-inline{display:none}
+.app-shell .chapter-control-panel .scene-description-field{padding:0;margin:0;grid-template-columns:minmax(0,1fr);gap:12px;align-items:stretch}
+.app-shell .chapter-control-panel .scene-description-field .remove-scene{grid-column:1;grid-row:auto;position:static;width:100%;height:auto;margin:0;min-height:36px}
+.app-shell .chapter-control-panel .chapter-progress-button>svg:first-child{color:var(--theme-accent,var(--accent))}

@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.5] - 2026-11-06
+
+### Corregido
+- Progreso, descripción y eliminación de escena se agrupan en Planificación, al inicio del panel derecho. En pantallas estrechas aparecen antes del editor.
+- Eliminar escena muestra una confirmación con su nombre y advierte que se borrará su texto; el botón tiene una etiqueta visible.
+- El panel derecho se alinea desde arriba y sus elementos del esquema respetan el ancho disponible.
+
 ## [0.24.4] - 2026-11-06
 
 ### Corregido
