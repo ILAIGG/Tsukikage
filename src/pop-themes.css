@@ -153,14 +153,14 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(input,textarea
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .paper {
   color: var(--theme-text); border: 1px solid var(--pop-edge);
-  background: var(--theme-page); border-radius: 10px;
-  box-shadow: inset 0 0 0 1px var(--pop-ring), 0 4px 0 var(--theme-shadow);
+  background: var(--theme-page); border-radius: var(--pop-radius);
+  box-shadow: var(--pop-key-shadow);
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing p.is-editor-empty:first-child::before {
   color: var(--theme-readable-muted); opacity: .65;
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .rich-wrapper .paper>.format-toolbar {
-  background: var(--theme-page); border-bottom-color: var(--pop-edge); border-radius: 9px 9px 0 0;
+  background: var(--theme-page); border-bottom-color: var(--pop-edge); border-radius: calc(var(--pop-radius) - 1px) calc(var(--pop-radius) - 1px) 0 0;
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.export-menu,.character-role-options) {
   padding: 8px; gap: 7px;

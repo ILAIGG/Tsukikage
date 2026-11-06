@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.24.2] - 2026-11-06
+
+### Corregido
+- El papel del editor de capítulos usa el mismo radio y relieve de tecla que los demás controles de Pop y DarkPop; la barra de formato sigue la misma línea del marco.
+
 ## [0.24.1] - 2026-11-06
 
 ### Corregido
