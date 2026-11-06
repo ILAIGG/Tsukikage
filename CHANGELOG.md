@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.1] - 2026-11-06
+
+### Corregido
+- El selector de géneros mantiene su tamaño al añadir o quitar etiquetas, con áreas de desplazamiento para la selección y las sugerencias. Las sugerencias conservan su posición y muestran su estado seleccionado.
+
 ## [0.31.0] - 2026-11-06
 
 ### Añadido
