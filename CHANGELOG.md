@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.22.2] - 2026-11-06
+
+### Corregido
+- Los editores de Pop y DarkPop ya no muestran un contorno rectangular adicional al escribir; los controles conservan su indicador de foco.
+- La tarjeta de Personajes en Mundo queda alineada con el título de la página.
+
 ## [0.22.1] - 2026-11-06
 
 ### Corregido

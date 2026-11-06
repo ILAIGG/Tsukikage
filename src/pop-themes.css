@@ -228,3 +228,9 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.coll
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .sidebar:not(.collapsed) .tree-submenu {
   margin-top:10px;gap:10px;
 }
+
+/* The paper already frames the writing area; keep focus rings on controls only. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing:focus,
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing:focus-visible {
+  outline:none !important;
+}
