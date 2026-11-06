@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.22.1] - 2026-11-06
+
+### Corregido
+- Los editores Libre y Guiado del personaje ocupan el ancho de su sección, alineados con los textos y botones de navegación.
+
 ## [0.22.0] - 2026-11-06
 
 ### Cambiado

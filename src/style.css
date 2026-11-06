@@ -642,3 +642,6 @@ html[data-resolved-theme='light'] .character-description{--panel:#fff;--line:#d8
 .interview-rich-editor{min-width:0}.interview-answer-text.tiptap-writing{min-height:0;margin:14px 0;white-space:normal;overflow-wrap:anywhere;font-size:var(--writing-size,18px)}.interview-answer-text.tiptap-writing>:last-child{margin-bottom:0}.interview-rich-editor .paper{width:100%}
 
 .character-page .character-description .interview-answer-text :is(p,strong,em,u,s,h1,h2,h3,li,blockquote){color:inherit}
+/* Character descriptions align with the surrounding fields and interview navigation. */
+.character-description .rich-wrapper{--editor-paper-width:100%}
+.character-description .rich-wrapper .paper{width:100%;max-width:100%;margin-inline:0}
