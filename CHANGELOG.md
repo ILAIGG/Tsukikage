@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.30.0] - 2026-11-06
+
+### Añadido
+- La revisión señala capítulos vacíos y descripciones pendientes como sugerencias.
+- Buscar en el proyecto con Ctrl/Cmd + Mayús + F; cerrar Preferencias con Escape.
+- Buscar personajes por apodo, nombre y apellido. Roadmap actualizado con funciones entregadas y pendientes, manteniendo aplazada la nube.
+
 ## [0.29.0] - 2026-11-06
 
 ### Añadido

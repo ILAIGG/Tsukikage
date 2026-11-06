@@ -1,5 +1,17 @@
 # Hoja de ruta de Tsukikage
 
+## Revisión 0.30.0
+
+- [x] Búsqueda de contenido de capítulos, escenas, descripciones y respuestas guiadas; incluir apodos y nombres del personaje.
+- [x] Conexiones navegables entre personajes, lugares y apariciones en capítulos/escenas.
+- [x] Revisión orientativa de capítulos vacíos y descripciones pendientes.
+- [x] Acceso a búsqueda con Ctrl/Cmd + Mayús + F y cierre de preferencias con Escape.
+- [x] Copias JSON, importación, historial de capítulos y recuperación de borradores locales.
+- [ ] Auditoría completa con lector de pantalla y gestión de foco de diálogos.
+- [ ] Historial restaurable de proyectos completos (el historial actual es por capítulo).
+
+La sincronización y la elección de proveedor remoto siguen aplazadas. Evaluar MongoDB Atlas y Supabase cuando se diseñen autenticación, permisos, conflictos y alojamiento del servidor.
+
 ## Entregado en 0.9.8
 
 - [x] Mejorar el contraste de la numeración y dar estilo de tema a las tarjetas del Esquema.
@@ -140,4 +152,4 @@
 - [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.
 - [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.
 
-La cuenta y la base remota son opcionales: hace falta crear un proyecto Supabase y configurarlo siguiendo `README.md`. No se transmiten manuscritos automáticamente.
+La cuenta y la base remota serán opcionales. La integración experimental de Supabase existente no determina el proveedor definitivo; no se transmiten manuscritos automáticamente.
