@@ -184,9 +184,9 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .entry-fullscreen 
 }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell :is(.goal-heading,.goal-numbers span,.goal-card small,.theme-choice-label,.project-chapter-no,.chapter-menu-index) { color: var(--theme-readable-muted); }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input[type='range'] { appearance: none; height: 26px; background: transparent; border: 0; padding: 0; box-shadow: none; cursor: pointer; }
-html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-runnable-track { height: 7px; border: 1px solid var(--pop-edge); border-radius: 10px; background: var(--theme-page); }
-html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; margin-top: -7px; border: 1px solid var(--pop-edge); border-radius: 50%; background: var(--theme-accent); box-shadow: 0 2px 0 var(--theme-shadow); }
-html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-moz-range-track { height: 6px; border: 1px solid var(--pop-edge); border-radius: 10px; background: var(--theme-page); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-runnable-track { height: 7px; border: 1px solid var(--pop-edge); border-radius: 10px; background: linear-gradient(to right,var(--theme-accent) 0 var(--slider-fill,0%),var(--theme-page) var(--slider-fill,0%) 100%); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-webkit-slider-thumb { appearance: none; width: 18px; height: 18px; margin-top: -6px; border: 1px solid var(--pop-edge); border-radius: 50%; background: var(--theme-accent); box-shadow: 0 2px 0 var(--theme-shadow); }
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-moz-range-track { height: 6px; border: 1px solid var(--pop-edge); border-radius: 10px; background: linear-gradient(to right,var(--theme-accent) 0 var(--slider-fill,0%),var(--theme-page) var(--slider-fill,0%) 100%); }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .slider-row input::-moz-range-thumb { width: 16px; height: 16px; border: 1px solid var(--pop-edge); border-radius: 50%; background: var(--theme-accent); box-shadow: 0 2px 0 var(--theme-shadow); }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu .menu-label { border:1px solid var(--pop-edge);border-radius:var(--pop-radius);background:var(--theme-surface);color:var(--theme-text);box-shadow:var(--pop-key-shadow);padding:9px 12px;cursor:pointer; }
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .export-menu .menu-label:hover { background:var(--pop-hover);border-color:var(--theme-accent); }
@@ -234,3 +234,12 @@ html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing:fo
 html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .tiptap-writing:focus-visible {
   outline:none !important;
 }
+
+/* Keep footer controls clear of the version separator, including their key shadow. */
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-dialog .settings-bottom {
+  margin:16px 0 0;padding:16px 0 8px;gap:12px;align-items:center;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>button {
+  height:34px;min-height:34px;margin:0;display:inline-flex;align-items:center;justify-content:center;line-height:1;padding:0 10px;
+}
+html:is([data-theme='pop'],[data-theme='darkpop']) .app-shell .settings-bottom>.icon-button { width:34px;padding:0; }

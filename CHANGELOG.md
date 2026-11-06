@@ -2,6 +2,15 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.23.1] - 2026-11-06
+
+### Corregido
+- En Pop y DarkPop, el slider de tamaño de texto se rellena con el color del tema según su valor.
+- Los botones inferiores de Preferencias tienen la misma altura y más separación respecto de la versión, sin superponerse con su línea divisoria.
+
+### Cambiado
+- Se elimina de Preferencias el control de ancho del editor.
+
 ## [0.23.0] - 2026-11-06
 
 ### Añadido
