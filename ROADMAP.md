@@ -153,3 +153,7 @@ La sincronización y la elección de proveedor remoto siguen aplazadas. Evaluar 
 - [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.
 
 La cuenta y la base remota serán opcionales. La integración experimental de Supabase existente no determina el proveedor definitivo; no se transmiten manuscritos automáticamente.
+
+## Ideas a futuro
+- [ ] Sistema de plantillas personalizables para distintos proyectos.
+- [ ] Validar la beta en Vercel con PWA/offline y lectores de pantalla antes de anunciarla como estable.

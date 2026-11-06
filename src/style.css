@@ -833,3 +833,5 @@ html[data-resolved-theme='light'] .rich-wrapper .paper>.format-toolbar{backgroun
 @media(max-width:600px){.entry-page-actions{justify-content:flex-start}}
 
 .character-quick-summary{margin-block:28px}.character-quick-summary dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}.character-quick-summary dl>div{padding:16px;border:1px solid var(--border);border-radius:12px}.character-quick-summary dt{font-weight:600}.character-quick-summary dd{margin:8px 0 0;overflow-wrap:anywhere}.character-quick-summary>p{color:var(--theme-readable-muted,var(--muted));font-size:12px}
+
+.app-shell .story-card-content>input{background:transparent!important;box-shadow:none!important}.genre-tags{display:grid;gap:10px}.genre-tag-list{display:flex;flex-wrap:wrap;gap:8px}.story-card[draggable]{cursor:grab}.story-card[draggable]:active{cursor:grabbing}

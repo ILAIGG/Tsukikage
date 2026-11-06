@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.0] - 2026-11-06
+
+### Añadido
+- Reordenar proyectos por arrastre y crear géneros como etiquetas con sugerencias y separación por comas.
+### Corregido
+- Fondo del título de tarjetas consistente con el tema. Se retira el selector de plantillas y las flechas de reordenamiento.
+
 ## [0.30.0] - 2026-11-06
 
 ### Añadido
