@@ -2,6 +2,14 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.25.2] - 2026-11-06
+
+### Cambiado
+- Las 27 preguntas de la entrevista de Lugares adaptan su redacción y sus ejemplos al tipo seleccionado, en español e inglés. «Otro» mantiene las ayudas generales.
+
+### Corregido
+- Cambiar el tipo actualiza también el ejemplo del editor sin perder las respuestas, su formato ni sus estados. Explorar todas las preguntas mantiene las ayudas del tipo elegido.
+
 ## [0.25.1] - 2026-11-06
 
 ### Cambiado

@@ -1,3 +1,4 @@
+import { contextualPlaceQuestion } from './place-context';
 import type { Entry, PlaceType } from './model';
 export type LocalText={es:string;en:string};
 export const placeTypes: {id:PlaceType;label:LocalText}[]=[
@@ -42,7 +43,7 @@ export const placeGuide:PlaceCategory[]=[
  q('hidden','Lo que se oculta','What is hidden','¿Qué hay detrás de su apariencia cotidiana?','What lies behind its everyday appearance?','Bajo el taller sigue funcionando una puerta hacia una ciudad desaparecida.','Beneath the workshop a door to a vanished city still works.'),
  q('knowledge','Quién lo sabe','Who knows','¿Quién conoce el secreto y por qué no lo revela?','Who knows the secret and why do they keep it?','La cuidadora conserva el mapa, pero teme perder su único hogar.','The caretaker keeps the map but fears losing her only home.'),
  q('discovery','Descubrimiento y consecuencias','Discovery and consequences','¿Cómo podría descubrirse y qué cambiaría al conocerse?','How might it be discovered and what would change?','Una reparación deja al descubierto nombres que nadie reconoce.','Repairs uncover names that nobody recognises.')]}];
-export function questionsForPlace(type:PlaceType,all=false):PlaceCategory[]{return placeGuide.map(c=>({...c,questions:c.questions.filter(q=>all||!q.types||q.types.includes(type))})).filter(c=>c.questions.length);}
+export function questionsForPlace(type:PlaceType,all=false):PlaceCategory[]{return placeGuide.map(c=>({...c,questions:c.questions.filter(q=>all||!q.types||q.types.includes(type)).map(q=>contextualPlaceQuestion(q,type))})).filter(c=>c.questions.length);}
 /** Also rejects joining an already corrupt ancestry; missing parents end a chain safely. */
 export function canContainPlace(entries:Entry[],childId:string,parentId:string|undefined):boolean{
  if(!parentId)return true;

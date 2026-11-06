@@ -22,3 +22,25 @@ test('place questions adapt to scale and retain access to every question',()=>{
  const questions=placeGuide.flatMap(c=>c.questions);assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
  for(const q of questions)for(const lang of ['es','en'] as const){assert(q.prompt[lang]);assert(q.example[lang]);assert.notEqual(q.prompt[lang],q.example[lang]);}
 });
+
+test('every concrete place type has bilingual contextual prompts and examples without changing answer IDs',()=>{
+ const types=['world','region','city','building','room','nature','mobile','abstract'] as const;
+ const original=JSON.stringify(placeGuide);
+ const base=placeGuide.flatMap(c=>c.questions);
+ for(const type of types){
+  const all=questionsForPlace(type,true).flatMap(c=>c.questions);
+  assert.deepEqual(all.map(q=>q.id),base.map(q=>q.id));
+  for(const [i,q] of all.entries())for(const lang of ['es','en'] as const){
+   assert(q.prompt[lang]?.trim(),`${type}/${q.id}/${lang}: prompt`);
+   assert(q.example[lang]?.trim(),`${type}/${q.id}/${lang}: example`);
+   assert.notEqual(q.prompt[lang],base[i].prompt[lang]);
+   assert.notEqual(q.example[lang],base[i].example[lang]);
+  }
+ }
+ assert.equal(JSON.stringify(placeGuide),original,'Presentation never mutates the shared guide');
+ assert.deepEqual(questionsForPlace('other',true).flatMap(c=>c.questions),base);
+ const room=questionsForPlace('room',true).flatMap(c=>c.questions).find(q=>q.id==='layout')!;
+ const city=questionsForPlace('city',true).flatMap(c=>c.questions).find(q=>q.id==='layout')!;
+ assert.match(room.prompt.es,/mobiliario/);assert.match(city.prompt.es,/barrios/);
+ assert.match(room.example.en,/table/);assert.match(city.example.en,/district/);
+});
