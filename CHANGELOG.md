@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.31.5] - 2026-11-06
+
+### Documentación
+- README en español e inglés orientado a visitantes y colaboradores, con funciones, instalación, copias y estado de la beta. Las notas operativas de publicación se conservan solo de forma local.
+
 ## [0.31.4] - 2026-11-06
 
 ### Corregido

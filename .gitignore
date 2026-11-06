@@ -33,3 +33,6 @@ assistant-instructions/
 
 # Local project-specific working instructions
 docs/POP_THEMES.md
+
+# Private maintenance and deployment notes
+.local/
