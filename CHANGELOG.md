@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.21.2] - 2026-11-06
+
+### Cambiado
+- Se retira la pregunta de Pronombres de la entrevista del personaje en ambos idiomas, conservando las respuestas anteriores en los datos guardados.
+
 ## [0.21.1] - 2026-11-06
 
 ### Corregido
