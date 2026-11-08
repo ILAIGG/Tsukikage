@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './style.css';
 import './pop-themes.css';
+import './refinement.css';
 
 document.documentElement.lang=/^(en)(-|$)/i.test(navigator.languages?.find(language=>/^(es|en)(-|$)/i.test(language))||navigator.language||'')?'en':'es';
 

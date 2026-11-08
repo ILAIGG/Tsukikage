@@ -89,6 +89,7 @@ export default function App() {
  useEffect(()=>{const capture=(e:Event)=>{e.preventDefault();setInstallPrompt(e)};const done=()=>{setInstalled(true);setInstallPrompt(null);setInstallHelp(false)};window.addEventListener('beforeinstallprompt',capture);window.addEventListener('appinstalled',done);return()=>{window.removeEventListener('beforeinstallprompt',capture);window.removeEventListener('appinstalled',done)}},[]);
  useEffect(()=>{if(syncConfigured)void activeUser().then(user=>setSyncUser(user?.email||''))},[]);
  const totalWords=useMemo(()=>wordCount(novel?.chapters.map(c=>htmlToText(c.text)).join(' ')||''),[novel]);
+ useEffect(()=>{if(settings.theme!=='system')return;const media=matchMedia('(prefers-color-scheme: light)');const update=()=>{document.documentElement.dataset.resolvedTheme=media.matches?'light':'dark'};media.addEventListener('change',update);return()=>media.removeEventListener('change',update)},[settings.theme]);
  const searchResults=useMemo(()=>searchProject(novel,query),[novel,query]);
  const visibleSearchResults=searchFilter==='all'?searchResults:searchResults.filter(result=>result.kind===searchFilter);
  const chapterScenes=chapter?.scenes||[]; const activeSceneIndex=chapterScenes.length?Math.min(selectedScene,chapterScenes.length-1):0; const activeScene=chapterScenes[activeSceneIndex]; const visibleScenes=showFullChapter?chapterScenes:activeScene?[activeScene]:[]; const chapterWords=chapter?wordCount(htmlToText(chapter.text)):0;

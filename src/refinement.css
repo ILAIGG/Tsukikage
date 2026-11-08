@@ -1,0 +1,37 @@
+/* Quiet editorial surfaces; palettes keep their user-supplied colors. */
+html[data-resolved-theme='dark']{--studio-bg:#11131b;--studio-surface:#1e202c;--studio-field:#171923;--studio-line:#4e495f;--studio-text:#f0eaf7;--studio-muted:#aaa5ba;--studio-accent:#b99be7;--line:var(--studio-line);--muted:var(--studio-muted);--accent:var(--studio-accent);--panel:var(--studio-surface)}
+html[data-resolved-theme='light']{--studio-bg:#f2eef5;--studio-surface:#fffdfd;--studio-field:#faf7fc;--studio-line:#95899f;--studio-text:#342b40;--studio-muted:#64596f;--studio-accent:#76539f;--line:var(--studio-line);--muted:var(--studio-muted);--accent:var(--studio-accent);--panel:var(--studio-surface)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell{background:var(--studio-bg);color:var(--studio-text)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(.story-card,.entry-card,.stats-card,.project-stats article,.project-chapter-card,.settings-dialog,.modal-card,.reference-panel,.paper){background:var(--studio-surface);border-color:var(--studio-line);color:var(--studio-text)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(.sidebar,.topbar,.statusbar){background:var(--studio-field);border-color:var(--studio-line)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(input,textarea,select,.secondary-btn,.icon-button){color:var(--studio-text)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(textarea,select,.modal-content input,.setting-row input:not([type=range])){background:var(--studio-field);border-color:var(--studio-line)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(.eyebrow,small,.story-card-content p,.project-home p,.save-state,.statusbar,.nav-item,.tree-section-head,.tree-entry,.outline-item,.editor-foot,.paper-footer){color:var(--studio-muted)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :is(h1,h2,h3,.book-title-edit,.tiptap-writing){color:var(--studio-text)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell .format-toolbar{background:var(--studio-field);border-color:var(--studio-line)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell .format-toolbar button{color:var(--studio-text)}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell ::placeholder{color:var(--studio-muted);opacity:1}
+.app-shell .tiptap-writing{line-height:1.8;overflow-wrap:anywhere}
+.app-shell .tiptap-writing p{margin-block:0 .85em}
+.app-shell .tiptap-writing :is(h1,h2,h3){line-height:1.3;margin-block:1.25em .55em}
+.app-shell .tiptap-writing a{color:var(--theme-link,var(--accent));text-decoration:underline;text-underline-offset:3px}
+.app-shell .tiptap-writing ::selection{background:color-mix(in srgb,var(--accent) 32%,transparent);color:inherit}
+.app-shell :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.app-shell .story-art{position:relative;min-height:156px;background:linear-gradient(110deg,transparent 10px,color-mix(in srgb,var(--accent) 24%,var(--panel)) 11px,color-mix(in srgb,var(--accent) 24%,var(--panel)) 14px,transparent 15px),var(--panel);border-bottom:1px solid var(--line)}
+.app-shell .story-card:nth-child(3n+2) .story-art{background:repeating-linear-gradient(135deg,transparent 0 24px,color-mix(in srgb,var(--accent) 10%,transparent) 25px 26px),var(--panel)}
+.app-shell .story-card:nth-child(3n) .story-art{background:radial-gradient(ellipse at 80% 10%,color-mix(in srgb,var(--accent) 24%,transparent),transparent 65%),var(--panel)}
+.app-shell .story-art>img{width:48px;height:48px;opacity:.85}
+.app-shell .story-card{border-radius:10px;overflow:hidden}
+.app-shell .story-card-content{padding:18px}
+.app-shell .story-card-content>input{font-size:16px;line-height:1.5}
+.app-shell .project-home h1{font-size:clamp(28px,4vw,42px);line-height:1.2;letter-spacing:-.025em}
+.app-shell .project-stats article{padding:18px;border-radius:10px}
+.app-shell .project-stats article>b{font-variant-numeric:tabular-nums}
+.app-shell .project-chapter-card{border-radius:10px}
+.app-shell.focus-mode .paper{box-shadow:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:600px){.app-shell .story-art{min-height:132px}.app-shell .format-toolbar button{min-width:30px;min-height:30px}}
+.app-shell .story-art>img{box-shadow:none;filter:none}
+.app-shell .story-art>span{background:var(--panel);color:var(--theme-text,var(--studio-text,inherit));border:1px solid var(--line);max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell .primary-btn{background:var(--studio-accent);color:var(--studio-bg);border-color:var(--studio-accent)}
+html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}

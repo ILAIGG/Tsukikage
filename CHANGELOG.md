@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.33.0] - 2026-11-08
+
+### Mejorado
+- Superficies y textos de Claro/Oscuro con mayor separación y contraste, conservando las paletas personalizadas.
+- Portadas editoriales discretas, jerarquía del proyecto y lectura del manuscrito refinadas.
+- Foco visible y reducción de movimiento coherentes con las preferencias del sistema.
+
 ## [0.32.0] - 2026-11-06
 
 ### Añadido
