@@ -35,3 +35,42 @@ html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell :
 .app-shell .story-art>span{background:var(--panel);color:var(--theme-text,var(--studio-text,inherit));border:1px solid var(--line);max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 html:is([data-resolved-theme='light'],[data-resolved-theme='dark']) .app-shell .primary-btn{background:var(--studio-accent);color:var(--studio-bg);border-color:var(--studio-accent)}
 html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
+
+/* The cover belongs to the work, rather than to its position in the library. */
+.editorial-cover{--cover-bg:#342945;--cover-ink:#fff4e3;position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;min-height:250px;padding:32px 26px;text-align:center;background:var(--cover-bg);color:var(--cover-ink);overflow:hidden}
+.editorial-cover[data-palette=ink]{--cover-bg:#243343;--cover-ink:#f4f0e5}
+.editorial-cover[data-palette=forest]{--cover-bg:#293d36;--cover-ink:#f7f0dd}
+.editorial-cover[data-palette=rose]{--cover-bg:#543440;--cover-ink:#fff1e5}
+.editorial-cover::before{content:'';position:absolute;inset:14px;border-left:2px solid currentColor;opacity:.35;pointer-events:none;z-index:-1}
+.editorial-cover[data-cover-style=frame]::before{inset:16px;border:1px solid currentColor}
+.editorial-cover[data-cover-style=orbit]::before{inset:auto;width:220px;height:220px;border:1px solid currentColor;border-radius:50%;right:-100px;top:-100px}
+.cover-kicker{font:500 11px/1.4 system-ui,sans-serif;letter-spacing:.16em}
+.cover-title{display:block;font:500 clamp(24px,2.5vw,34px)/1.2 Georgia,Cambria,serif;overflow-wrap:anywhere;max-width:100%;text-wrap:balance}
+.cover-genre{font:400 12px/1.6 system-ui,sans-serif;max-width:100%;overflow-wrap:anywhere}
+.cover-picker{border-bottom:1px solid var(--line);font-size:12px}
+.cover-picker summary{padding:10px 16px;cursor:pointer;min-height:36px}
+.cover-options{padding:6px 16px 16px;display:grid;gap:10px}
+.cover-options label{display:grid;gap:6px;font-size:13px}
+.cover-options select{width:100%;min-width:0;min-height:36px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:inherit;padding:6px}
+.cover-options small{line-height:1.5;font-size:12px}
+.app-shell .story-card-content>p{font-size:12px;line-height:1.6}
+.app-shell :is(.tree-section-head,.tree-entry,.tree-entries button,.nav-item,.novel-link,.chapter-tab,.scene-row,.outline-item){font-size:13px;line-height:1.5}
+.app-shell :is(.project-stats article>span,.stats-card>span,.stat-row,.save-state,.editor-foot,.statusbar,.right-rail label,.right-rail small){font-size:12px;line-height:1.5}
+.app-shell :is(.chapter-menu-open,.project-chapter-info b,.project-chapter-info small){font-size:13px;line-height:1.5}
+.app-shell :is(.modal-content,.character-page,.place-page) :is(input,textarea,select){font-size:14px;line-height:1.5}
+.app-shell .right-rail{font-size:13px;line-height:1.6}
+.app-shell .writing-layout .tiptap-writing{font-family:var(--manuscript-font,Georgia,serif);line-height:var(--manuscript-leading,1.8);max-width:68ch;margin-inline:auto;width:100%;color:inherit}
+.app-shell .writing-layout .tiptap-writing :is(p,li,blockquote,strong,em,h1,h2,h3){color:inherit}
+.app-shell .writing-layout .tiptap-writing p{margin-bottom:.8em}
+.app-shell .writing-layout .paper{padding-inline:clamp(18px,3vw,36px)}
+.app-shell .writing-layout .format-toolbar{font-family:system-ui,sans-serif}
+.app-shell .writing-preferences h3{font-size:14px;margin:16px 0 0}
+.app-shell.focus-mode .focus-exit{font-size:12px;min-height:36px}
+.app-shell.focus-mode .editor-column{max-width:960px;padding-top:56px}
+.app-shell.focus-mode .paper{padding-top:12px}
+@media(max-width:830px){.app-shell .save-state{display:none}.app-shell .top-action-label{display:none}}
+@media(max-width:600px){.editorial-cover{min-height:230px}.app-shell .statusbar{height:auto;min-height:30px;flex-wrap:wrap;gap:4px;padding-block:5px}.app-shell .statusbar>span{max-width:100%;white-space:normal}.app-shell .format-toolbar{flex-wrap:wrap}.app-shell.focus-mode .focus-exit{font-size:12px}.app-shell .writing-layout .paper{padding-inline:16px}}
+.app-shell.focus-mode .format-toolbar{display:flex!important;position:sticky;top:58px;z-index:5;flex-wrap:wrap;margin:0 0 20px!important;padding:8px!important;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.focus-save-status{position:fixed;top:23px;left:20px;z-index:101;font-size:12px;line-height:1.5;color:var(--theme-readable-muted,var(--muted));max-width:calc(100% - 230px)}
+.app-shell .sidebar .tree-entries button{min-width:0;width:100%;height:auto;min-height:34px;white-space:normal;overflow-wrap:anywhere;text-align:left;line-height:1.5;padding-block:7px}
+.app-shell .sidebar .tree-entries button>span{min-width:0;white-space:normal}

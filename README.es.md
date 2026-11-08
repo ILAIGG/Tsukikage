@@ -11,7 +11,7 @@ Tsukikage reúne la escritura del manuscrito y la planificación de una historia
 
 | Espacio | Funciones |
 | --- | --- |
-| Biblioteca | Varios proyectos, orden por arrastre y géneros como etiquetas. |
+| Biblioteca | Varios proyectos, portadas editoriales personalizables, orden por arrastre y géneros como etiquetas. |
 | Grimorio | Sinopsis editable y estructura de la historia. |
 | Escritura | Capítulos y escenas, formato enriquecido, enfoque, progreso, contador y meta diaria. |
 | Personajes | Página completa, imagen, identidad, descripción libre y entrevista opcional, relaciones y vista rápida. |
@@ -20,7 +20,7 @@ Tsukikage reúne la escritura del manuscrito y la planificación de una historia
 | Referencia | Notas, búsqueda global y revisión orientativa de contenido pendiente. |
 | Copias | Importar/exportar el espacio completo en JSON y recuperar borradores e historial de capítulos. |
 | Exportación | Markdown, EPUB, DOCX y PDF mediante impresión del navegador. |
-| Preferencias | Español/inglés, tamaño de texto, Claro, Oscuro, Sistema, Pop, DarkPop y paletas JSON. |
+| Preferencias | Español/inglés, tipografía e interlineado del manuscrito, tamaño de texto, Claro, Oscuro, Sistema, Pop, DarkPop y paletas JSON. |
 
 ## Guardado y copias de seguridad
 

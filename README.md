@@ -11,7 +11,7 @@ Tsukikage brings manuscript writing and story planning into one workspace. It he
 
 | Space | Features |
 | --- | --- |
-| Library | Multiple projects, drag ordering and genre tags. |
+| Library | Multiple projects, customizable editorial covers, drag ordering and genre tags. |
 | Grimoire | Editable synopsis and story outline. |
 | Writing | Chapters and scenes, rich text, focus, progress, word count and daily goal. |
 | Characters | Full page, portrait, identity, free text and optional guided interview, relationships and quick summary. |
@@ -20,7 +20,7 @@ Tsukikage brings manuscript writing and story planning into one workspace. It he
 | Reference | Notes, project search and suggestions for unfinished content. |
 | Backups | Import/export the entire workspace as JSON; chapter history and pending draft recovery. |
 | Export | Markdown, EPUB, DOCX and PDF through browser printing. |
-| Preferences | English/Spanish, text size, Light, Dark, System, Pop, DarkPop and JSON palettes. |
+| Preferences | English/Spanish, manuscript typeface and line spacing, text size, Light, Dark, System, Pop, DarkPop and JSON palettes. |
 
 ## Storage and backups
 

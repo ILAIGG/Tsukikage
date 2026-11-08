@@ -2,6 +2,16 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.34.0] - 2026-11-08
+
+### Añadido
+- Portadas editoriales con título y género, cuatro paletas y tres estilos personalizables por historia; la elección se conserva en copias JSON.
+- Preferencias de tipografía serif/sans-serif e interlineado para el manuscrito, sin cambiar el contenido ni los formatos de exportación.
+
+### Mejorado
+- Mayor legibilidad de navegación, metadatos, campos y planificación; ancho de lectura y márgenes del manuscrito refinados.
+- Salida del modo enfoque legible también en móvil. Los proyectos antiguos conservan sus datos y reciben portadas y preferencias predeterminadas.
+
 ## [0.33.0] - 2026-11-08
 
 ### Mejorado
