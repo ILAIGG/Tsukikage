@@ -44,7 +44,6 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 .editorial-cover::before{content:'';position:absolute;inset:14px;border-left:2px solid currentColor;opacity:.35;pointer-events:none;z-index:-1}
 .editorial-cover[data-cover-style=frame]::before{inset:16px;border:1px solid currentColor}
 .editorial-cover[data-cover-style=orbit]::before{inset:auto;width:220px;height:220px;border:1px solid currentColor;border-radius:50%;right:-100px;top:-100px}
-.cover-kicker{font:500 11px/1.4 system-ui,sans-serif;letter-spacing:.16em}
 .cover-title{display:block;font:500 clamp(24px,2.5vw,34px)/1.2 Georgia,Cambria,serif;overflow-wrap:anywhere;max-width:100%;text-wrap:balance}
 .cover-genre{font:400 12px/1.6 system-ui,sans-serif;max-width:100%;overflow-wrap:anywhere}
 .cover-picker{border-bottom:1px solid var(--line);font-size:12px}

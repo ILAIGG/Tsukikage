@@ -12,7 +12,6 @@ export default function StoryCover({novel,language,onChange}:{novel:Novel;langua
  const styleNames=es?['Clásica','Marco','Órbita']:['Classic','Frame','Orbit'];
  return <div className="story-cover-wrapper">
   <div className="editorial-cover" data-palette={cover.palette} data-cover-style={cover.style} aria-label={es?'Vista previa de portada':'Cover preview'}>
-   <span className="cover-kicker">{es?'UNA HISTORIA':'A STORY'}</span>
    <strong className="cover-title">{novel.title||(es?'Historia sin título':'Untitled story')}</strong>
    <span className="cover-genre">{novel.genre||(es?'Manuscrito':'Manuscript')}</span>
   </div>

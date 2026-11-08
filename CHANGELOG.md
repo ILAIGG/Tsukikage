@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.34.1] - 2026-11-08
+
+### Corregido
+- Las portadas muestran únicamente el título y el género, sin el encabezado «Una historia» / «A story».
+
 ## [0.34.0] - 2026-11-08
 
 ### Añadido
