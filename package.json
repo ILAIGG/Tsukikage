@@ -1,6 +1,6 @@
 {
   "name": "tsukikage",
-  "version": "0.34.1",
+  "version": "0.34.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,7 +16,8 @@
     "test:world-deletion": "node tests/world-entry-deletion-browser.mjs",
     "test:beta": "node tests/beta-browser.mjs",
     "test:security": "node tests/content-security-browser.mjs",
-    "test:editorial": "node tests/editorial-browser.mjs"
+    "test:editorial": "node tests/editorial-browser.mjs",
+    "test:ux-dialogs": "node tests/ux-dialogs-browser.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

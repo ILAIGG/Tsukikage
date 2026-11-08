@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.34.2] - 2026-11-08
+
+### Corregido
+- Personalización de portadas en un diálogo con vista previa, navegación por teclado y retorno del foco, sin estirar las tarjetas.
+- Preferencias separa su contenido desplazable del pie, manteniendo accesible la instalación en pantallas pequeñas.
+- Nombres y aclaraciones de las preferencias de escritura más precisos, con vista previa real del manuscrito. Las portadas limitan su tamaño y permiten recorrer textos extensos.
+
 ## [0.34.1] - 2026-11-08
 
 ### Corregido

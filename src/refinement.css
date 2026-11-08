@@ -46,8 +46,6 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 .editorial-cover[data-cover-style=orbit]::before{inset:auto;width:220px;height:220px;border:1px solid currentColor;border-radius:50%;right:-100px;top:-100px}
 .cover-title{display:block;font:500 clamp(24px,2.5vw,34px)/1.2 Georgia,Cambria,serif;overflow-wrap:anywhere;max-width:100%;text-wrap:balance}
 .cover-genre{font:400 12px/1.6 system-ui,sans-serif;max-width:100%;overflow-wrap:anywhere}
-.cover-picker{border-bottom:1px solid var(--line);font-size:12px}
-.cover-picker summary{padding:10px 16px;cursor:pointer;min-height:36px}
 .cover-options{padding:6px 16px 16px;display:grid;gap:10px}
 .cover-options label{display:grid;gap:6px;font-size:13px}
 .cover-options select{width:100%;min-width:0;min-height:36px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:inherit;padding:6px}
@@ -73,3 +71,24 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 .focus-save-status{position:fixed;top:23px;left:20px;z-index:101;font-size:12px;line-height:1.5;color:var(--theme-readable-muted,var(--muted));max-width:calc(100% - 230px)}
 .app-shell .sidebar .tree-entries button{min-width:0;width:100%;height:auto;min-height:34px;white-space:normal;overflow-wrap:anywhere;text-align:left;line-height:1.5;padding-block:7px}
 .app-shell .sidebar .tree-entries button>span{min-width:0;white-space:normal}
+/* Dialog layout: only the content scrolls; footer actions never overlay it. */
+.app-shell .settings-dialog,.app-shell .cover-modal{display:flex;flex-direction:column;max-height:calc(100dvh - 24px);overflow:hidden;min-height:0}
+.app-shell .settings-dialog>.modal-head,.app-shell .cover-modal>.modal-head{flex-shrink:0}
+.app-shell .settings-content,.cover-modal-content{overflow-y:auto;min-height:0;overscroll-behavior:contain;padding-right:6px;flex:1 1 auto}
+.app-shell .settings-dialog .settings-bottom{position:static!important;flex:0 0 auto;flex-wrap:wrap;gap:12px;margin:0!important;padding:14px 0 10px!important;width:auto}
+.app-shell .settings-dialog .settings-version{flex-shrink:0;margin-top:0}
+.settings-content .setting-row{gap:16px;flex-wrap:wrap}
+.settings-content .setting-row>span{flex:1 1 160px}
+.settings-content .setting-row>select{max-width:100%;min-height:36px}
+.settings-writing-hint{font-size:12px;line-height:1.6;color:var(--theme-readable-muted,var(--muted));margin:10px 0 14px}
+.writing-preview{font-family:var(--manuscript-font,Georgia,serif);line-height:var(--manuscript-leading,1.8);padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--theme-page,var(--panel));color:var(--theme-text,inherit);overflow-wrap:anywhere}
+.cover-edit{display:block;width:100%;min-height:36px;border:0;border-bottom:1px solid var(--line);background:transparent;color:inherit;text-align:left;font:inherit;font-size:12px;padding:10px 16px;cursor:pointer}
+.cover-edit:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.app-shell .cover-modal{width:min(500px,100%)}
+.cover-modal .modal-head h2{font-size:20px;line-height:1.3;margin:0}
+.cover-modal .modal-head .icon-button{flex:none}
+.cover-modal-content .editorial-cover{border-radius:8px}
+.editorial-cover{height:280px;min-height:0!important;gap:16px;padding:26px}
+.cover-title{flex:0 1 auto;min-height:0;max-height:7.2em;overflow:auto;scrollbar-width:thin}
+.cover-genre{flex:0 1 auto;min-height:0;max-height:4.8em;overflow:auto;scrollbar-width:thin}
+@media(max-width:600px){.app-shell .settings-dialog,.app-shell .cover-modal{max-height:calc(100dvh - 20px)}.settings-content{padding-right:4px}.settings-content .slider-row input[type=range]{max-width:100%}.cover-modal-content{padding-right:4px}}
