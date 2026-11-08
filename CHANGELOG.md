@@ -2,6 +2,11 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.34.3] - 2026-11-08
+
+### Mejorado
+- Las páginas de personajes y lugares y la biblioteca de sincronización opcional se cargan por separado para reducir el paquete inicial, manteniendo el funcionamiento local y la disponibilidad offline.
+
 ## [0.34.2] - 2026-11-08
 
 ### Corregido
