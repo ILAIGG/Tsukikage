@@ -1,3 +1,4 @@
+import {remapWikiLinks} from './wiki-links';
 import type {Novel,ProjectSnapshot,StoryTemplate,Workspace} from './model';
 export const MAX_PROJECT_SNAPSHOTS=10;
 export function projectSnapshots(workspace:Workspace,projectId:string):ProjectSnapshot[]{const value=workspace.projectHistory?.[projectId];return Array.isArray(value)?value:[]}
@@ -16,6 +17,9 @@ export function restoreProject(workspace:Workspace,projectId:string,snapshotId:s
 export function createFromTemplate(template:StoryTemplate,title:string):Novel{
  const n=structuredClone(template.project);const ids=new Map<string,string>();
  for(const original of [n.id,...n.chapters.flatMap(c=>[c.id,...(c.scenes||[]).map(s=>s.id)]),...(n.entries||[]).map(e=>e.id)])ids.set(original,crypto.randomUUID());
+ // Remap links everywhere in the cloned project, including guided descriptions and notes.
+ const remapText=(value:unknown):unknown=>typeof value==='string'?remapWikiLinks(value,ids):Array.isArray(value)?value.map(remapText):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([key,item])=>[key,remapText(item)])):value;
+ Object.assign(n,remapText(n));
  const remap=(id:string)=>ids.get(id)||id;
  const refs=(value:{characterIds?:string[];placeIds?:string[]})=>({...(value.characterIds?{characterIds:value.characterIds.map(remap)}:{}),...(value.placeIds?{placeIds:value.placeIds.map(remap)}:{})});
  return {...n,id:remap(n.id),title:title.trim()||n.title,updated:new Date().toISOString(),revisions:{},writingSession:undefined,

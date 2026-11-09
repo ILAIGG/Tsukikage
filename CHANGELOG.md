@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.38.0] - 2026-11-09
+
+### Añadido
+- Enlaces wiki en los editores de capítulos, descripciones libres y guiadas, y notas: búsqueda de personajes, lugares, capítulos, escenas y notas del proyecto.
+- Inserción sobre texto seleccionado, apertura con Ctrl/Cmd + clic, eliminación de enlaces y aviso de destinos eliminados. Los enlaces se conservan en JSON y se adaptan al crear proyectos desde plantillas.
+- Notas con el mismo editor enriquecido. Los formatos de manuscrito conservan el texto de las referencias internas sin enlaces a destinos ajenos al libro.
+
 ## [0.37.0] - 2026-11-09
 
 ### Añadido

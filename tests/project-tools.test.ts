@@ -41,3 +41,11 @@ test('single-project backups preserve full history and merge without replacing o
  const replaced=mergeProjectBackup(added,{...exported,novels:[{...exported.novels[0],title:'Imported revision'}]});assert.equal(replaced.novels.length,2);assert.equal(replaced.novels[1].title,'Imported revision');assert.equal(replaced.novels[0],other);
  assert.throws(()=>mergeProjectBackup(current,{...exported,novels:[]}));assert.throws(()=>mergeProjectBackup(current,{...exported,novels:[other,...exported.novels]}));
 });
+
+test('wiki references survive project backups and remap to independent template targets',async()=>{
+ const {wikiHref,parseWikiHref}=await import('../src/wiki-links');
+ assert.deepEqual(parseWikiHref(wikiHref('character','name / á')),{kind:'character',id:'name / á'});assert.equal(parseWikiHref('javascript:alert(1)'),null);assert.equal(parseWikiHref('#tsukikage/character/%broken'),null);
+ const project=createSampleProject('en')[0];const target=project.entries![0];const html=`<p><a href="${wikiHref(target.kind,target.id)}">Reference</a></p>`;project.chapters[0].text=html;project.chapters[0].scenes![0].text=html;project.entries![1].description=html;
+ const raw=JSON.parse(serializeProjectBackup({novels:[project],settings:defaultSettings},project.id));assert.equal(raw.novels[0].chapters[0].text,html);
+ const copy=createFromTemplate({id:'t',name:'t',createdAt:'now',project},'Copy');const newHref=wikiHref(copy.entries![0].kind,copy.entries![0].id);assert(copy.chapters[0].text.includes(newHref));assert(copy.chapters[0].scenes![0].text.includes(newHref));assert(copy.entries![1].description.includes(newHref));assert.equal(project.chapters[0].text,html);
+});

@@ -1,8 +1,8 @@
 import type {Novel} from './model';
 import {bookInfo,bookCoverSvg,escapeBookText as e} from './publication';
-import {sanitizeHtml,download} from './export';
+import {manuscriptExportHtml,download} from './export';
 const name=(value:string)=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9-]+/g,'-').toLowerCase().replace(/^-|-$/g,'')||'tsukikage';
-function xhtml(value:string){const el=document.createElement('div');el.innerHTML=sanitizeHtml(value);return Array.from(el.childNodes).map(node=>new window.XMLSerializer().serializeToString(node)).join('')||'<p/>'}
+function xhtml(value:string){const el=document.createElement('div');el.innerHTML=manuscriptExportHtml(value);return Array.from(el.childNodes).map(node=>new window.XMLSerializer().serializeToString(node)).join('')||'<p/>'}
 export async function exportEpubBook(novel:Novel){
  const {default:JSZip}=await import('jszip');const zip=new JSZip(),info=bookInfo(novel);const files=novel.chapters.map((_,i)=>`chapter-${i+1}.xhtml`);const uid=`urn:tsukikage:${encodeURIComponent(novel.id)}`;
  zip.file('mimetype','application/epub+zip',{compression:'STORE'});
@@ -26,7 +26,7 @@ export async function exportDocxBook(novel:Novel){
   return Array.from(node.childNodes).flatMap(child=>runs(child,next));
  }
  function paragraphs(value:string){
-  const root=document.createElement('div');root.innerHTML=sanitizeHtml(value);const output:InstanceType<typeof Paragraph>[]=[];
+  const root=document.createElement('div');root.innerHTML=manuscriptExportHtml(value);const output:InstanceType<typeof Paragraph>[]=[];
   function visit(node:Node){if(node.nodeType===3){if(node.textContent?.trim())output.push(new Paragraph({children:runs(node)}));return}if(node.nodeType!==1)return;const tag=(node as Element).tagName.toLowerCase();
    if(['p','h1','h2','h3','blockquote','li'].includes(tag)){const heading=tag==='h1'?HeadingLevel.HEADING_1:tag==='h2'?HeadingLevel.HEADING_2:tag==='h3'?HeadingLevel.HEADING_3:undefined;const content=node.cloneNode(true) as Element;content.querySelectorAll('ol,ul').forEach(list=>list.remove());const ordered=tag==='li'&&node.parentElement?.tagName.toLowerCase()==='ol';const prefix=ordered?[new TextRun({text:`${Array.from(node.parentElement!.children).indexOf(node as Element)+1}. `})]:[];output.push(new Paragraph({children:[...prefix,...runs(content)],heading,...(tag==='li'&&!ordered?{bullet:{level:0}}:{}),spacing:{after:160,line:360}}));if(tag==='li')Array.from(node.childNodes).filter(child=>child.nodeType===1&&['ol','ul'].includes((child as Element).tagName.toLowerCase())).forEach(visit)}else Array.from(node.childNodes).forEach(visit);
   }Array.from(root.childNodes).forEach(visit);return output;
