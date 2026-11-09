@@ -19,3 +19,14 @@ export function parseWorkspaceBackup(serialized: string): Workspace {
   const normalizedTemplates=storyTemplates.map(template=>{if(!template||typeof template.id!=='string'||typeof template.name!=='string'||!template.project||typeof template.project.id!=='string'||typeof template.project.title!=='string'||!Array.isArray(template.project.chapters))throw new Error('Invalid template');return {...template,project:migrateNovel(template.project)}});
   return { novels,projectHistory,storyTemplates:normalizedTemplates, settings: { ...defaultSettings, ...(data.settings as Partial<Workspace['settings']>) } };
 }
+
+/** A portable project includes its complete history; global preferences/templates stay in full backups. */
+export function serializeProjectBackup(workspace:Workspace,projectId:string):string{
+ const novel=workspace.novels.find(n=>n.id===projectId);if(!novel)throw new Error('Project not found');
+ return serializeWorkspaceBackup({novels:[novel],settings:defaultSettings,projectHistory:{[projectId]:workspace.projectHistory?.[projectId]||[]}});
+}
+export function mergeProjectBackup(workspace:Workspace,imported:Workspace):Workspace{
+ if(imported.novels.length!==1)throw new Error('Choose a single-project backup');
+ const novel=imported.novels[0];
+ return {...workspace,novels:workspace.novels.some(n=>n.id===novel.id)?workspace.novels.map(n=>n.id===novel.id?novel:n):[...workspace.novels,novel],projectHistory:{...workspace.projectHistory,[novel.id]:imported.projectHistory?.[novel.id]||[]}};
+}

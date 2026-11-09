@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.37.0] - 2026-11-09
+
+### Añadido
+- Menú «Importar/Exportar» con copias JSON de un proyecto completo o de toda la biblioteca.
+- Importación individual con historial, sin modificar otros proyectos ni preferencias. Reemplazar un proyecto existente requiere confirmación y descarga previa de una copia de seguridad.
+
 ## [0.36.0] - 2026-11-09
 
 ### Añadido

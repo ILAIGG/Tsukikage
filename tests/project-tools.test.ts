@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';import {test} from 'node:test';import {W
 const browser=new Window({url:'http://localhost/'});Object.defineProperty(globalThis,'window',{value:browser});Object.defineProperty(globalThis,'document',{value:browser.document});Object.defineProperty(globalThis,'Node',{value:browser.Node});
 const {checkpoint,restoreProject,createFromTemplate}=await import('../src/project-tools');
 const {createSampleProject}=await import('../src/sample-project');const {defaultSettings}=await import('../src/model');
-const {parseWorkspaceBackup,serializeWorkspaceBackup}=await import('../src/backup');const {saveWorkspace,loadWorkspace}=await import('../src/storage');
+const {parseWorkspaceBackup,serializeWorkspaceBackup,serializeProjectBackup,mergeProjectBackup}=await import('../src/backup');const {saveWorkspace,loadWorkspace}=await import('../src/storage');
 test('complete restore preserves a return point and leaves other stories and preferences intact',()=>{
  let workspace=checkpoint({novels:[...createSampleProject('es'),{...createSampleProject('en')[0],id:'other'}],settings:defaultSettings},'moon','Original');const snapshot=workspace.projectHistory!.moon[0];const original=structuredClone(workspace.novels[0]);
  workspace.novels[0].title='Edited';workspace.novels[0].entries=[];workspace.novels[0].chapters=[];
@@ -30,4 +30,14 @@ test('imported history treats unusual IDs as data and rejects cross-project snap
  const novel=createSampleProject('en')[0];novel.id='__proto__';const snapshot={id:'snapshot',at:'2026-11-09',label:'Version',novel};const history=Object.fromEntries([['__proto__',[snapshot]]]);const parsed=parseWorkspaceBackup(serializeWorkspaceBackup({novels:[novel],settings:defaultSettings,projectHistory:history}));
  assert.equal(Object.getPrototypeOf(parsed.projectHistory),null);assert.equal(parsed.projectHistory!['__proto__'][0].novel.id,'__proto__');
  const wrong={...snapshot,novel:{...novel,id:'another-project'}};assert.throws(()=>parseWorkspaceBackup(serializeWorkspaceBackup({novels:[novel],settings:defaultSettings,projectHistory:{project:[wrong]}})));
+});
+
+test('single-project backups preserve full history and merge without replacing other projects or preferences',()=>{
+ const novels=createSampleProject('en');for(const chapter of novels[0].chapters){chapter.text='<p>Preserved manuscript</p>';chapter.scenes=[{id:chapter.id+'-scene',title:'Scene',text:chapter.text,description:'Description'}]}const original=checkpoint({novels,settings:defaultSettings},'moon','Original');
+ const serialized=serializeProjectBackup(original,'moon');assert.deepEqual(JSON.parse(serialized).novels,original.novels);const exported=parseWorkspaceBackup(serialized);const baseline=parseWorkspaceBackup(serializeWorkspaceBackup(original));
+ assert.equal(exported.novels.length,1);assert.deepEqual(exported.novels,baseline.novels);assert.deepEqual(exported.projectHistory,baseline.projectHistory);
+ const other={...original.novels[0],id:'other',title:'Other story'};const current={novels:[other],settings:{...defaultSettings,fontSize:20},storyTemplates:[]};
+ const added=mergeProjectBackup(current,exported);assert.equal(added.novels.length,2);assert.equal(added.novels[0],other);assert.equal(added.settings,current.settings);assert.equal(added.storyTemplates,current.storyTemplates);
+ const replaced=mergeProjectBackup(added,{...exported,novels:[{...exported.novels[0],title:'Imported revision'}]});assert.equal(replaced.novels.length,2);assert.equal(replaced.novels[1].title,'Imported revision');assert.equal(replaced.novels[0],other);
+ assert.throws(()=>mergeProjectBackup(current,{...exported,novels:[]}));assert.throws(()=>mergeProjectBackup(current,{...exported,novels:[other,...exported.novels]}));
 });

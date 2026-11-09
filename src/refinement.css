@@ -120,3 +120,5 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 .project-tools-content .project-cover-choice{display:flex;align-items:center;gap:10px}.project-cover-choice input{width:18px;height:18px;min-height:0}
 .project-version{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:12px}.project-version>div,.template-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.template-row span{flex:1;min-width:0;overflow-wrap:anywhere}
 @media(max-width:600px){.project-tools-content input,.project-tools-content select{font-size:16px}}
+
+.export-menu{max-height:calc(100dvh - 80px);overflow-y:auto}.export-menu :is(button,.menu-label){white-space:normal;overflow-wrap:anywhere;text-align:left}.export-menu svg{flex-shrink:0}
