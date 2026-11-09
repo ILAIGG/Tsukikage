@@ -2,6 +2,17 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.36.0] - 2026-11-09
+
+### Añadido
+- Historial completo de proyectos con restauración segura y punto de retorno, además de las versiones de capítulos.
+- Plantillas personales reutilizables que conservan estructura, textos y mundo con identificadores independientes. Las versiones y plantillas se incluyen en las copias JSON.
+- Opciones editoriales por proyecto para EPUB, DOCX y PDF: autoría, subtítulo, idioma, portada, tipografía y papel. El DOCX conserva formato enriquecido y los capítulos comienzan en páginas nuevas.
+
+### Corregido
+- Foco, navegación por teclado y nombres accesibles en los diálogos, la barra lateral contraída, el editor y los avisos.
+- EPUB con capítulos XHTML válidos y metadatos localizados. Roadmap actualizado sin marcar como realizadas las verificaciones externas pendientes.
+
 ## [0.35.0] - 2026-11-09
 
 ### Añadido

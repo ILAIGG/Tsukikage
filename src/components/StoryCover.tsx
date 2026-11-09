@@ -4,12 +4,8 @@ import {X} from 'lucide-react';
 import {useDialogFocus} from './useDialogFocus';
 import type { Novel, StoryCoverSettings } from '../model';
 
-export const coverPalettes = ['lunar','ink','forest','rose'] as const;
-export const coverStyles = ['classic','frame','orbit'] as const;
-export function resolveCover(novel:Pick<Novel,'id'|'cover'>):StoryCoverSettings {
- let hash=0;for(const char of novel.id)hash=(hash*31+char.charCodeAt(0))>>>0;
- return {palette:coverPalettes.includes(novel.cover?.palette as typeof coverPalettes[number])?novel.cover!.palette:coverPalettes[hash%coverPalettes.length],style:coverStyles.includes(novel.cover?.style as typeof coverStyles[number])?novel.cover!.style:coverStyles[hash%coverStyles.length]};
-}
+import {coverPalettes,coverStyles,resolveCover} from '../cover';
+export {resolveCover} from '../cover';
 export default function StoryCover({novel,language,onChange}:{novel:Novel;language:'es'|'en';onChange:(cover:StoryCoverSettings)=>void}){
  const es=language==='es';const cover=resolveCover(novel);
  const [open,setOpen]=useState(false);const dialog=useRef<HTMLElement>(null);const titleId=useId();useDialogFocus(open,dialog,()=>setOpen(false));

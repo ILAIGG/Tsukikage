@@ -1,14 +1,16 @@
 # Privacidad de Tsukikage
 
-**Última actualización: 6 de noviembre de 2026**
+**Última actualización: 9 de noviembre de 2026**
 
 Tsukikage es una aplicación de escritura local-first. Esta política describe el comportamiento del código de Tsukikage; si otra persona aloja una copia o activa servicios, esa persona debe publicar los datos y el contacto que correspondan a su instalación.
 
 ## Datos guardados en el dispositivo
 
-Los proyectos, capítulos, fichas, preferencias y borradores se guardan en IndexedDB del navegador. Tsukikage no envía este contenido a un servidor central. Borrar los datos del sitio o del navegador puede eliminar la única copia local, así que puedes descargar una copia JSON desde Exportar.
+Los proyectos, capítulos, fichas, preferencias, borradores, versiones completas y plantillas personales se guardan en IndexedDB del navegador. Tsukikage no envía este contenido a un servidor central. Borrar los datos del sitio o del navegador puede eliminar la única copia local, así que puedes descargar una copia JSON desde Exportar.
 
 Los datos locales y los archivos descargados no están cifrados por Tsukikage. Las personas con acceso a tu perfil del navegador o a tus copias pueden leerlos. Cambiar de dominio, navegador o dispositivo no transfiere los proyectos: exporta e importa una copia JSON.
+
+Las versiones completas se eliminan al eliminar su proyecto. Las plantillas son copias independientes y se pueden borrar desde el selector de plantillas al crear una historia o desde la página de un proyecto. Eliminar un proyecto no borra las plantillas guardadas a partir de él.
 
 ## Sincronización opcional
 

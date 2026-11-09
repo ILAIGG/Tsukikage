@@ -10,11 +10,14 @@ export type Entry = { id: string; name: string; description: string; kind: 'char
 export type Revision = { id: string; at: string; html: string; words: number; automatic?:boolean };
 export type RecoverySnapshot = { id:string; novelId:string; chapterId:string; chapter:Chapter; createdAt:number };
 export type StoryCoverSettings = {palette:'lunar'|'ink'|'forest'|'rose';style:'classic'|'frame'|'orbit'};
-export type Novel = { wordGoal?:number; writingSession?:{targetWords:number;baselineWords:number;startedAt:string}; id: string; title: string; cover?:StoryCoverSettings; genre: string; chapters: Chapter[]; updated: string; synopsis?: string; entries?: Entry[]; revisions?: Record<string, Revision[]>; template?: string };
+export type Publication={author?:string;subtitle?:string;language?:'es'|'en';font?:'serif'|'sans';fontSize?:number;paper?:'a4'|'a5'|'letter';includeCover?:boolean};
+export type ProjectSnapshot={id:string;at:string;label:string;novel:Novel};
+export type StoryTemplate={id:string;name:string;createdAt:string;project:Novel};
+export type Novel = { publication?:Publication; wordGoal?:number; writingSession?:{targetWords:number;baselineWords:number;startedAt:string}; id: string; title: string; cover?:StoryCoverSettings; genre: string; chapters: Chapter[]; updated: string; synopsis?: string; entries?: Entry[]; revisions?: Record<string, Revision[]>; template?: string };
 export type ThemeColors = { background:string; surface:string; sidebar:string; text:string; muted:string; line:string; accent:string; accentStrong:string; link?:string; page:string; shadow:string };
 export type CustomTheme = { id:string; name:string; mode:'light'|'dark'; colors:ThemeColors };
 export type Settings = { writingFont?:'serif'|'sans'; writingLineHeight?:number; language: 'es' | 'en'; dailyGoal: number; theme: string; customThemes?:CustomTheme[]; dailyWords: number; dailyDate: string; fontSize: number; pageWidth: number };
-export type Workspace = { novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'chapters'|'library'; activeSection?: 'project'|'chapter'|'world'|'character'|'place'|'note'|'event' };
+export type Workspace = { projectHistory?:Record<string,ProjectSnapshot[]>; storyTemplates?:StoryTemplate[]; novels: Novel[]; settings: Settings; activeNovelId?: string; activeChapterId?: string; lastPage?: 'project'|'write'|'world'|'chapters'|'library'; activeSection?: 'project'|'chapter'|'world'|'character'|'place'|'note'|'event' };
 
 export function preferredLanguage(languages: readonly string[] = typeof navigator === 'undefined' ? [] : navigator.languages?.length ? navigator.languages : [navigator.language]): Settings['language'] {
   const supported = languages.find(language => /^(es|en)(-|$)/i.test(language));

@@ -18,8 +18,8 @@ Tsukikage brings manuscript writing and story planning into one workspace. It he
 | Places | Full page, hierarchy, image, contextual questions, filters and duplication. |
 | Connections | Link characters and places to chapters, scenes and each other. |
 | Reference | Notes, project search and suggestions for unfinished content. |
-| Backups | Import/export the entire workspace as JSON; chapter history and pending draft recovery. |
-| Export | Markdown, EPUB, DOCX and PDF through browser printing. |
+| Backups | Import/export the whole workspace as JSON; chapter and full project versions, and pending draft recovery. |
+| Export | Markdown, EPUB, DOCX and browser-printed PDF with cover and per-project publication settings. |
 | Preferences | English/Spanish, manuscript typeface and line spacing, text size, Light, Dark, System, Pop, DarkPop and JSON palettes. |
 
 ## Storage and backups
@@ -28,15 +28,17 @@ Projects are saved in the device’s browser without an account. An independent 
 
 Clearing browser data can delete projects. Each browser, device and website address has separate storage; JSON backups allow stories to be moved between them. Tsukikage does not encrypt local data or backup files.
 
+Full project versions and templates also stay local and are included in JSON backups. Templates are independent copies: deleting the original project does not delete them.
+
 ## Installation and offline use
 
-**Preferences → Install Tsukikage** installs the app when supported by the browser. When direct installation is unavailable, the app provides instructions. On iPhone and iPad, use **Share → Add to Home Screen**.
+**Settings → Install Tsukikage** installs the app when supported by the browser. When direct installation is unavailable, the app provides instructions. On iPhone and iPad, use **Share → Add to Home Screen**.
 
 After the first load and completion of the application file installation, the app can be used offline. Updates may require closing open tabs and reopening the app.
 
 ## Project status
 
-Tsukikage is in beta. Guided interviews are optional and content review provides suggestions. Revision history covers individual chapters. Cross-device sync and collaboration are not yet part of the public beta.
+Tsukikage is in beta. Guided interviews are optional and content review provides suggestions. History includes up to ten full project versions as well as chapter revisions. Personal templates can be saved from a project and selected when creating a story. Cross-device sync and collaboration are not yet part of the public beta.
 
 The app contains no ads or analytics. Google Fonts supplies its typefaces. See [Privacy](PRIVACY.md) and [Security](SECURITY.md) for details.
 

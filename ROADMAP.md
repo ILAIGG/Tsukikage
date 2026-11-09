@@ -1,11 +1,28 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.36.0
+
+- [x] Versiones completas del proyecto, restauración con punto de retorno y copia JSON previa, hasta diez versiones manuales por proyecto.
+- [x] Plantillas personales a partir de proyectos; creación con identificadores nuevos y conservación de vínculos. Gestión y copias JSON incluidas.
+- [x] Exportación editorial: autoría, subtítulo, idioma, portada, tipografía, papel, saltos de capítulo y formato enriquecido.
+- [x] EPUB de 60 capítulos comprobado en EPUB.js y EPUBCheck 5.4.0 sin errores ni advertencias. DOCX abierto por LibreOffice Writer y PDF comprobado con Chromium y Poppler.
+- [x] Prueba real de Firefox: creación, metadatos editoriales, versiones completas, recarga y foco/Escape de Preferencias.
+- [x] Gestión de foco ampliada a los diálogos antiguos y nombres accesibles en navegación contraída, editor y avisos.
+
+## Validaciones externas que siguen abiertas
+
+- [ ] Auditoría formal con lector de pantalla, pruebas manuales en Safari/iOS y revisión independiente de seguridad.
+- [ ] Instalación y actualización de esta versión en el dominio público final. La inspección de Vercel requiere autorización de acceso al equipo; los recursos públicos de GitHub Pages responden, pero corresponden a otra compilación.
+- [ ] Sincronización, cuentas remotas y resolución de conflictos: siguen expresamente aplazadas.
+
+Las comprobaciones automáticas y locales no sustituyen las revisiones externas anteriores.
+
 ## Entregado en 0.35.0
 
 - [x] Arrastrar capítulos sin perder el capítulo activo; conservar flechas accesibles.
 - [x] Metas opcionales por proyecto y sesiones de escritura persistentes.
 
-La beta abierta local no depende de añadir más funciones. Antes del anuncio queda confirmar instalación, actualización PWA y cabeceras en el dominio público final, y realizar la pasada manual en Firefox y Safari/iOS. La auditoría formal con lector de pantalla sigue pendiente. La nube continúa aplazada.
+La beta abierta local no depende de añadir más funciones. Antes del anuncio queda confirmar instalación, actualización PWA y cabeceras en el dominio público final, y realizar la pasada manual en Safari/iOS. La auditoría formal con lector de pantalla sigue pendiente. La nube continúa aplazada.
 
 ## Revisión 0.30.0
 
@@ -14,8 +31,9 @@ La beta abierta local no depende de añadir más funciones. Antes del anuncio qu
 - [x] Revisión orientativa de capítulos vacíos y descripciones pendientes.
 - [x] Acceso a búsqueda con Ctrl/Cmd + Mayús + F y cierre de preferencias con Escape.
 - [x] Copias JSON, importación, historial de capítulos y recuperación de borradores locales.
-- [ ] Auditoría completa con lector de pantalla y gestión de foco de diálogos.
-- [ ] Historial restaurable de proyectos completos (el historial actual es por capítulo).
+- [x] Gestión de foco de los diálogos.
+- [ ] Auditoría formal con lector de pantalla.
+- [x] Historial restaurable de proyectos completos, además del historial por capítulo.
 
 La sincronización y la elección de proveedor remoto siguen aplazadas. Evaluar MongoDB Atlas y Supabase cuando se diseñen autenticación, permisos, conflictos y alojamiento del servidor.
 
@@ -155,18 +173,20 @@ La sincronización y la elección de proveedor remoto siguen aplazadas. Evaluar 
 - [ ] **Aplazado · Sincronización Supabase:** pospuesto hasta una etapa posterior; no bloquea el trabajo local del producto.
 - [x] **P1 · Organización del mundo (personajes y lugares):** Personajes ya tiene página propia, descripciones libre/guiada, resumen, imagen, guardado automático y relaciones navegables. La navegación jerárquica permite regresar a las secciones del proyecto. Lugares ya tiene página propia, imagen, guardado automático, descripciones libre/guiada adaptadas al tipo y jerarquía navegable con protección contra ciclos. Entregados vínculos con capítulos y escenas, apariciones de personajes y lugares, relaciones personaje-lugar, filtros, jerarquía completa y duplicación de lugares.
 - [x] **P1 · Escritura y estructura:** escenas reordenables, arrastre de capítulos con alternativa por teclado, metas de palabras por proyecto y objetivos de sesión persistentes con progreso neto.
-- [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
+- [x] **P1 · Exportación editorial:** EPUB/DOCX/PDF validados en lectores y herramientas reales, portadas, metadatos, saltos de capítulo, tipografía y formato de impresión.
 - [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.
-- [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.
+- [x] **P2 · Calidad verificable localmente:** teclado, nombres accesibles, móvil, temas, migración, recuperación y Firefox.
+- [ ] **P2 · Accesibilidad externa:** auditoría formal con lector de pantalla y Safari/iOS.
 
 La cuenta y la base remota serán opcionales. La integración experimental de Supabase existente no determina el proveedor definitivo; no se transmiten manuscritos automáticamente.
 
 ## Ideas a futuro
-- [ ] Sistema de plantillas personalizables para distintos proyectos.
+- [x] Sistema de plantillas personales para distintos proyectos.
 - [ ] Validar la beta en Vercel con PWA/offline y lectores de pantalla antes de anunciarla como estable.
 
 ## Preparación de beta 0.31.4
 - [x] README bilingüe actualizado, cabeceras para Vercel, revisión de contenido enriquecido y precarga offline por compilación.
 - [ ] Confirmar cabeceras, instalación y actualización PWA en el dominio público final.
-- [ ] Auditoría formal con lector de pantalla y validación manual en Safari/iOS y Firefox.
+- [x] Validación funcional real en Firefox.
+- [ ] Auditoría formal con lector de pantalla y validación manual en Safari/iOS.
 - [ ] Revisión independiente de seguridad antes de habilitar cuentas o nube.

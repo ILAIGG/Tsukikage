@@ -6,7 +6,7 @@ export function useDialogFocus(open:boolean,ref:RefObject<HTMLElement|null>,onCl
   const dialog=ref.current;if(!open||!dialog)return;
   const previous=document.activeElement as HTMLElement|null;const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';
   const focusable=()=>Array.from(dialog.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href],[tabindex="0"]')).filter(el=>el.getClientRects().length>0);
-  (focusable()[0]||dialog).focus();
+  if(!dialog.contains(document.activeElement))(focusable()[0]||dialog).focus();
   const key=(event:KeyboardEvent)=>{
    if(event.key==='Escape'){event.preventDefault();event.stopPropagation();close.current();return}
    if(event.key!=='Tab')return;

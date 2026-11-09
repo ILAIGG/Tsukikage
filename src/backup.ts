@@ -13,5 +13,9 @@ export function parseWorkspaceBackup(serialized: string): Workspace {
   const novels = (data.novels as Novel[])
     .filter(novel => novel && typeof novel.id === 'string' && typeof novel.title === 'string' && Array.isArray(novel.chapters))
     .map(migrateNovel);
-  return { novels, settings: { ...defaultSettings, ...(data.settings as Partial<Workspace['settings']>) } };
+  const projectHistory:NonNullable<Workspace['projectHistory']>=Object.create(null);
+  for(const [id,snapshots] of Object.entries(data.projectHistory||{})){if(!Array.isArray(snapshots))throw new Error('Invalid project history');projectHistory[id]=snapshots.map(snapshot=>{if(!snapshot||typeof snapshot.id!=='string'||typeof snapshot.label!=='string'||typeof snapshot.at!=='string'||!snapshot.novel||typeof snapshot.novel.title!=='string'||snapshot.novel.id!==id||!Array.isArray(snapshot.novel.chapters))throw new Error('Invalid project snapshot');return {...snapshot,novel:migrateNovel(snapshot.novel)}})}
+  const storyTemplates=data.storyTemplates||[];if(!Array.isArray(storyTemplates))throw new Error('Invalid templates');
+  const normalizedTemplates=storyTemplates.map(template=>{if(!template||typeof template.id!=='string'||typeof template.name!=='string'||!template.project||typeof template.project.id!=='string'||typeof template.project.title!=='string'||!Array.isArray(template.project.chapters))throw new Error('Invalid template');return {...template,project:migrateNovel(template.project)}});
+  return { novels,projectHistory,storyTemplates:normalizedTemplates, settings: { ...defaultSettings, ...(data.settings as Partial<Workspace['settings']>) } };
 }

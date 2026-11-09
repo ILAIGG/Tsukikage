@@ -18,8 +18,8 @@ Tsukikage reúne la escritura del manuscrito y la planificación de una historia
 | Lugares | Página completa, jerarquía, imagen, preguntas según el tipo, filtros y duplicación. |
 | Conexiones | Personajes y lugares vinculados con capítulos, escenas y entre sí. |
 | Referencia | Notas, búsqueda global y revisión orientativa de contenido pendiente. |
-| Copias | Importar/exportar el espacio completo en JSON y recuperar borradores e historial de capítulos. |
-| Exportación | Markdown, EPUB, DOCX y PDF mediante impresión del navegador. |
+| Copias | Importar/exportar el espacio completo en JSON, recuperar borradores y restaurar versiones de capítulos o del proyecto completo. |
+| Exportación | Markdown, EPUB, DOCX y PDF mediante impresión, con portada y opciones editoriales por proyecto. |
 | Preferencias | Español/inglés, tipografía e interlineado del manuscrito, tamaño de texto, Claro, Oscuro, Sistema, Pop, DarkPop y paletas JSON. |
 
 ## Guardado y copias de seguridad
@@ -27,6 +27,8 @@ Tsukikage reúne la escritura del manuscrito y la planificación de una historia
 Los proyectos se guardan en el navegador del dispositivo, sin necesidad de crear una cuenta. Para conservar una copia independiente, se puede descargar el espacio completo desde **Exportar → Copia completa JSON** y restaurarlo con **Importar copia**.
 
 Borrar los datos del navegador puede eliminar los proyectos. Cada navegador, dispositivo y dirección web mantiene su propio almacenamiento; las copias JSON permiten trasladar las historias entre ellos. Los datos locales y las copias no están cifrados por Tsukikage.
+
+Las versiones completas y las plantillas también se guardan localmente y se incluyen en la copia JSON. Las plantillas son copias independientes: eliminar el proyecto original no las elimina.
 
 ## Instalación y uso sin conexión
 
@@ -36,7 +38,7 @@ Después de la primera carga y de completar la instalación de los archivos, la 
 
 ## Estado del proyecto
 
-Tsukikage está en beta. Las entrevistas son opcionales y la revisión de contenido ofrece sugerencias orientativas. El historial corresponde a capítulos individuales. La sincronización entre dispositivos y la colaboración todavía no forman parte de la beta pública.
+Tsukikage está en beta. Las entrevistas son opcionales y la revisión de contenido ofrece sugerencias orientativas. El historial permite guardar hasta diez versiones completas por proyecto, además de las versiones de capítulos. Las plantillas personales se crean desde la página del proyecto y se eligen al crear una historia. La sincronización entre dispositivos y la colaboración todavía no forman parte de la beta pública.
 
 No incluye anuncios ni analíticas. Utiliza Google Fonts para las tipografías. Más información en [Privacidad](PRIVACY.md) y [Seguridad](SECURITY.md).
 

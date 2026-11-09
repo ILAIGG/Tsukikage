@@ -89,7 +89,7 @@ test('DOCX and print-ready PDF handle a long manuscript', async () => {
   let printHtml = '';
   browser.open = (() => ({ document: { write: (html: string) => { printHtml = html; }, close() {} } })) as typeof browser.open;
   exportPdf(novel);
-  assert.equal((printHtml.match(/<h2>/g)||[]).length, novel.chapters.length);
+  assert.equal((printHtml.match(/<h2\b/g)||[]).length, novel.chapters.length);
   assert.match(printHtml, /Capítulo 60/);
 });
 

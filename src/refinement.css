@@ -109,3 +109,14 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 
 .chapter-menu-card button:disabled{opacity:.45;cursor:default}
 @media(max-width:600px){.writing-goals input{font-size:16px}}
+.project-tools{display:grid;gap:12px;margin-top:28px}
+.project-tools>details{border:1px solid var(--line);border-radius:8px;background:var(--theme-surface,var(--panel))}
+.project-tools summary{padding:14px;font-size:14px;line-height:1.5;cursor:pointer}
+.project-tools-content{padding:4px 14px 18px;display:grid;gap:14px;min-width:0}
+.project-tools-content label{display:grid;gap:6px;font-size:13px;line-height:1.5}
+.project-tools-content input,.project-tools-content select{min-height:36px;min-width:0;width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;color:inherit;background:var(--theme-page,var(--panel));font:inherit}
+.project-tools-content p,.project-tools-content small,.project-version{font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.project-tools-content button{justify-self:start;height:auto;min-height:36px;padding:8px 12px}
+.project-tools-content .project-cover-choice{display:flex;align-items:center;gap:10px}.project-cover-choice input{width:18px;height:18px;min-height:0}
+.project-version{display:grid;gap:6px;border-top:1px solid var(--line);padding-top:12px}.project-version>div,.template-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.template-row span{flex:1;min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.project-tools-content input,.project-tools-content select{font-size:16px}}
