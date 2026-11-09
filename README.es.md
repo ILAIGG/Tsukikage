@@ -13,7 +13,7 @@ Tsukikage reúne la escritura del manuscrito y la planificación de una historia
 | --- | --- |
 | Biblioteca | Varios proyectos, portadas editoriales personalizables, orden por arrastre y géneros como etiquetas. |
 | Grimorio | Sinopsis editable y estructura de la historia. |
-| Escritura | Capítulos y escenas, formato enriquecido, enfoque, progreso, contador y meta diaria. |
+| Escritura | Capítulos y escenas, formato enriquecido, enfoque, progreso, contador, meta diaria y objetivos por proyecto y sesión. |
 | Personajes | Página completa, imagen, identidad, descripción libre y entrevista opcional, relaciones y vista rápida. |
 | Lugares | Página completa, jerarquía, imagen, preguntas según el tipo, filtros y duplicación. |
 | Conexiones | Personajes y lugares vinculados con capítulos, escenas y entre sí. |

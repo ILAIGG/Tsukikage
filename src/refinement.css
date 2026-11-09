@@ -92,3 +92,20 @@ html[data-resolved-theme='light'] .app-shell .primary-btn{color:#fff}
 .cover-title{flex:0 1 auto;min-height:0;max-height:7.2em;overflow:auto;scrollbar-width:thin}
 .cover-genre{flex:0 1 auto;min-height:0;max-height:4.8em;overflow:auto;scrollbar-width:thin}
 @media(max-width:600px){.app-shell .settings-dialog,.app-shell .cover-modal{max-height:calc(100dvh - 20px)}.settings-content{padding-right:4px}.settings-content .slider-row input[type=range]{max-width:100%}.cover-modal-content{padding-right:4px}}
+.writing-goals{margin:18px 0;border:1px solid var(--line);border-radius:8px;background:var(--theme-surface,var(--panel));color:inherit}
+.writing-goals summary{cursor:pointer;padding:12px;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.writing-goals summary span{margin-left:12px;font-variant-numeric:tabular-nums}
+.writing-goals-content{display:grid;gap:16px;padding:4px 12px 16px}
+.writing-goals label{display:grid;gap:6px;font-size:13px;line-height:1.5}
+.writing-goals input{width:100%;min-width:0;max-width:260px;min-height:36px;padding:7px;border:1px solid var(--line);border-radius:6px;background:var(--theme-page,var(--panel));color:inherit}
+.goal-progress{display:grid;gap:6px;font-size:12px;line-height:1.6}
+.goal-progress progress{width:100%;height:9px;accent-color:var(--accent)}
+.session-goal{display:grid;gap:12px}.session-goal h3{font-size:14px;margin:0}.session-goal small{font-size:12px;line-height:1.6;color:var(--theme-readable-muted,var(--muted))}
+.session-goal button{justify-self:start;min-height:34px;height:auto;padding:8px 12px}
+.chapter-drag-handle{cursor:grab;touch-action:none}.chapter-drag-handle:active{cursor:grabbing}
+.chapter-menu-card.chapter-drop-target{outline:2px dashed var(--accent);outline-offset:3px}
+.chapter-reorder-notice{font-size:13px;line-height:1.5;min-height:20px}
+@media(max-width:600px){.chapter-menu-card>div{display:flex;flex-wrap:wrap;max-width:76px;gap:6px}.chapter-menu-card>div .icon-button{min-width:30px;min-height:30px}}
+
+.chapter-menu-card button:disabled{opacity:.45;cursor:default}
+@media(max-width:600px){.writing-goals input{font-size:16px}}

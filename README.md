@@ -13,7 +13,7 @@ Tsukikage brings manuscript writing and story planning into one workspace. It he
 | --- | --- |
 | Library | Multiple projects, customizable editorial covers, drag ordering and genre tags. |
 | Grimoire | Editable synopsis and story outline. |
-| Writing | Chapters and scenes, rich text, focus, progress, word count and daily goal. |
+| Writing | Chapters and scenes, rich text, focus, progress, word count, daily goal and project/session goals. |
 | Characters | Full page, portrait, identity, free text and optional guided interview, relationships and quick summary. |
 | Places | Full page, hierarchy, image, contextual questions, filters and duplication. |
 | Connections | Link characters and places to chapters, scenes and each other. |

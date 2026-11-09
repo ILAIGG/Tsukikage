@@ -1,5 +1,12 @@
 # Hoja de ruta de Tsukikage
 
+## Entregado en 0.35.0
+
+- [x] Arrastrar capítulos sin perder el capítulo activo; conservar flechas accesibles.
+- [x] Metas opcionales por proyecto y sesiones de escritura persistentes.
+
+La beta abierta local no depende de añadir más funciones. Antes del anuncio queda confirmar instalación, actualización PWA y cabeceras en el dominio público final, y realizar la pasada manual en Firefox y Safari/iOS. La auditoría formal con lector de pantalla sigue pendiente. La nube continúa aplazada.
+
 ## Revisión 0.30.0
 
 - [x] Búsqueda de contenido de capítulos, escenas, descripciones y respuestas guiadas; incluir apodos y nombres del personaje.
@@ -146,8 +153,8 @@ La sincronización y la elección de proveedor remoto siguen aplazadas. Evaluar 
 - [x] **P0 · Exportaciones en lectores:** validar un DOCX de 60 capítulos en LibreOffice Writer y la impresión PDF de 60 capítulos en Chromium; ambos conservan el título del último capítulo y se pueden abrir/renderizar.
 - [x] **P0 · Recuperación del manuscrito:** verificada en Chromium real con un perfil persistente temporal: manuscrito guardado, borrador pendiente tras reiniciar, recuperación desde el diálogo y persistencia tras un segundo reinicio. Repetible con `npm run test:browser`.
 - [ ] **Aplazado · Sincronización Supabase:** pospuesto hasta una etapa posterior; no bloquea el trabajo local del producto.
-- [ ] **P1 · Organización del mundo:** Personajes ya tiene página propia, descripciones libre/guiada, resumen, imagen, guardado automático y relaciones navegables. La navegación jerárquica permite regresar a las secciones del proyecto. Lugares ya tiene página propia, imagen, guardado automático, descripciones libre/guiada adaptadas al tipo y jerarquía navegable con protección contra ciclos. Entregados vínculos con capítulos y escenas, apariciones de personajes y lugares, relaciones personaje-lugar, filtros, jerarquía completa y duplicación de lugares.
-- [ ] **P1 · Escritura y estructura:** escenas reordenables, arrastrar capítulos, metas por proyecto y objetivos de sesión.
+- [x] **P1 · Organización del mundo (personajes y lugares):** Personajes ya tiene página propia, descripciones libre/guiada, resumen, imagen, guardado automático y relaciones navegables. La navegación jerárquica permite regresar a las secciones del proyecto. Lugares ya tiene página propia, imagen, guardado automático, descripciones libre/guiada adaptadas al tipo y jerarquía navegable con protección contra ciclos. Entregados vínculos con capítulos y escenas, apariciones de personajes y lugares, relaciones personaje-lugar, filtros, jerarquía completa y duplicación de lugares.
+- [x] **P1 · Escritura y estructura:** escenas reordenables, arrastre de capítulos con alternativa por teclado, metas de palabras por proyecto y objetivos de sesión persistentes con progreso neto.
 - [ ] **P1 · Exportación editorial:** validar EPUB/DOCX/PDF en lectores reales y añadir portadas, metadatos, saltos de capítulo, tipografía y formato de imprenta.
 - [ ] **P2 · Sincronización segura:** resolución visual de conflictos, historial remoto y sincronización entre dispositivos; conservar confirmación explícita antes de sobrescribir contenido.
 - [ ] **P2 · Accesibilidad y calidad:** pruebas de teclado/lector de pantalla, contraste, móvil y escenarios de migración y recuperación.

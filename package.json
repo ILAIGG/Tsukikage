@@ -1,6 +1,6 @@
 {
   "name": "tsukikage",
-  "version": "0.34.3",
+  "version": "0.35.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -17,7 +17,8 @@
     "test:beta": "node tests/beta-browser.mjs",
     "test:security": "node tests/content-security-browser.mjs",
     "test:editorial": "node tests/editorial-browser.mjs",
-    "test:ux-dialogs": "node tests/ux-dialogs-browser.mjs"
+    "test:ux-dialogs": "node tests/ux-dialogs-browser.mjs",
+    "test:writing-goals": "node tests/writing-goals-browser.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.0",

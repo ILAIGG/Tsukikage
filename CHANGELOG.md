@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.35.0] - 2026-11-09
+
+### Añadido
+- Reordenamiento de capítulos mediante arrastre con inserción y controles alternativos por teclado.
+- Metas opcionales de palabras por proyecto y objetivos de sesión con progreso neto y persistencia tras recargar, disponibles desde el proyecto y la planificación.
+- Roadmap actualizado para distinguir funciones entregadas y comprobaciones pendientes de la beta local.
+
 ## [0.34.3] - 2026-11-08
 
 ### Mejorado
