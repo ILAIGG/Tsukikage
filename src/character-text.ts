@@ -9,7 +9,7 @@ export function characterTextHtml(text:string):string {
 export function characterPlainText(text:string):string {
  return /<[a-z][\s\S]*>/i.test(text)?htmlToText(sanitizeHtml(text)):text;
 }
-export const hasCharacterText=(text:string|undefined)=>Boolean(text&&characterPlainText(text).trim());
+export const hasCharacterText=(text:string|undefined)=>Boolean(text&&(characterPlainText(text).trim()||/<img\b/i.test(sanitizeHtml(text))));
 export function characterGuidePreview(answers:Record<string,string>,language:GuideLanguage):string {
  return guideAnswerText(Object.fromEntries(Object.entries(answers).map(([id,text])=>[id,characterPlainText(text)])),language);
 }

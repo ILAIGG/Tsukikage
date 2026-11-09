@@ -2,6 +2,13 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.39.0] - 2026-11-09
+
+### Añadido
+- Imágenes locales en capítulos, descripciones libres y guiadas de personajes y lugares, y notas, mediante la barra de herramientas compartida.
+- Tamaño relativo, descripción alternativa y eliminación de imágenes. Las imágenes se optimizan y guardan dentro del proyecto y sus copias JSON, sin depender de servicios externos.
+- Conservación de imágenes en EPUB, Word, PDF y Markdown. Se admiten PNG, JPG, WebP y GIF de hasta 10 MB; se insertan como imágenes estáticas optimizadas.
+
 ## [0.38.0] - 2026-11-09
 
 ### Añadido

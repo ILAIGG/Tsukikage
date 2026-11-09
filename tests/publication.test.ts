@@ -14,3 +14,14 @@ test('print layout respects publication settings and escapes cover text',()=>{
  const html=printBookHtml(novel,sanitizeHtml);assert.match(html,/@page\{size:A5/);assert.match(html,/14pt/);assert.match(html,/A &amp; B/);assert.match(html,/lang="en"/);assert.doesNotMatch(html,/<script/);
  const without=printBookHtml({...novel,publication:{includeCover:false}},sanitizeHtml);assert.doesNotMatch(without,/<section class="book-cover">/);
 });
+
+test('embedded raster images are safe and preserved in EPUB, DOCX and PDF',async()=>{
+ const src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a22sAAAAASUVORK5CYII=';
+ const text=`<p>Illustrated chapter</p><img src="${src}" alt="Moon sketch" data-image-width="1" data-image-height="1" data-image-size="50">`;
+ assert.match(sanitizeHtml(text),/<img/);assert.doesNotMatch(sanitizeHtml('<img src="https://example.org/track.png"><img src="data:image/svg+xml;base64,PHN2Zy8+"><img src="x" onerror="alert(1)">'),/<img|onerror/);
+ const book={...novel,chapters:[{...novel.chapters[0],text}]};
+ const epub=await captured(()=>exportEpub(book));assert(epub.file('OEBPS/images/image-1.png'));assert.match(await epub.file('OEBPS/chapter-1.xhtml')!.async('text'),/src="images\/image-1.png"/);assert.match(await epub.file('OEBPS/content.opf')!.async('text'),/media-type="image\/png"/);
+ const docx=await captured(()=>exportDocx(book));assert(Object.keys(docx.files).some(path=>path.startsWith('word/media/')&&path.endsWith('.png')));assert.match(await docx.file('word/document.xml')!.async('text'),/Moon sketch/);
+ assert.match(printBookHtml(book,sanitizeHtml),/data:image\/png;base64/);
+ const {serializeWorkspaceBackup,parseWorkspaceBackup}=await import('../src/backup');const {defaultSettings}=await import('../src/model');const project={...book,chapters:[{...book.chapters[0],scenes:[{id:'image-scene',title:'Image scene',text,description:''}]}]};const restored=parseWorkspaceBackup(serializeWorkspaceBackup({novels:[project],settings:defaultSettings}));assert(restored.novels[0].chapters[0].text.includes(src));
+});
