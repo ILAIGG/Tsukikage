@@ -2,6 +2,12 @@
 
 Los cambios notables de Tsukikage se registran aquí.
 
+## [0.39.1] - 2026-11-09
+
+### Corregido
+- Editor integrado en temas claro y oscuro: barra de herramientas unida al borde, márgenes internos compactos y pie sin espacio sobrante, también en personajes y lugares.
+- El foco se indica en el contorno exterior del editor, sin un rectángulo de color dentro del área de escritura.
+
 ## [0.39.0] - 2026-11-09
 
 ### Añadido
